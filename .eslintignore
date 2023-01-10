@@ -1,0 +1,3 @@
+**/.fttemplates/**
+**/dist/**
+**/.fttemplates/**/*.{js|ts|tsx|jsx}

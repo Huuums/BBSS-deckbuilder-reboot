@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.trainer-border-UR {
+  border-image: linear-gradient(180deg, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%) 1;
+}
+.trainer-border-SSR {
+  border-image: linear-gradient(180deg, rgb(235, 71, 72) 0%, rgb(249, 102, 102) 40%, rgb(200, 55, 60) 87%, rgb(183, 54, 59) 100%) 1;
+}
+.trainer-border-SR {
+  border-image: linear-gradient(180deg, rgb(156, 89, 223) 0%, rgb(196, 145, 255) 27%, rgb(135, 83, 190) 79%, rgb(100, 52, 154) 100%) 1;
+}
+.trainer-border-R {
+  border-image: linear-gradient(180deg, rgb(81, 119, 212) 0%, rgb(122, 163, 248) 40%, rgb(70, 104, 189) 80%, rgb(41, 73, 151) 100%) 1;
+}
+.trainer-border-N {
+  border-image: linear-gradient(180deg, rgb(89, 156, 71) 0%, rgb(119, 212, 92) 25%, rgb(84, 141, 68) 76%, rgb(59, 93, 60) 100%) 1;
+}
+
+.trainer-glow{
+  overflow: hidden;
+}
+.trainer-glow::before{
+  content: "";
+  width: 250%;
+  height: 250%;
+  position: absolute;
+  left: -75%;
+  top: -75%;
+}
+.trainer-glow.UR::before {
+  background: conic-gradient(from 0deg, rgba(247, 219, 65, 0) 0%, rgb(247, 219, 65) 40%, rgb(254, 251, 155) 45%, rgb(254, 252, 90) 50%, rgb(252, 250, 46) 60%, rgb(250, 243, 34) 70%, rgba(250, 243, 34, 0) 75%);
+}
+.trainer-glow.SSR::before {
+  background: conic-gradient(from 0deg, rgba(247, 84, 94, 0) 0%, rgb(247, 84, 94) 40%, rgb(254, 166, 184) 45%, rgb(254, 148, 168) 50%, rgb(251, 89, 105) 60%, rgb(240, 58, 68) 70%, rgba(240, 58, 68, 0) 75%);
+}
+
+.trainer-glow::before{
+  animation: rotate-border 1.8s linear infinite;
+}
+
+@keyframes rotate-border {
+  to {
+    transform: rotate(360deg);
+  }
+}

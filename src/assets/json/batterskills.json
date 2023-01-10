@@ -1,0 +1,5503 @@
+{
+  "Aria": {
+    "1": {
+      "C's Resolve": 1,
+      "Switch Hitter": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Power Batter": 1,
+      "Tenacity": 1,
+      "Dash": 2,
+      "Iron Wall": 1,
+      "No Stolen Bases": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Switch Hitter": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Power Batter": 1,
+      "Tenacity": 2,
+      "Dash": 2,
+      "Iron Wall": 2,
+      "No Stolen Bases": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Switch Hitter": 2,
+      "Framing": 2,
+      "Home Run Master": 2,
+      "Power Batter": 1,
+      "Tenacity": 2,
+      "Dash": 2,
+      "Iron Wall": 2,
+      "No Stolen Bases": 3
+    },
+    "4": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Switch Hitter": 2,
+      "Framing": 2,
+      "Home Run Master": 2,
+      "Power Batter": 1,
+      "Tenacity": 3,
+      "Dash": 3,
+      "Iron Wall": 2,
+      "No Stolen Bases": 3
+    },
+    "5": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Switch Hitter": 2,
+      "Framing": 3,
+      "Home Run Master": 3,
+      "Power Batter": 3,
+      "Tenacity": 3,
+      "Dash": 3,
+      "Iron Wall": 2,
+      "No Stolen Bases": 3
+    }
+  },
+  "Bill": {
+    "1": {
+      "CF's Resolve": 1,
+      "HR King Blessing": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 1,
+      "Home Run Master": 1,
+      "Knuckleball Hunter": 2,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 2,
+      "Super Jump": 3
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "HR King Blessing": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Home Run Master": 1,
+      "Knuckleball Hunter": 2,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 3,
+      "Super Jump": 3
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "HR King Blessing": 2,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Home Run Master": 2,
+      "Knuckleball Hunter": 2,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 3,
+      "Super Jump": 3
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "HR King Blessing": 2,
+      "Switch Hitter": 2,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Home Run Master": 3,
+      "Knuckleball Hunter": 2,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Super Jump": 4
+    },
+    "5": {
+      "CF's Resolve": 1,
+      "HR King Blessing": 2,
+      "Switch Hitter": 2,
+      "Top Batter Blessing": 1,
+      "Hit Master": 3,
+      "Home Run Master": 3,
+      "Knuckleball Hunter": 3,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Super Jump": 5
+    }
+  },
+  "Pansy": {
+    "1": {
+      "1B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Big Bang": 2,
+      "Golden Arm": 1,
+      "Home Run Master": 1,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 2,
+      "Walk Machine": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Big Bang": 2,
+      "Golden Arm": 1,
+      "Home Run Master": 1,
+      "Power Batter": 1,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 2,
+      "Walk Machine": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Big Bang": 2,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 2,
+      "Walk Machine": 2
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Big Bang": 2,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 2,
+      "Walk Machine": 2
+    },
+    "5": {
+      "1B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 2,
+      "Big Bang": 2,
+      "Golden Arm": 3,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "Tenacity": 3,
+      "Anti RH Pitcher": 3,
+      "Walk Machine": 3
+    }
+  },
+  "Johanna": {
+    "1": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Roadrunner": 1,
+      "Tenacity": 1,
+      "IF Throw God": 2,
+      "Target Sighted": 1,
+      "Walk Machine": 1,
+      "New Resolution": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Roadrunner": 1,
+      "Tenacity": 2,
+      "IF Throw God": 2,
+      "Target Sighted": 1,
+      "Walk Machine": 1,
+      "New Resolution": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 3,
+      "Roadrunner": 1,
+      "Tenacity": 2,
+      "IF Throw God": 2,
+      "Target Sighted": 1,
+      "Walk Machine": 1,
+      "New Resolution": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 3,
+      "Roadrunner": 1,
+      "Tenacity": 2,
+      "IF Throw God": 3,
+      "Target Sighted": 2,
+      "Walk Machine": 2,
+      "New Resolution": 2
+    },
+    "5": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 3,
+      "Roadrunner": 2,
+      "Tenacity": 3,
+      "IF Throw God": 3,
+      "Target Sighted": 2,
+      "Walk Machine": 2,
+      "New Resolution": 3
+    }
+  },
+  "Kinsley": {
+    "1": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 1,
+      "Tenacity": 2,
+      "OF Catch God": 2,
+      "Target Sighted": 2,
+      "Walk Machine": 1
+    },
+    "2": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 1,
+      "Power Batter": 1,
+      "Tenacity": 2,
+      "OF Catch God": 2,
+      "Target Sighted": 2,
+      "Walk Machine": 1
+    },
+    "3": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "Power Batter": 1,
+      "Tenacity": 3,
+      "OF Catch God": 2,
+      "Target Sighted": 2,
+      "Walk Machine": 2
+    },
+    "4": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 2,
+      "Hit Master": 2,
+      "Power Batter": 2,
+      "Tenacity": 3,
+      "OF Catch God": 2,
+      "Target Sighted": 3,
+      "Walk Machine": 2
+    },
+    "5": {
+      "HR King Blessing": 2,
+      "RF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 3,
+      "Hit Master": 2,
+      "Power Batter": 3,
+      "Tenacity": 3,
+      "OF Catch God": 2,
+      "Target Sighted": 3,
+      "Walk Machine": 3
+    }
+  },
+  "Velvet": {
+    "1": {
+      "3B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Golden Arm": 1,
+      "Roadrunner": 2,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 2,
+      "Push-hit": 2,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Golden Arm": 1,
+      "Roadrunner": 2,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 2,
+      "Push-hit": 2,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Roadrunner": 3,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 2,
+      "Push-hit": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 2,
+      "Roadrunner": 3,
+      "Tenacity": 2,
+      "Anti LH Pitcher": 2,
+      "Push-hit": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "HR King Blessing": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 2,
+      "Roadrunner": 3,
+      "Tenacity": 2,
+      "Anti LH Pitcher": 3,
+      "Push-hit": 3,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 3
+    }
+  },
+  "Ziz": {
+    "1": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "Provoke": 2,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 2,
+      "IF Throw God": 1
+    },
+    "2": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 2,
+      "IF Throw God": 1
+    },
+    "3": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 3,
+      "Power Batter": 1,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 2,
+      "IF Throw God": 2
+    },
+    "4": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 3,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "IF Throw God": 2
+    },
+    "5": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 3,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Roadrunner": 2,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 3,
+      "IF Throw God": 3
+    }
+  },
+  "Behemoth": {
+    "1": {
+      "CF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 1,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Tenacity": 1,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Point Man": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Tenacity": 1,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Point Man": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Tenacity": 2,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Point Man": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 2,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Tenacity": 2,
+      "Tight Defense": 2,
+      "Dash": 2,
+      "Point Man": 2
+    },
+    "5": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 3,
+      "Power Batter": 3,
+      "Provoke": 3,
+      "Tenacity": 3,
+      "Tight Defense": 3,
+      "Dash": 2,
+      "Point Man": 2
+    }
+  },
+  "Leviathan": {
+    "1": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Big Bang": 1,
+      "Hit Master": 1,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 1,
+      "Push-hit": 1,
+      "Point Man": 2
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Big Bang": 1,
+      "Hit Master": 1,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 2,
+      "Push-hit": 2,
+      "Point Man": 2
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Top Batter Blessing": 1,
+      "Big Bang": 1,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 2,
+      "Push-hit": 2,
+      "Point Man": 3
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Top Batter Blessing": 1,
+      "Big Bang": 2,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 3,
+      "Push-hit": 2,
+      "Point Man": 3
+    },
+    "5": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Top Batter Blessing": 1,
+      "Big Bang": 2,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Roadrunner": 3,
+      "Dash": 3,
+      "Push-hit": 3,
+      "Point Man": 3
+    }
+  },
+  "Mav": {
+    "1": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 1,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 3,
+      "Golden Arm": 2,
+      "Hit Master": 3,
+      "Provoke": 2,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 2
+    }
+  },
+  "Bebe": {
+    "1": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 1,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 2,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "C's Resolve": 1,
+      "Top Batter Blessing": 3,
+      "Golden Arm": 2,
+      "Hit Master": 3,
+      "Provoke": 2,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 3,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 2
+    }
+  },
+  "Camilla/Freyja": {
+    "1": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Horizontal Cut": 1,
+      "Tenacity": 1,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 2,
+      "Push-hit": 1,
+      "Target Sighted": 1,
+      "Gambler": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 1,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 2,
+      "Push-hit": 2,
+      "Target Sighted": 1,
+      "Gambler": 1
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Horizontal Cut": 2,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 2,
+      "Push-hit": 2,
+      "Target Sighted": 1,
+      "Gambler": 1
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Horizontal Cut": 2,
+      "Provoke": 1,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 3,
+      "Push-hit": 2,
+      "Target Sighted": 1,
+      "Gambler": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Horizontal Cut": 2,
+      "Provoke": 2,
+      "Tenacity": 2,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 3,
+      "Push-hit": 2,
+      "Target Sighted": 1,
+      "Gambler": 2
+    }
+  },
+  "Hyper": {
+    "1": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Hit Master": 1,
+      "Home Run Master": 2,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Slide": 1,
+      "Gambler": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "Home Run Master": 2,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Slide": 2,
+      "Gambler": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "Home Run Master": 3,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Slide": 2,
+      "Gambler": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "Home Run Master": 3,
+      "Provoke": 1,
+      "IF Defense God": 3,
+      "Low-Ball Batter": 1,
+      "Super Slide": 2,
+      "Gambler": 2
+    },
+    "5": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 3,
+      "Golden Arm": 2,
+      "Hit Master": 2,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "IF Defense God": 3,
+      "Low-Ball Batter": 1,
+      "Super Slide": 2,
+      "Gambler": 2
+    }
+  },
+  "Loki": {
+    "1": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Home Run Master": 1,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 1,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Home Run Master": 2,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 3,
+      "Home Run Master": 2,
+      "Tight Defense": 1,
+      "Dash": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 3,
+      "Home Run Master": 2,
+      "Power Batter": 1,
+      "Tight Defense": 2,
+      "Dash": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Switch Hitter": 2,
+      "Hit Master": 3,
+      "Home Run Master": 2,
+      "Power Batter": 2,
+      "Tight Defense": 2,
+      "Dash": 3,
+      "Pull-Hit": 1,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 2
+    }
+  },
+  "Sun Wukong": {
+    "1": {
+      "RF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Full Swing": 1,
+      "Home Run Master": 2,
+      "Provoke": 1,
+      "High-Ball Batter": 1,
+      "OF Catch God": 2,
+      "OF Defense God": 1,
+      "Slugger Power": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Full Swing": 1,
+      "Home Run Master": 2,
+      "Provoke": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 2,
+      "OF Defense God": 2,
+      "Slugger Power": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Full Swing": 1,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 2,
+      "OF Defense God": 2,
+      "Slugger Power": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Full Swing": 1,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "High-Ball Batter": 1,
+      "OF Catch God": 3,
+      "OF Defense God": 2,
+      "Slugger Power": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Switch Hitter": 2,
+      "Full Swing": 2,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "Roadrunner": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 3,
+      "OF Defense God": 2,
+      "Slugger Power": 2
+    }
+  },
+  "Nox": {
+    "1": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Home Run Master": 1,
+      "Provoke": 2,
+      "Tight Defense": 1,
+      "High-Ball Batter": 1,
+      "OF Throw God": 1,
+      "Twister": 2,
+      "Pure Survival": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Home Run Master": 1,
+      "Provoke": 2,
+      "Tight Defense": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Twister": 2,
+      "Pure Survival": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Home Run Master": 1,
+      "Provoke": 3,
+      "Tight Defense": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Twister": 2,
+      "Pure Survival": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Home Run Master": 1,
+      "Power Batter": 1,
+      "Provoke": 3,
+      "Tight Defense": 2,
+      "High-Ball Batter": 3,
+      "OF Throw God": 2,
+      "Twister": 2,
+      "Pure Survival": 1
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Home Run Master": 2,
+      "Power Batter": 2,
+      "Provoke": 3,
+      "Tight Defense": 3,
+      "High-Ball Batter": 3,
+      "OF Throw God": 3,
+      "Twister": 2,
+      "Pure Survival": 1
+    }
+  },
+  "Caroline": {
+    "1": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Power Batter": 1,
+      "OF Catch God": 1,
+      "Push-hit": 2,
+      "Twister": 1,
+      "Scoring Chance": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "OF Catch God": 2,
+      "Push-hit": 2,
+      "Twister": 1,
+      "Scoring Chance": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Golden Arm": 3,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "OF Catch God": 2,
+      "Push-hit": 2,
+      "Twister": 1,
+      "Scoring Chance": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Golden Arm": 3,
+      "Home Run Master": 1,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "OF Catch God": 2,
+      "Push-hit": 2,
+      "Twister": 2,
+      "Scoring Chance": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Switch Hitter": 2,
+      "Golden Arm": 3,
+      "Home Run Master": 2,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "OF Catch God": 2,
+      "Push-hit": 2,
+      "Twister": 2,
+      "Scoring Chance": 2
+    }
+  },
+  "Anubis": {
+    "1": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Power Batter": 1,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 1,
+      "Early Challenge": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Power Batter": 1,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 1,
+      "Early Challenge": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 3,
+      "Power Batter": 1,
+      "Provoke": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 1,
+      "Early Challenge": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 3,
+      "Power Batter": 1,
+      "Provoke": 2,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1
+    },
+    "5": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 3,
+      "Hit Master": 3,
+      "Power Batter": 1,
+      "Provoke": 2,
+      "Tight Defense": 3,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 2
+    }
+  },
+  "Bastet": {
+    "1": {
+      "C's Resolve": 1,
+      "Idol's Swing": 1,
+      "Framing": 1,
+      "Golden Arm": 1,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 1,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 1,
+      "Early Challenge": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Idol's Swing": 1,
+      "Framing": 1,
+      "Golden Arm": 2,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 1,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 1,
+      "Early Challenge": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Idol's Swing": 2,
+      "Framing": 1,
+      "Golden Arm": 2,
+      "Tenacity": 3,
+      "Anti RH Pitcher": 1,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 1,
+      "Early Challenge": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Idol's Swing": 2,
+      "Framing": 2,
+      "Golden Arm": 2,
+      "Tenacity": 3,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 2,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 1,
+      "Early Challenge": 1
+    },
+    "5": {
+      "C's Resolve": 1,
+      "Idol's Swing": 3,
+      "Framing": 2,
+      "Golden Arm": 2,
+      "Tenacity": 3,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 2,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 2,
+      "Early Challenge": 2
+    }
+  },
+  "Dion": {
+    "1": {
+      "2B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 2,
+      "Tight Defense": 1,
+      "IF Catch God": 1,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "New Resolution": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Horizontal Cut": 2,
+      "Tight Defense": 1,
+      "IF Catch God": 1,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "New Resolution": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Tight Defense": 1,
+      "IF Catch God": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "New Resolution": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Horizontal Cut": 3,
+      "Power Batter": 1,
+      "Tight Defense": 2,
+      "IF Catch God": 3,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "New Resolution": 1
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Power Batter": 2,
+      "Tight Defense": 2,
+      "IF Catch God": 3,
+      "IF Defense God": 3,
+      "Pull-Hit": 3,
+      "New Resolution": 2
+    }
+  },
+  "Roy": {
+    "1": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Framing": 1,
+      "Home Run Master": 1,
+      "Push-hit": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 1,
+      "Error Prevention": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Framing": 1,
+      "Home Run Master": 1,
+      "Push-hit": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Error Prevention": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 2,
+      "Framing": 1,
+      "Home Run Master": 2,
+      "Push-hit": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Error Prevention": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 2,
+      "Framing": 1,
+      "Home Run Master": 2,
+      "Power Batter": 1,
+      "Push-hit": 3,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Error Prevention": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "HR King Blessing": 3,
+      "Big Bang": 2,
+      "Framing": 2,
+      "Home Run Master": 2,
+      "Power Batter": 2,
+      "Push-hit": 3,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Error Prevention": 2
+    }
+  },
+  "Ines": {
+    "1": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Hit Master": 1,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Pure Survival": 1
+    },
+    "2": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Hit Master": 1,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Push-hit": 2,
+      "Pure Survival": 1
+    },
+    "3": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 1,
+      "Power Batter": 3,
+      "Provoke": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 1,
+      "Push-hit": 2,
+      "Pure Survival": 1
+    },
+    "4": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 1,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 2,
+      "Push-hit": 2,
+      "Pure Survival": 2
+    },
+    "5": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 2,
+      "Golden Arm": 2,
+      "Hit Master": 2,
+      "Power Batter": 3,
+      "Provoke": 3,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 3,
+      "Push-hit": 2,
+      "Pure Survival": 2
+    }
+  },
+  "Clefina": {
+    "1": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Power Batter": 2,
+      "Tenacity": 2,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 1,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Slugger Power": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Power Batter": 2,
+      "Tenacity": 2,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 1,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Slugger Power": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Power Batter": 3,
+      "Tenacity": 2,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 2,
+      "OF Throw God": 2,
+      "Super Slide": 1,
+      "Slugger Power": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 2,
+      "Power Batter": 3,
+      "Tenacity": 2,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 3,
+      "OF Throw God": 2,
+      "Super Slide": 1,
+      "Slugger Power": 1
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 2,
+      "Power Batter": 3,
+      "Tenacity": 3,
+      "Low-Ball Batter": 3,
+      "OF Catch God": 3,
+      "OF Throw God": 3,
+      "Super Slide": 1,
+      "Slugger Power": 1
+    }
+  },
+  "Rachel": {
+    "1": {
+      "3B's Resolve": 1,
+      "Idol's Swing": 1,
+      "Power Batter": 2,
+      "Roadrunner": 1,
+      "Anti LH Pitcher": 1,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 1,
+      "Gambler": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Idol's Swing": 1,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "Roadrunner": 1,
+      "Anti LH Pitcher": 1,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 1,
+      "Gambler": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Idol's Swing": 2,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Roadrunner": 2,
+      "Anti LH Pitcher": 1,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 1,
+      "Gambler": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Idol's Swing": 2,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Roadrunner": 2,
+      "Anti LH Pitcher": 3,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 1,
+      "Gambler": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Idol's Swing": 2,
+      "Home Run Master": 2,
+      "Power Batter": 3,
+      "Provoke": 3,
+      "Roadrunner": 2,
+      "Anti LH Pitcher": 3,
+      "IF Catch God": 3,
+      "Low-Ball Batter": 1,
+      "Gambler": 2
+    }
+  },
+  "Michaella": {
+    "1": {
+      "CF's Resolve": 1,
+      "Idol's Swing": 1,
+      "Tenacity": 1,
+      "Tight Defense": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Super Slide": 1,
+      "Hustle": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Idol's Swing": 1,
+      "Power Batter": 1,
+      "Tenacity": 1,
+      "Tight Defense": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Super Slide": 1,
+      "Hustle": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Idol's Swing": 2,
+      "Golden Arm": 1,
+      "Power Batter": 1,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Super Slide": 1,
+      "Hustle": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Idol's Swing": 2,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Super Slide": 1,
+      "Hustle": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Idol's Swing": 2,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "Tenacity": 2,
+      "Tight Defense": 3,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 3,
+      "Super Slide": 1,
+      "Hustle": 2
+    }
+  },
+  "Tsubaki": {
+    "1": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Roadrunner": 2,
+      "Drive": 1,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Golden Arm": 1,
+      "Power Batter": 1,
+      "Roadrunner": 2,
+      "Drive": 1,
+      "IF Defense God": 2,
+      "Push-hit": 2,
+      "Error Prevention": 1
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Power Batter": 1,
+      "Roadrunner": 3,
+      "Drive": 1,
+      "IF Defense God": 3,
+      "Push-hit": 2,
+      "Error Prevention": 1
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Power Batter": 1,
+      "Roadrunner": 3,
+      "Drive": 2,
+      "IF Defense God": 3,
+      "Push-hit": 2,
+      "Error Prevention": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 2,
+      "Power Batter": 3,
+      "Roadrunner": 3,
+      "Drive": 2,
+      "IF Defense God": 3,
+      "Push-hit": 3,
+      "Error Prevention": 2,
+      "Gambler": 1
+    }
+  },
+  "Luther": {
+    "1": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Golden Arm": 2,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 1,
+      "OF Throw God": 1,
+      "Pull-Hit": 2,
+      "Slugger Power": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Full Swing": 1,
+      "Golden Arm": 2,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 1,
+      "OF Throw God": 2,
+      "Pull-Hit": 2,
+      "Slugger Power": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Full Swing": 1,
+      "Golden Arm": 3,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 1,
+      "OF Throw God": 2,
+      "Pull-Hit": 2,
+      "Slugger Power": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Full Swing": 2,
+      "Golden Arm": 3,
+      "Roadrunner": 1,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 1,
+      "OF Throw God": 2,
+      "Pull-Hit": 2,
+      "Slugger Power": 3
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Switch Hitter": 2,
+      "Full Swing": 2,
+      "Golden Arm": 3,
+      "Roadrunner": 2,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 2,
+      "OF Throw God": 3,
+      "Pull-Hit": 2,
+      "Slugger Power": 3
+    }
+  },
+  "Flamesh": {
+    "1": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 1,
+      "IF Throw God": 1,
+      "Pull-Hit": 2,
+      "Early Challenge": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Home Run Master": 1,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Home Run Master": 2,
+      "Roadrunner": 2,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Super Slide": 1,
+      "Early Challenge": 3
+    }
+  },
+  "Britra": {
+    "1": {
+      "1B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Provoke": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Target Sighted": 2,
+      "Early Challenge": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 2,
+      "Home Run Master": 1,
+      "Provoke": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Target Sighted": 2,
+      "Early Challenge": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Home Run Master": 1,
+      "Provoke": 1,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Golden Arm": 1,
+      "Home Run Master": 2,
+      "Provoke": 2,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "HR King Blessing": 2,
+      "Big Bang": 3,
+      "Golden Arm": 2,
+      "Home Run Master": 2,
+      "Provoke": 3,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 3,
+      "Target Sighted": 2,
+      "Early Challenge": 2
+    }
+  },
+  "Chael": {
+    "1": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Full Swing": 2,
+      "Hit Master": 1,
+      "High-Ball Batter": 1,
+      "OF Defense God": 1,
+      "OF Throw God": 2,
+      "Hustle": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Full Swing": 2,
+      "Hit Master": 2,
+      "High-Ball Batter": 1,
+      "OF Defense God": 1,
+      "OF Throw God": 2,
+      "Hustle": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 2,
+      "Tight Defense": 1,
+      "High-Ball Batter": 1,
+      "OF Defense God": 1,
+      "OF Throw God": 2,
+      "Hustle": 2
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 3,
+      "Tight Defense": 2,
+      "High-Ball Batter": 1,
+      "OF Defense God": 1,
+      "OF Throw God": 2,
+      "Hustle": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 3,
+      "Tight Defense": 3,
+      "High-Ball Batter": 2,
+      "OF Defense God": 2,
+      "OF Throw God": 2,
+      "Super Slide": 3,
+      "Hustle": 2
+    }
+  },
+  "Helga": {
+    "1": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Golden Arm": 1,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "Drive": 1,
+      "IF Catch God": 1,
+      "Tactical Bunt": 2
+    },
+    "2": {
+      "HR King Blessing": 1,
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 2,
+      "Provoke": 2,
+      "Drive": 1,
+      "IF Catch God": 1,
+      "Tactical Bunt": 2
+    },
+    "3": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Drive": 1,
+      "IF Catch God": 1,
+      "Tactical Bunt": 2
+    },
+    "4": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Drive": 1,
+      "IF Catch God": 1,
+      "Target Sighted": 1,
+      "Tactical Bunt": 2
+    },
+    "5": {
+      "HR King Blessing": 2,
+      "SS's Resolve": 2,
+      "Golden Arm": 2,
+      "Home Run Master": 2,
+      "Power Batter": 3,
+      "Provoke": 2,
+      "Drive": 1,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Tactical Bunt": 2
+    }
+  },
+  "Seiryu": {
+    "1": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Big Bang": 1,
+      "Home Run Master": 2,
+      "Provoke": 1,
+      "IF Catch God": 2,
+      "Early Challenge": 1,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Big Bang": 1,
+      "Home Run Master": 2,
+      "Provoke": 2,
+      "IF Catch God": 2,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Big Bang": 2,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "Tight Defense": 1,
+      "IF Catch God": 2,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Big Bang": 2,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "Tight Defense": 1,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Switch Hitter": 2,
+      "Big Bang": 3,
+      "Home Run Master": 3,
+      "Provoke": 2,
+      "Tight Defense": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 3,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 3
+    }
+  },
+  "Kai": {
+    "1": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 2,
+      "Roadrunner": 1,
+      "Dash": 1,
+      "IF Defense God": 1,
+      "Four-Seam Hunter": 1,
+      "Gambler": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 1,
+      "Hit Master": 2,
+      "Horizontal Cut": 2,
+      "Roadrunner": 1,
+      "Dash": 1,
+      "IF Defense God": 1,
+      "Four-Seam Hunter": 2,
+      "Gambler": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Roadrunner": 1,
+      "Dash": 1,
+      "IF Defense God": 1,
+      "Four-Seam Hunter": 2,
+      "Gambler": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 1,
+      "IF Defense God": 1,
+      "Four-Seam Hunter": 2,
+      "Gambler": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Switch Hitter": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Provoke": 1,
+      "Roadrunner": 2,
+      "Dash": 2,
+      "IF Defense God": 2,
+      "Four-Seam Hunter": 3,
+      "Gambler": 2
+    }
+  },
+  "Nina": {
+    "1": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Big Bang": 1,
+      "Power Batter": 2,
+      "Anti RH Pitcher": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Hustle": 1
+    },
+    "2": {
+      "HR King Blessing": 1,
+      "RF's Resolve": 1,
+      "Big Bang": 1,
+      "Power Batter": 2,
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Target Sighted": 1,
+      "Hustle": 1
+    },
+    "3": {
+      "HR King Blessing": 2,
+      "RF's Resolve": 1,
+      "Big Bang": 3,
+      "Power Batter": 3,
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Target Sighted": 1,
+      "Hustle": 1
+    },
+    "4": {
+      "HR King Blessing": 2,
+      "RF's Resolve": 1,
+      "Big Bang": 3,
+      "Golden Arm": 1,
+      "Power Batter": 3,
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Target Sighted": 3,
+      "Hustle": 1
+    },
+    "5": {
+      "HR King Blessing": 2,
+      "RF's Resolve": 2,
+      "Big Bang": 3,
+      "Golden Arm": 3,
+      "Power Batter": 3,
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 2,
+      "OF Throw God": 3,
+      "Target Sighted": 3,
+      "Hustle": 1
+    }
+  },
+  "Sohyang": {
+    "1": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 1,
+      "Anti RH Pitcher": 1,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "New Resolution": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 1,
+      "Anti RH Pitcher": 1,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "New Resolution": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Hit Master": 1,
+      "Horizontal Cut": 3,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 1,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "New Resolution": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 1,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "New Resolution": 1
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Golden Arm": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Tenacity": 2,
+      "Anti RH Pitcher": 1,
+      "OF Catch God": 2,
+      "Target Sighted": 2,
+      "New Resolution": 3
+    }
+  },
+  "Ara": {
+    "1": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Roadrunner": 2,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Super Slide": 1,
+      "Walk Machine": 1,
+      "Gambler": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 1,
+      "Horizontal Cut": 1,
+      "Roadrunner": 2,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Super Slide": 1,
+      "Walk Machine": 1,
+      "Gambler": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Horizontal Cut": 1,
+      "Roadrunner": 3,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Super Slide": 1,
+      "Walk Machine": 1,
+      "Gambler": 2,
+      "New Resolution": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Switch Hitter": 2,
+      "Horizontal Cut": 2,
+      "Roadrunner": 3,
+      "Tenacity": 2,
+      "OF Defense God": 2,
+      "Super Slide": 1,
+      "Walk Machine": 1,
+      "Gambler": 2,
+      "New Resolution": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Switch Hitter": 2,
+      "Horizontal Cut": 2,
+      "Roadrunner": 3,
+      "Tenacity": 2,
+      "OF Defense God": 3,
+      "Super Slide": 2,
+      "Walk Machine": 2,
+      "Gambler": 2,
+      "New Resolution": 2
+    }
+  },
+  "King Tiger": {
+    "1": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Anti LH Pitcher": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 1,
+      "Early Challenge": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "HR King Blessing": 1,
+      "Big Bang": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Anti LH Pitcher": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 1,
+      "Framing": 3,
+      "Home Run Master": 1,
+      "Anti LH Pitcher": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "No Stolen Bases": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "HR King Blessing": 2,
+      "Big Bang": 1,
+      "Framing": 3,
+      "Home Run Master": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "HR King Blessing": 2,
+      "Big Bang": 2,
+      "Framing": 3,
+      "Home Run Master": 2,
+      "Anti LH Pitcher": 2,
+      "Iron Wall": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 3,
+      "No Stolen Bases": 2
+    }
+  },
+  "Luna": {
+    "1": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Full Swing": 2,
+      "Hit Master": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 1,
+      "Full Swing": 2,
+      "Hit Master": 1,
+      "Tight Defense": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 1,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 1,
+      "Tenacity": 2,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Top Batter Blessing": 2,
+      "Full Swing": 3,
+      "Hit Master": 2,
+      "Tenacity": 3,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 3,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2
+    }
+  },
+  "Daphne": {
+    "1": {
+      "2B's Resolve": 1,
+      "Horizontal Cut": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1,
+      "New Resolution": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1,
+      "New Resolution": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 3,
+      "IF Catch God": 2,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Hit Master": 1,
+      "Horizontal Cut": 3,
+      "Provoke": 1,
+      "IF Catch God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 1
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Hit Master": 2,
+      "Horizontal Cut": 3,
+      "Provoke": 1,
+      "IF Catch God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 2
+    }
+  },
+  "Kyoko": {
+    "1": {
+      "2B's Resolve": 1,
+      "Roadrunner": 1,
+      "Tenacity": 2,
+      "IF Throw God": 1,
+      "Pull-Hit": 1,
+      "Slugger Power": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Big Bang": 1,
+      "Roadrunner": 1,
+      "Tenacity": 2,
+      "IF Throw God": 1,
+      "Pull-Hit": 1,
+      "Slugger Power": 1,
+      "Walk-Off Hit": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Big Bang": 2,
+      "Roadrunner": 1,
+      "Tenacity": 3,
+      "IF Throw God": 1,
+      "Pull-Hit": 2,
+      "Slugger Power": 1,
+      "Walk-Off Hit": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Big Bang": 2,
+      "Power Batter": 1,
+      "Roadrunner": 1,
+      "Tenacity": 3,
+      "Anti RH Pitcher": 1,
+      "IF Throw God": 1,
+      "Pull-Hit": 2,
+      "Slugger Power": 1,
+      "Walk-Off Hit": 1
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Big Bang": 2,
+      "Power Batter": 2,
+      "Roadrunner": 1,
+      "Tenacity": 3,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 1,
+      "Pull-Hit": 2,
+      "Slugger Power": 1,
+      "Walk-Off Hit": 1
+    }
+  },
+  "Zia": {
+    "1": {
+      "CF's Resolve": 1,
+      "Horizontal Cut": 2,
+      "OF Catch God": 1,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Horizontal Cut": 2,
+      "OF Catch God": 1,
+      "Push-hit": 1,
+      "Super Jump": 2,
+      "Super Slide": 1,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Horizontal Cut": 3,
+      "Power Batter": 1,
+      "OF Catch God": 1,
+      "Push-hit": 1,
+      "Super Jump": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Horizontal Cut": 3,
+      "Power Batter": 2,
+      "OF Catch God": 2,
+      "Push-hit": 1,
+      "Super Jump": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Horizontal Cut": 3,
+      "Power Batter": 2,
+      "Tenacity": 1,
+      "OF Catch God": 2,
+      "Push-hit": 1,
+      "Super Jump": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 2
+    }
+  },
+  "Magnus": {
+    "1": {
+      "3B's Resolve": 1,
+      "Home Run Master": 2,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Gambler": 1,
+      "New Resolution": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Big Bang": 1,
+      "Home Run Master": 2,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Gambler": 1,
+      "New Resolution": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Big Bang": 2,
+      "Home Run Master": 3,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Super Jump": 1,
+      "Gambler": 1,
+      "New Resolution": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Big Bang": 2,
+      "Home Run Master": 3,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Super Jump": 2,
+      "Gambler": 2,
+      "New Resolution": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Big Bang": 2,
+      "Home Run Master": 3,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 2,
+      "Super Jump": 2,
+      "Gambler": 2,
+      "New Resolution": 1
+    }
+  },
+  "Monique": {
+    "1": {
+      "C's Resolve": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Iron Wall": 1,
+      "Push-hit": 1,
+      "Gambler": 1,
+      "Human Magnet": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Framing": 2,
+      "Home Run Master": 1,
+      "Iron Wall": 2,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Gambler": 2,
+      "Human Magnet": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Framing": 3,
+      "Home Run Master": 2,
+      "Iron Wall": 2,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Gambler": 2,
+      "Human Magnet": 1,
+      "Walk-Off Hit": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Idol's Swing": 1,
+      "Framing": 3,
+      "Home Run Master": 2,
+      "Iron Wall": 2,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Gambler": 2,
+      "Human Magnet": 1,
+      "Walk-Off Hit": 1
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Idol's Swing": 1,
+      "Framing": 3,
+      "Home Run Master": 2,
+      "Iron Wall": 2,
+      "Push-hit": 2,
+      "Super Jump": 2,
+      "Gambler": 2,
+      "Human Magnet": 2,
+      "Walk-Off Hit": 1
+    }
+  },
+  "Sophie": {
+    "1": {
+      "CF's Resolve": 1,
+      "Golden Arm": 1,
+      "Tenacity": 1,
+      "OF Catch God": 2,
+      "Push-hit": 1,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Golden Arm": 1,
+      "Tenacity": 2,
+      "OF Catch God": 2,
+      "Push-hit": 1,
+      "Scoring Chance": 2,
+      "Tactical Bunt": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Golden Arm": 2,
+      "Tenacity": 2,
+      "OF Catch God": 3,
+      "Push-hit": 1,
+      "Scoring Chance": 2,
+      "Tactical Bunt": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Idol's Swing": 1,
+      "Golden Arm": 2,
+      "Hit Master": 1,
+      "Tenacity": 2,
+      "OF Catch God": 3,
+      "Push-hit": 1,
+      "Scoring Chance": 2,
+      "Tactical Bunt": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Idol's Swing": 1,
+      "Golden Arm": 2,
+      "Hit Master": 1,
+      "Tenacity": 2,
+      "OF Catch God": 3,
+      "Push-hit": 2,
+      "Super Jump": 1,
+      "Scoring Chance": 2,
+      "Tactical Bunt": 1
+    }
+  },
+  "Nameless": {
+    "1": {
+      "2B's Resolve": 1,
+      "Horizontal Cut": 1,
+      "Tenacity": 2,
+      "High-Ball Batter": 1,
+      "IF Catch God": 1,
+      "Gambler": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Horizontal Cut": 1,
+      "Tenacity": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Gambler": 1,
+      "Walk-Off Hit": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 3,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Gambler": 1,
+      "New Resolution": 1,
+      "Walk-Off Hit": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 3,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Gambler": 1,
+      "New Resolution": 2,
+      "Walk-Off Hit": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Hit Master": 1,
+      "Horizontal Cut": 2,
+      "Tenacity": 3,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Push-hit": 1,
+      "Gambler": 2,
+      "New Resolution": 2,
+      "Walk-Off Hit": 3
+    }
+  },
+  "Mei Mei": {
+    "1": {
+      "LF's Resolve": 1,
+      "Hit Master": 2,
+      "OF Defense God": 1,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "New Resolution": 1,
+      "Slugger Power": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Hit Master": 2,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "New Resolution": 1,
+      "Slugger Power": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Hit Master": 3,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "New Resolution": 1,
+      "Slugger Power": 2
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Hit Master": 3,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "New Resolution": 2,
+      "Point Man": 1,
+      "Slugger Power": 2
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Hit Master": 3,
+      "Tenacity": 2,
+      "OF Defense God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "New Resolution": 2,
+      "Point Man": 2,
+      "Slugger Power": 2
+    }
+  },
+  "Albert": {
+    "1": {
+      "SS's Resolve": 1,
+      "Full Swing": 2,
+      "Anti RH Pitcher": 1,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Hustle": 1,
+      "Point Man": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Full Swing": 2,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Walk Machine": 1,
+      "Hustle": 1,
+      "Point Man": 1
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Full Swing": 3,
+      "Power Batter": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Walk Machine": 2,
+      "Hustle": 2,
+      "Point Man": 1
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Full Swing": 3,
+      "Power Batter": 1,
+      "Provoke": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Walk Machine": 2,
+      "Hustle": 2,
+      "Point Man": 1
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Full Swing": 3,
+      "Power Batter": 2,
+      "Provoke": 1,
+      "Anti RH Pitcher": 2,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 2,
+      "Walk Machine": 2,
+      "Hustle": 2,
+      "Point Man": 1
+    }
+  },
+  "Base Hero": {
+    "1": {
+      "3B's Resolve": 1,
+      "Tight Defense": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 1,
+      "Super Jump": 1,
+      "Error Prevention": 2
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Tight Defense": 2,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 1,
+      "Super Jump": 1,
+      "Error Prevention": 2
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Power Batter": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 1,
+      "Super Jump": 2,
+      "Error Prevention": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Power Batter": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Super Jump": 2,
+      "Error Prevention": 2,
+      "Slugger Power": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Power Batter": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Super Jump": 2,
+      "Error Prevention": 2,
+      "Gambler": 1,
+      "Slugger Power": 2
+    }
+  },
+  "Tauric": {
+    "1": {
+      "RF's Resolve": 1,
+      "Provoke": 2,
+      "OF Throw God": 1,
+      "Pull-Hit": 1,
+      "Target Sighted": 1,
+      "Error Prevention": 1,
+      "Hustle": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Provoke": 2,
+      "OF Throw God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Error Prevention": 1,
+      "Hustle": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Golden Arm": 1,
+      "Provoke": 3,
+      "OF Throw God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Error Prevention": 1,
+      "Hustle": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Provoke": 3,
+      "OF Throw God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Error Prevention": 1,
+      "Hustle": 1
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Full Swing": 1,
+      "Golden Arm": 2,
+      "Home Run Master": 1,
+      "Provoke": 3,
+      "OF Throw God": 2,
+      "Pull-Hit": 3,
+      "Target Sighted": 1,
+      "Error Prevention": 1,
+      "Hustle": 1
+    }
+  },
+  "Helen": {
+    "1": {
+      "RF's Resolve": 1,
+      "Tight Defense": 2,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 1,
+      "Walk Machine": 1,
+      "Error Prevention": 1,
+      "Point Man": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Tight Defense": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 1,
+      "Error Prevention": 1,
+      "Point Man": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Tight Defense": 3,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 2,
+      "Error Prevention": 1,
+      "Point Man": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 1,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 2,
+      "Error Prevention": 1,
+      "Point Man": 1
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Full Swing": 2,
+      "Tight Defense": 3,
+      "Anti RH Pitcher": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 2,
+      "Error Prevention": 1,
+      "Point Man": 1,
+      "Chaser": 2
+    }
+  },
+  "NOM": {
+    "1": {
+      "CF's Resolve": 1,
+      "Roadrunner": 2,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 1,
+      "Super Jump": 1,
+      "Tactical Bunt": 2
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Roadrunner": 2,
+      "Dash": 1,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 2,
+      "Super Jump": 1,
+      "Tactical Bunt": 2
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Provoke": 1,
+      "Roadrunner": 3,
+      "Dash": 1,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Super Jump": 1,
+      "Tactical Bunt": 2
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Provoke": 1,
+      "Roadrunner": 3,
+      "Dash": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Super Jump": 1,
+      "Scoring Chance": 1,
+      "Tactical Bunt": 2
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Provoke": 2,
+      "Roadrunner": 3,
+      "Dash": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Super Jump": 1,
+      "Scoring Chance": 2,
+      "Tactical Bunt": 2,
+      "Dbl Play Machine": 2
+    }
+  },
+  "Golden Boy": {
+    "1": {
+      "LF's Resolve": 1,
+      "Hit Master": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Four-Seam Hunter": 1,
+      "Slugger Power": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Hit Master": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 2,
+      "Target Sighted": 1,
+      "Four-Seam Hunter": 2,
+      "Slugger Power": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Hit Master": 3,
+      "High-Ball Batter": 2,
+      "OF Throw God": 2,
+      "Target Sighted": 1,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 1,
+      "Slugger Power": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Hit Master": 3,
+      "Anti RH Pitcher": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 2,
+      "Target Sighted": 1,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 1,
+      "Slugger Power": 1
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Hit Master": 3,
+      "Anti RH Pitcher": 2,
+      "High-Ball Batter": 2,
+      "OF Throw God": 2,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 2,
+      "New Resolution": 2,
+      "Slugger Power": 2,
+      "Human Magnet": 2
+    }
+  },
+  "Elfin": {
+    "1": {
+      "1B's Resolve": 1,
+      "Tenacity": 2,
+      "Burst": 1,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Scoring Chance": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Tenacity": 2,
+      "Burst": 1,
+      "Dash": 1,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Scoring Chance": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Tenacity": 3,
+      "Tight Defense": 1,
+      "Burst": 2,
+      "Dash": 1,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Scoring Chance": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Tenacity": 3,
+      "Tight Defense": 1,
+      "Burst": 2,
+      "Dash": 2,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Scoring Chance": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Tenacity": 3,
+      "Tight Defense": 2,
+      "Burst": 2,
+      "Dash": 2,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 2,
+      "Gambler": 1,
+      "Scoring Chance": 2
+    }
+  },
+  "Lucy": {
+    "1": {
+      "C's Resolve": 1,
+      "Framing": 2,
+      "Iron Wall": 2,
+      "Push-hit": 1,
+      "Point Man": 1,
+      "Short Swing": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Framing": 2,
+      "Push-hit": 2,
+      "Point Man": 1,
+      "Short Swing": 2,
+      "No Stolen Bases": 1
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Framing": 3,
+      "Tenacity": 1,
+      "Iron Wall": 2,
+      "Push-hit": 2,
+      "Walk Machine": 1,
+      "Point Man": 1,
+      "Short Swing": 2,
+      "No Stolen Bases": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Framing": 3,
+      "Tenacity": 1,
+      "Iron Wall": 2,
+      "Push-hit": 2,
+      "Walk Machine": 2,
+      "Point Man": 2,
+      "Short Swing": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Framing": 3,
+      "Hit Master": 1,
+      "Tenacity": 1,
+      "Iron Wall": 2,
+      "Push-hit": 2,
+      "Walk Machine": 3,
+      "Point Man": 2,
+      "Short Swing": 2,
+      "No Stolen Bases": 2
+    }
+  },
+  "Policia": {
+    "1": {
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Hustle": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Golden Arm": 2,
+      "Power Batter": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 1,
+      "Super Slide": 1,
+      "Hustle": 1,
+      "Dbl Play Machine": 1
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Golden Arm": 3,
+      "Power Batter": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Super Slide": 1,
+      "Hustle": 2,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Golden Arm": 3,
+      "Power Batter": 2,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Super Slide": 2,
+      "Hustle": 2,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Big Bang": 1,
+      "Golden Arm": 3,
+      "Power Batter": 2,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Super Slide": 2,
+      "Hustle": 2,
+      "Pure Survival": 1,
+      "Dbl Play Machine": 2
+    }
+  },
+  "Basedevil": {
+    "1": {
+      "1B's Resolve": 1,
+      "Full Swing": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "Four-Seam Hunter": 1,
+      "Scoring Chance": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Full Swing": 2,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Four-Seam Hunter": 2,
+      "Scoring Chance": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Full Swing": 3,
+      "Power Batter": 1,
+      "Anti RH Pitcher": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Four-Seam Hunter": 2,
+      "Scoring Chance": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Full Swing": 3,
+      "Power Batter": 1,
+      "Anti RH Pitcher": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Four-Seam Hunter": 2,
+      "Scoring Chance": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Full Swing": 3,
+      "Power Batter": 1,
+      "Anti RH Pitcher": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Super Jump": 1,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 2,
+      "Scoring Chance": 2
+    }
+  },
+  "Pi": {
+    "1": {
+      "SS's Resolve": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 1,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 1,
+      "Pure Survival": 1,
+      "Tactical Bunt": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Tight Defense": 2,
+      "Anti LH Pitcher": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 1,
+      "Pure Survival": 2,
+      "Tactical Bunt": 2
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Anti LH Pitcher": 2,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 1,
+      "Pure Survival": 2,
+      "Tactical Bunt": 2
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Anti LH Pitcher": 2,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Twister": 1,
+      "Pure Survival": 2,
+      "Tactical Bunt": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Tenacity": 1,
+      "Tight Defense": 3,
+      "Anti LH Pitcher": 2,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Twister": 2,
+      "Point Man": 1,
+      "Pure Survival": 2,
+      "Tactical Bunt": 2
+    }
+  },
+  "Kryzer": {
+    "1": {
+      "2B's Resolve": 1,
+      "Tenacity": 2,
+      "IF Catch God": 1,
+      "Low-Ball Batter": 2,
+      "Power Swing": 2
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Tenacity": 2,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 2,
+      "Target Sighted": 1,
+      "Power Swing": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Tenacity": 3,
+      "Tight Defense": 1,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 2,
+      "Target Sighted": 2,
+      "Power Swing": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Tenacity": 3,
+      "Tight Defense": 1,
+      "Dash": 1,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 2,
+      "Target Sighted": 2,
+      "Power Swing": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Tenacity": 3,
+      "Tight Defense": 2,
+      "Dash": 2,
+      "IF Catch God": 2,
+      "Low-Ball Batter": 2,
+      "Target Sighted": 2,
+      "Power Swing": 2,
+      "Slugger Power": 1
+    }
+  },
+  "Mia": {
+    "1": {
+      "2B's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "IF Throw God": 1,
+      "Pull-Hit": 1,
+      "Hustle": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 2,
+      "IF Throw God": 2,
+      "Pull-Hit": 1,
+      "Hustle": 1,
+      "Walk-Off Hit": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Golden Arm": 1,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Hustle": 2,
+      "Walk-Off Hit": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Golden Arm": 2,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Error Prevention": 1,
+      "Hustle": 2,
+      "Walk-Off Hit": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Golden Arm": 2,
+      "Hit Master": 3,
+      "Provoke": 1,
+      "IF Throw God": 2,
+      "Pull-Hit": 2,
+      "Error Prevention": 2,
+      "Hustle": 2,
+      "Pure Survival": 2,
+      "Walk-Off Hit": 2
+    }
+  },
+  "Zena": {
+    "1": {
+      "CF's Resolve": 1,
+      "Roadrunner": 2,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 2,
+      "Pure Survival": 1,
+      "Scoring Chance": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Roadrunner": 2,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Super Jump": 1,
+      "Pure Survival": 1,
+      "Scoring Chance": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Full Swing": 1,
+      "Roadrunner": 3,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Super Jump": 2,
+      "Pure Survival": 1,
+      "Scoring Chance": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Full Swing": 1,
+      "Roadrunner": 3,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Super Jump": 2,
+      "Hustle": 1,
+      "Pure Survival": 2,
+      "Scoring Chance": 2
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Full Swing": 2,
+      "Roadrunner": 3,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Super Jump": 2,
+      "Super Slide": 1,
+      "Hustle": 1,
+      "Pure Survival": 2,
+      "Scoring Chance": 2
+    }
+  },
+  "Liew": {
+    "1": {
+      "3B's Resolve": 1,
+      "Provoke": 2,
+      "Drive": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Provoke": 2,
+      "Drive": 2,
+      "IF Catch God": 1,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Hit Master": 1,
+      "Provoke": 3,
+      "Drive": 2,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Hit Master": 1,
+      "Provoke": 3,
+      "Drive": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Hit Master": 1,
+      "Provoke": 3,
+      "Anti LH Pitcher": 1,
+      "Drive": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 2,
+      "Walk Machine": 2,
+      "Four-Seam Hunter": 2,
+      "Point Man": 2
+    }
+  },
+  "Guy-E": {
+    "1": {
+      "1B's Resolve": 1,
+      "Home Run Master": 2,
+      "Burst": 1,
+      "High-Ball Batter": 1,
+      "IF Catch God": 1,
+      "Pure Survival": 1,
+      "Slugger Power": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Home Run Master": 2,
+      "Burst": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 1,
+      "Pure Survival": 1,
+      "Slugger Power": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Home Run Master": 3,
+      "Burst": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 1,
+      "Pure Survival": 1,
+      "Slugger Power": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Home Run Master": 3,
+      "Provoke": 1,
+      "Burst": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Pure Survival": 1,
+      "Slugger Power": 1
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Home Run Master": 3,
+      "Provoke": 1,
+      "Tight Defense": 1,
+      "Burst": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 2,
+      "Pure Survival": 1,
+      "Slugger Power": 2
+    }
+  },
+  "Velour": {
+    "1": {
+      "3B's Resolve": 1,
+      "Power Batter": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "New Resolution": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Power Batter": 2,
+      "Drive": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "New Resolution": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "Power Batter": 3,
+      "Drive": 1,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "New Resolution": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "Power Batter": 3,
+      "Drive": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 2,
+      "New Resolution": 2,
+      "Scoring Chance": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Hit Master": 1,
+      "Home Run Master": 1,
+      "Power Batter": 3,
+      "Drive": 2,
+      "IF Defense God": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 2,
+      "New Resolution": 2,
+      "Scoring Chance": 2
+    }
+  },
+  "Medica": {
+    "1": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Golden Arm": 2,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 1,
+      "Error Prevention": 1,
+      "Focused Defense": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Full Swing": 1,
+      "Golden Arm": 2,
+      "Anti LH Pitcher": 1,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 2,
+      "Error Prevention": 1,
+      "Focused Defense": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Full Swing": 2,
+      "Golden Arm": 3,
+      "Anti LH Pitcher": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Error Prevention": 1,
+      "Focused Defense": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Full Swing": 2,
+      "Golden Arm": 3,
+      "Anti LH Pitcher": 2,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Error Prevention": 1,
+      "Focused Defense": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Full Swing": 2,
+      "Golden Arm": 3,
+      "Power Batter": 1,
+      "Anti LH Pitcher": 2,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Error Prevention": 2,
+      "Pure Survival": 1,
+      "Focused Defense": 2
+    }
+  },
+  "Scumbag Joe": {
+    "1": {
+      "LF's Resolve": 1,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 1,
+      "Tactical Bunt": 1,
+      "Terminator": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Provoke": 2,
+      "Roadrunner": 1,
+      "Dash": 1,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 2,
+      "Tactical Bunt": 1,
+      "Terminator": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Provoke": 3,
+      "Roadrunner": 2,
+      "Dash": 1,
+      "Low-Ball Batter": 1,
+      "OF Defense God": 2,
+      "Walk Machine": 1,
+      "Tactical Bunt": 1,
+      "Terminator": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Provoke": 3,
+      "Roadrunner": 2,
+      "Dash": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 1,
+      "Tactical Bunt": 1,
+      "Terminator": 1
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Hit Master": 1,
+      "Provoke": 3,
+      "Roadrunner": 2,
+      "Dash": 2,
+      "Low-Ball Batter": 2,
+      "OF Defense God": 2,
+      "Walk Machine": 2,
+      "Tactical Bunt": 1,
+      "Terminator": 1
+    }
+  },
+  "Rose": {
+    "1": {
+      "C's Resolve": 1,
+      "Big Bang": 2,
+      "Framing": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 1,
+      "Slugger Power": 1,
+      "Chaser": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Big Bang": 2,
+      "Framing": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Slugger Power": 2,
+      "Chaser": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Big Bang": 3,
+      "Framing": 1,
+      "Power Batter": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Slugger Power": 2,
+      "Chaser": 2,
+      "No Stolen Bases": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Big Bang": 3,
+      "Framing": 2,
+      "Power Batter": 1,
+      "High-Ball Batter": 2,
+      "Iron Wall": 2,
+      "Slugger Power": 2,
+      "Chaser": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Big Bang": 3,
+      "Framing": 2,
+      "Power Batter": 1,
+      "Roadrunner": 1,
+      "High-Ball Batter": 2,
+      "Iron Wall": 2,
+      "Slugger Power": 2,
+      "Chaser": 2,
+      "No Stolen Bases": 3
+    }
+  },
+  "Riki": {
+    "1": {
+      "1B's Resolve": 1,
+      "Burst": 2,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Point Man": 1,
+      "Terminator": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Burst": 2,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1,
+      "Terminator": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Burst": 3,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Four-Seam Hunter": 1,
+      "Point Man": 1,
+      "Terminator": 1
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Tight Defense": 1,
+      "Burst": 3,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Four-Seam Hunter": 2,
+      "Point Man": 1,
+      "Terminator": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Tight Defense": 2,
+      "Burst": 3,
+      "IF Defense God": 1,
+      "Push-hit": 1,
+      "Four-Seam Hunter": 2,
+      "Point Man": 1,
+      "Terminator": 2
+    }
+  },
+  "Lina": {
+    "1": {
+      "3B's Resolve": 1,
+      "IF Throw God": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 1,
+      "Chaser": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "IF Throw God": 2,
+      "Pull-Hit": 1,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Chaser": 2
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "IF Throw God": 3,
+      "Pull-Hit": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Power Swing": 1,
+      "Chaser": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "IF Throw God": 3,
+      "Pull-Hit": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 1,
+      "Power Swing": 1,
+      "Chaser": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Home Run Master": 1,
+      "IF Throw God": 3,
+      "Pull-Hit": 2,
+      "Target Sighted": 2,
+      "Early Challenge": 2,
+      "Power Swing": 2,
+      "Chaser": 2
+    }
+  },
+  "Kate": {
+    "1": {
+      "CF's Resolve": 1,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 1,
+      "Twister": 2,
+      "New Resolution": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Twister": 2,
+      "New Resolution": 2,
+      "Walk-Off Hit": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Twister": 3,
+      "Walk Machine": 1,
+      "New Resolution": 2,
+      "Walk-Off Hit": 1
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Tight Defense": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Twister": 3,
+      "Walk Machine": 1,
+      "New Resolution": 2,
+      "Walk-Off Hit": 1
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Tight Defense": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Twister": 3,
+      "Walk Machine": 2,
+      "New Resolution": 2,
+      "Point Man": 1,
+      "Walk-Off Hit": 1
+    }
+  },
+  "Rex": {
+    "1": {
+      "C's Resolve": 1,
+      "Tight Defense": 1,
+      "Pull-Hit": 1,
+      "Twister": 2,
+      "Gambler": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Tight Defense": 1,
+      "Iron Wall": 1,
+      "Pull-Hit": 1,
+      "Twister": 2,
+      "Gambler": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Tight Defense": 1,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Twister": 3,
+      "Gambler": 2,
+      "No Stolen Bases": 1
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Tight Defense": 1,
+      "Dash": 1,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Twister": 3,
+      "Gambler": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Framing": 1,
+      "Tight Defense": 1,
+      "Dash": 1,
+      "Iron Wall": 2,
+      "Pull-Hit": 1,
+      "Twister": 3,
+      "Gambler": 2,
+      "No Stolen Bases": 2
+    }
+  },
+  "Flora": {
+    "1": {
+      "SS's Resolve": 1,
+      "IF Defense God": 1,
+      "Low-Ball Batter": 1,
+      "Super Jump": 2,
+      "Short Swing": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Jump": 2,
+      "Super Slide": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 1
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Dash": 1,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Jump": 3,
+      "Super Slide": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 1
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Dash": 1,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Jump": 3,
+      "Super Slide": 1,
+      "Short Swing": 2,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Roadrunner": 1,
+      "Dash": 1,
+      "IF Defense God": 2,
+      "Low-Ball Batter": 1,
+      "Super Jump": 3,
+      "Super Slide": 1,
+      "Short Swing": 2,
+      "Dbl Play Machine": 3
+    }
+  },
+  "Paris": {
+    "1": {
+      "LF's Resolve": 1,
+      "High-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Target Sighted": 1,
+      "Hustle": 1,
+      "Terminator": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "High-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Target Sighted": 2,
+      "Hustle": 1,
+      "Power Swing": 1,
+      "Terminator": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "High-Ball Batter": 3,
+      "OF Defense God": 2,
+      "Target Sighted": 2,
+      "Hustle": 1,
+      "Power Swing": 1,
+      "Terminator": 2
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Power Batter": 1,
+      "High-Ball Batter": 3,
+      "OF Defense God": 2,
+      "Target Sighted": 2,
+      "Hustle": 1,
+      "Power Swing": 1,
+      "Terminator": 2
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Power Batter": 1,
+      "High-Ball Batter": 3,
+      "OF Defense God": 2,
+      "Target Sighted": 2,
+      "Hustle": 2,
+      "Power Swing": 2,
+      "Terminator": 2
+    }
+  },
+  "Eia": {
+    "1": {
+      "CF's Resolve": 1,
+      "Drive": 1,
+      "OF Defense God": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 1,
+      "Focused Defense": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Drive": 1,
+      "OF Defense God": 2,
+      "Pull-Hit": 1,
+      "Four-Seam Hunter": 2,
+      "Focused Defense": 2
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Drive": 1,
+      "OF Defense God": 3,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "Four-Seam Hunter": 2,
+      "Focused Defense": 2
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Drive": 2,
+      "OF Defense God": 3,
+      "Pull-Hit": 2,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 2,
+      "Focused Defense": 2
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Provoke": 1,
+      "Drive": 2,
+      "OF Defense God": 3,
+      "Pull-Hit": 2,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 2,
+      "Focused Defense": 2
+    }
+  },
+  "Patricia": {
+    "1": {
+      "SS's Resolve": 1,
+      "Anti RH Pitcher": 2,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "Gambler": 1,
+      "Human Magnet": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Anti RH Pitcher": 2,
+      "IF Defense God": 1,
+      "Pull-Hit": 1,
+      "Walk Machine": 1,
+      "Gambler": 1,
+      "Human Magnet": 2
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Anti RH Pitcher": 3,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "Walk Machine": 1,
+      "Gambler": 2,
+      "Human Magnet": 2
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 3,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "Walk Machine": 1,
+      "Gambler": 2,
+      "Human Magnet": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Roadrunner": 1,
+      "Anti RH Pitcher": 3,
+      "IF Defense God": 1,
+      "Pull-Hit": 2,
+      "Walk Machine": 1,
+      "Gambler": 2,
+      "Short Swing": 1,
+      "Human Magnet": 3
+    }
+  },
+  "Siren": {
+    "1": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "Low-Ball Batter": 1,
+      "Super Slide": 1,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "Low-Ball Batter": 1,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Pure Survival": 2,
+      "Walk-Off Hit": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 3,
+      "Low-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Pure Survival": 2,
+      "Walk-Off Hit": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 3,
+      "Low-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Pure Survival": 2,
+      "Walk-Off Hit": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 3,
+      "Low-Ball Batter": 2,
+      "OF Throw God": 1,
+      "Super Slide": 1,
+      "Pure Survival": 3,
+      "Focused Defense": 1,
+      "Walk-Off Hit": 2
+    }
+  },
+  "Brokel": {
+    "1": {
+      "CF's Resolve": 1,
+      "Home Run Master": 1,
+      "Burst": 2,
+      "Super Jump": 1,
+      "Pure Survival": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "Home Run Master": 1,
+      "Burst": 2,
+      "OF Defense God": 1,
+      "Super Jump": 1,
+      "Pure Survival": 1,
+      "Focused Defense": 1
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "Home Run Master": 1,
+      "Burst": 3,
+      "OF Defense God": 1,
+      "Super Jump": 2,
+      "Pure Survival": 1,
+      "Focused Defense": 2
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Home Run Master": 2,
+      "Burst": 3,
+      "OF Defense God": 1,
+      "Super Jump": 2,
+      "Pure Survival": 1,
+      "Focused Defense": 2
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Home Run Master": 2,
+      "Burst": 3,
+      "OF Defense God": 2,
+      "Super Jump": 2,
+      "Pure Survival": 1,
+      "Focused Defense": 3
+    }
+  },
+  "Gladius": {
+    "1": {
+      "2B's Resolve": 1,
+      "Drive": 2,
+      "IF Throw God": 1,
+      "Push-hit": 1,
+      "New Resolution": 1,
+      "Human Magnet": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Drive": 2,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "New Resolution": 2,
+      "Human Magnet": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Drive": 3,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "Walk Machine": 1,
+      "New Resolution": 2,
+      "Human Magnet": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Drive": 3,
+      "IF Throw God": 2,
+      "Push-hit": 2,
+      "Walk Machine": 1,
+      "New Resolution": 2,
+      "Human Magnet": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Golden Arm": 1,
+      "Drive": 3,
+      "IF Throw God": 2,
+      "Push-hit": 2,
+      "Walk Machine": 1,
+      "New Resolution": 2,
+      "Human Magnet": 3
+    }
+  },
+  "Pazuzu": {
+    "1": {
+      "LF's Resolve": 1,
+      "Low-Ball Batter": 1,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "Pure Survival": 1,
+      "Chaser": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Target Sighted": 2,
+      "Pure Survival": 1,
+      "Chaser": 2
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Dash": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Target Sighted": 3,
+      "Pure Survival": 2,
+      "Chaser": 2
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Hit Master": 1,
+      "Dash": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Target Sighted": 3,
+      "Pure Survival": 2,
+      "Chaser": 2
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Hit Master": 1,
+      "Dash": 1,
+      "Low-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Target Sighted": 3,
+      "Early Challenge": 1,
+      "Pure Survival": 2,
+      "Chaser": 3
+    }
+  },
+  "Hell Guy": {
+    "1": {
+      "1B's Resolve": 1,
+      "IF Throw God": 1,
+      "Low-Ball Batter": 2,
+      "Twister": 1,
+      "Point Man": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 2,
+      "Twister": 1,
+      "Point Man": 1,
+      "Dbl Play Machine": 2
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 3,
+      "Twister": 2,
+      "Error Prevention": 1,
+      "Point Man": 1,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 3,
+      "Twister": 2,
+      "Error Prevention": 1,
+      "Point Man": 2,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Home Run Master": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 3,
+      "Twister": 2,
+      "Error Prevention": 1,
+      "Point Man": 2,
+      "Dbl Play Machine": 3
+    }
+  },
+  "Zen": {
+    "1": {
+      "C's Resolve": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 1,
+      "Target Sighted": 2,
+      "Slugger Power": 1,
+      "No Stolen Bases": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 2,
+      "Slugger Power": 1,
+      "No Stolen Bases": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Framing": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 3,
+      "Slugger Power": 2,
+      "No Stolen Bases": 2
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Framing": 1,
+      "Burst": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Target Sighted": 3,
+      "Slugger Power": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Framing": 1,
+      "Burst": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 3,
+      "Target Sighted": 3,
+      "Slugger Power": 2,
+      "Human Magnet": 1,
+      "No Stolen Bases": 2
+    }
+  },
+  "Pale": {
+    "1": {
+      "3B's Resolve": 1,
+      "Anti LH Pitcher": 1,
+      "High-Ball Batter": 1,
+      "IF Catch God": 2,
+      "Four-Seam Hunter": 1,
+      "Human Magnet": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "High-Ball Batter": 1,
+      "IF Catch God": 2,
+      "Twister": 1,
+      "Four-Seam Hunter": 1,
+      "Human Magnet": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "High-Ball Batter": 1,
+      "IF Catch God": 3,
+      "Twister": 1,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2,
+      "Human Magnet": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "High-Ball Batter": 1,
+      "IF Catch God": 3,
+      "Twister": 2,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2,
+      "Human Magnet": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Anti LH Pitcher": 2,
+      "High-Ball Batter": 2,
+      "IF Catch God": 3,
+      "Twister": 2,
+      "Walk Machine": 1,
+      "Four-Seam Hunter": 2,
+      "Human Magnet": 2
+    }
+  },
+  "Talas": {
+    "1": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "Push-hit": 1,
+      "Super Slide": 2,
+      "Short Swing": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "Super Slide": 2,
+      "Short Swing": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "Dash": 1,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "Super Slide": 3,
+      "Short Swing": 1
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Home Run Master": 2,
+      "Dash": 1,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "Super Slide": 3,
+      "Short Swing": 1
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Home Run Master": 2,
+      "Dash": 2,
+      "IF Throw God": 1,
+      "Push-hit": 2,
+      "Super Slide": 3,
+      "Short Swing": 1,
+      "Terminator": 1
+    }
+  },
+  "Acro": {
+    "1": {
+      "RF's Resolve": 1,
+      "Dash": 1,
+      "High-Ball Batter": 1,
+      "OF Catch God": 2,
+      "Tactical Bunt": 1,
+      "Focused Defense": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Dash": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 2,
+      "Tactical Bunt": 1,
+      "Focused Defense": 2
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Burst": 1,
+      "Dash": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 3,
+      "Tactical Bunt": 2,
+      "Focused Defense": 2
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Golden Arm": 1,
+      "Burst": 1,
+      "Dash": 2,
+      "High-Ball Batter": 1,
+      "OF Catch God": 3,
+      "Tactical Bunt": 2,
+      "Focused Defense": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Golden Arm": 1,
+      "Burst": 1,
+      "Dash": 2,
+      "High-Ball Batter": 2,
+      "OF Catch God": 3,
+      "Tactical Bunt": 2,
+      "Focused Defense": 3
+    }
+  },
+  "Soun": {
+    "1": {
+      "3B's Resolve": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 1,
+      "Twister": 1,
+      "Scoring Chance": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "IF Throw God": 2,
+      "Low-Ball Batter": 1,
+      "Twister": 1,
+      "Hustle": 1,
+      "Scoring Chance": 2,
+      "Dbl Play Machine": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "IF Throw God": 3,
+      "Low-Ball Batter": 1,
+      "Twister": 2,
+      "Hustle": 1,
+      "Scoring Chance": 2,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "IF Throw God": 3,
+      "Low-Ball Batter": 2,
+      "Twister": 2,
+      "Hustle": 1,
+      "Scoring Chance": 2,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Power Batter": 1,
+      "IF Throw God": 3,
+      "Low-Ball Batter": 2,
+      "Twister": 2,
+      "Hustle": 1,
+      "Scoring Chance": 2,
+      "Dbl Play Machine": 3
+    }
+  },
+  "Nio": {
+    "1": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 1,
+      "OF Throw God": 1,
+      "Push-hit": 2,
+      "Power Swing": 1,
+      "Chaser": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "OF Throw God": 1,
+      "Push-hit": 2,
+      "Target Sighted": 1,
+      "Power Swing": 1,
+      "Chaser": 1
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "OF Throw God": 1,
+      "Push-hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Chaser": 1
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "OF Throw God": 2,
+      "Push-hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Chaser": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Roadrunner": 1,
+      "Anti LH Pitcher": 2,
+      "OF Throw God": 2,
+      "Push-hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Chaser": 3
+    }
+  },
+  "Liuxia": {
+    "1": {
+      "RF's Resolve": 1,
+      "Tenacity": 1,
+      "High-Ball Batter": 1,
+      "Super Jump": 2,
+      "New Resolution": 1
+    },
+    "2": {
+      "RF's Resolve": 1,
+      "Tenacity": 1,
+      "High-Ball Batter": 1,
+      "OF Catch God": 1,
+      "Super Jump": 2,
+      "New Resolution": 2
+    },
+    "3": {
+      "RF's Resolve": 1,
+      "Tenacity": 1,
+      "High-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Super Jump": 3,
+      "New Resolution": 2
+    },
+    "4": {
+      "RF's Resolve": 1,
+      "Tenacity": 1,
+      "High-Ball Batter": 2,
+      "OF Catch God": 1,
+      "Super Jump": 3,
+      "Error Prevention": 1,
+      "New Resolution": 2
+    },
+    "5": {
+      "RF's Resolve": 2,
+      "Tenacity": 2,
+      "High-Ball Batter": 2,
+      "OF Catch God": 2,
+      "Super Jump": 3,
+      "Error Prevention": 1,
+      "New Resolution": 2
+    }
+  },
+  "Liuxing": {
+    "1": {
+      "2B's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "Pull-Hit": 1,
+      "Super Slide": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "Pull-Hit": 2,
+      "Super Slide": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Anti LH Pitcher": 3,
+      "Pull-Hit": 2,
+      "Super Slide": 2,
+      "Hustle": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 3,
+      "Pull-Hit": 2,
+      "Super Slide": 2,
+      "Hustle": 1,
+      "Short Swing": 1,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Tight Defense": 1,
+      "Anti LH Pitcher": 3,
+      "Pull-Hit": 2,
+      "Super Slide": 2,
+      "Hustle": 2,
+      "Short Swing": 2,
+      "Dbl Play Machine": 2
+    }
+  },
+  "Nahyun": {
+    "1": {
+      "CF's Resolve": 1,
+      "OF Defense God": 1,
+      "Push-hit": 1,
+      "Target Sighted": 2,
+      "Short Swing": 1,
+      "Terminator": 1
+    },
+    "2": {
+      "CF's Resolve": 1,
+      "OF Defense God": 1,
+      "Push-hit": 2,
+      "Target Sighted": 2,
+      "Short Swing": 1,
+      "Terminator": 2
+    },
+    "3": {
+      "CF's Resolve": 1,
+      "OF Defense God": 2,
+      "Push-hit": 2,
+      "Target Sighted": 3,
+      "Short Swing": 2,
+      "Terminator": 2
+    },
+    "4": {
+      "CF's Resolve": 1,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Push-hit": 2,
+      "Target Sighted": 3,
+      "Short Swing": 2,
+      "Terminator": 2
+    },
+    "5": {
+      "CF's Resolve": 2,
+      "Tenacity": 1,
+      "OF Defense God": 2,
+      "Push-hit": 2,
+      "Target Sighted": 3,
+      "New Resolution": 1,
+      "Short Swing": 3,
+      "Terminator": 2
+    }
+  },
+  "Eunwoo": {
+    "1": {
+      "LF's Resolve": 1,
+      "Golden Arm": 1,
+      "Low-Ball Batter": 1,
+      "Twister": 2,
+      "Early Challenge": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "Golden Arm": 1,
+      "Low-Ball Batter": 1,
+      "OF Throw God": 1,
+      "Twister": 2,
+      "Early Challenge": 2
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "Golden Arm": 1,
+      "Low-Ball Batter": 1,
+      "OF Throw God": 1,
+      "Super Jump": 1,
+      "Twister": 3,
+      "Early Challenge": 2
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Golden Arm": 2,
+      "Low-Ball Batter": 1,
+      "OF Throw God": 1,
+      "Super Jump": 1,
+      "Twister": 3,
+      "Early Challenge": 2
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Golden Arm": 2,
+      "Low-Ball Batter": 1,
+      "OF Throw God": 2,
+      "Super Jump": 1,
+      "Twister": 3,
+      "Early Challenge": 2,
+      "Four-Seam Hunter": 1
+    }
+  },
+  "Genie": {
+    "1": {
+      "2B's Resolve": 1,
+      "Dash": 2,
+      "Push-hit": 1,
+      "Super Slide": 1,
+      "Scoring Chance": 1,
+      "Human Magnet": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Dash": 2,
+      "Push-hit": 1,
+      "Super Slide": 2,
+      "Scoring Chance": 1,
+      "Short Swing": 1,
+      "Human Magnet": 1
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Dash": 3,
+      "Push-hit": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 1,
+      "Short Swing": 1,
+      "Human Magnet": 1
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Dash": 3,
+      "Push-hit": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 2,
+      "Short Swing": 2,
+      "Human Magnet": 1
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Roadrunner": 1,
+      "Dash": 3,
+      "Push-hit": 2,
+      "Super Slide": 2,
+      "Scoring Chance": 2,
+      "Short Swing": 2,
+      "Human Magnet": 2
+    }
+  },
+  "Marvel": {
+    "1": {
+      "SS's Resolve": 1,
+      "Horizontal Cut": 1,
+      "IF Defense God": 1,
+      "Walk Machine": 2,
+      "Point Man": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Horizontal Cut": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 2,
+      "Point Man": 2
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Horizontal Cut": 1,
+      "Anti LH Pitcher": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 3,
+      "Point Man": 2
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Horizontal Cut": 2,
+      "Anti LH Pitcher": 1,
+      "IF Defense God": 2,
+      "Walk Machine": 3,
+      "Point Man": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Horizontal Cut": 2,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 2,
+      "Walk Machine": 3,
+      "Point Man": 2,
+      "Tactical Bunt": 1
+    }
+  },
+  "Titania": {
+    "1": {
+      "2B's Resolve": 1,
+      "Drive": 2,
+      "High-Ball Batter": 1,
+      "IF Throw God": 1,
+      "Hustle": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "2B's Resolve": 1,
+      "Drive": 2,
+      "High-Ball Batter": 1,
+      "IF Throw God": 2,
+      "Hustle": 1,
+      "Dbl Play Machine": 2
+    },
+    "3": {
+      "2B's Resolve": 1,
+      "Drive": 3,
+      "High-Ball Batter": 1,
+      "IF Throw God": 2,
+      "Walk Machine": 1,
+      "Hustle": 2,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "2B's Resolve": 1,
+      "Provoke": 1,
+      "Drive": 3,
+      "High-Ball Batter": 1,
+      "IF Throw God": 2,
+      "Walk Machine": 1,
+      "Hustle": 2,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "2B's Resolve": 2,
+      "Provoke": 1,
+      "Drive": 3,
+      "High-Ball Batter": 2,
+      "IF Throw God": 2,
+      "Walk Machine": 1,
+      "Hustle": 2,
+      "Dbl Play Machine": 3
+    }
+  },
+  "Kalisto": {
+    "1": {
+      "SS's Resolve": 1,
+      "Anti LH Pitcher": 1,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Focused Defense": 1
+    },
+    "2": {
+      "SS's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 2,
+      "Push-hit": 1,
+      "Error Prevention": 1,
+      "Focused Defense": 2
+    },
+    "3": {
+      "SS's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 3,
+      "Push-hit": 1,
+      "Twister": 1,
+      "Error Prevention": 2,
+      "Focused Defense": 2
+    },
+    "4": {
+      "SS's Resolve": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 3,
+      "Push-hit": 2,
+      "Twister": 1,
+      "Error Prevention": 2,
+      "Focused Defense": 2
+    },
+    "5": {
+      "SS's Resolve": 2,
+      "Tenacity": 1,
+      "Anti LH Pitcher": 2,
+      "IF Defense God": 3,
+      "Push-hit": 2,
+      "Twister": 1,
+      "Error Prevention": 2,
+      "Focused Defense": 3
+    }
+  },
+  "Brant": {
+    "1": {
+      "3B's Resolve": 1,
+      "High-Ball Batter": 1,
+      "IF Catch God": 2,
+      "Target Sighted": 1,
+      "Power Swing": 1,
+      "Focused Defense": 1
+    },
+    "2": {
+      "3B's Resolve": 1,
+      "High-Ball Batter": 2,
+      "IF Catch God": 2,
+      "Target Sighted": 1,
+      "Power Swing": 1,
+      "Slugger Power": 1,
+      "Focused Defense": 1
+    },
+    "3": {
+      "3B's Resolve": 1,
+      "High-Ball Batter": 2,
+      "IF Catch God": 3,
+      "Target Sighted": 2,
+      "Power Swing": 1,
+      "Slugger Power": 1,
+      "Focused Defense": 2
+    },
+    "4": {
+      "3B's Resolve": 1,
+      "Home Run Master": 1,
+      "High-Ball Batter": 2,
+      "IF Catch God": 3,
+      "Target Sighted": 2,
+      "Power Swing": 1,
+      "Slugger Power": 1,
+      "Focused Defense": 2
+    },
+    "5": {
+      "3B's Resolve": 2,
+      "Home Run Master": 1,
+      "High-Ball Batter": 2,
+      "IF Catch God": 3,
+      "Target Sighted": 2,
+      "Four-Seam Hunter": 1,
+      "Power Swing": 2,
+      "Slugger Power": 1,
+      "Focused Defense": 2
+    }
+  },
+  "Drucker": {
+    "1": {
+      "1B's Resolve": 1,
+      "Power Batter": 1,
+      "Burst": 2,
+      "Pull-Hit": 1,
+      "Early Challenge": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Power Batter": 1,
+      "Burst": 2,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "Focused Defense": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Power Batter": 1,
+      "Burst": 3,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Early Challenge": 1,
+      "Focused Defense": 2
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Power Batter": 1,
+      "Burst": 3,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Early Challenge": 2,
+      "Focused Defense": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Power Batter": 2,
+      "Burst": 3,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Early Challenge": 2,
+      "Focused Defense": 2
+    }
+  },
+  "Daisy": {
+    "1": {
+      "C's Resolve": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Walk Machine": 1,
+      "Power Swing": 1,
+      "No Stolen Bases": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Walk Machine": 2,
+      "Power Swing": 1,
+      "No Stolen Bases": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Anti RH Pitcher": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 3,
+      "Walk Machine": 2,
+      "Power Swing": 2,
+      "No Stolen Bases": 2
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Framing": 1,
+      "Anti RH Pitcher": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 3,
+      "Walk Machine": 2,
+      "Power Swing": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Framing": 1,
+      "Anti RH Pitcher": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 3,
+      "Walk Machine": 2,
+      "Power Swing": 2,
+      "Scoring Chance": 1,
+      "No Stolen Bases": 3
+    }
+  },
+  "Phrygia": {
+    "1": {
+      "1B's Resolve": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Power Swing": 1,
+      "Terminator": 1
+    },
+    "2": {
+      "1B's Resolve": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 1,
+      "Pull-Hit": 2,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Terminator": 1
+    },
+    "3": {
+      "1B's Resolve": 1,
+      "Anti RH Pitcher": 1,
+      "IF Catch God": 2,
+      "Pull-Hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Terminator": 2
+    },
+    "4": {
+      "1B's Resolve": 1,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Chaser": 1,
+      "Terminator": 2
+    },
+    "5": {
+      "1B's Resolve": 2,
+      "Tight Defense": 1,
+      "Anti RH Pitcher": 2,
+      "IF Catch God": 2,
+      "Pull-Hit": 3,
+      "Target Sighted": 1,
+      "Power Swing": 2,
+      "Chaser": 1,
+      "Terminator": 2
+    }
+  },
+  "Wonhee": {
+    "1": {
+      "C's Resolve": 1,
+      "Burst": 1,
+      "High-Ball Batter": 1,
+      "Iron Wall": 2,
+      "Error Prevention": 1,
+      "No Stolen Bases": 1
+    },
+    "2": {
+      "C's Resolve": 1,
+      "Burst": 1,
+      "High-Ball Batter": 2,
+      "Iron Wall": 2,
+      "Error Prevention": 1,
+      "No Stolen Bases": 2
+    },
+    "3": {
+      "C's Resolve": 1,
+      "Anti LH Pitcher": 1,
+      "Burst": 1,
+      "High-Ball Batter": 2,
+      "Iron Wall": 3,
+      "Error Prevention": 2,
+      "No Stolen Bases": 2
+    },
+    "4": {
+      "C's Resolve": 1,
+      "Framing": 1,
+      "Anti LH Pitcher": 1,
+      "Burst": 1,
+      "High-Ball Batter": 2,
+      "Iron Wall": 3,
+      "Error Prevention": 2,
+      "No Stolen Bases": 2
+    },
+    "5": {
+      "C's Resolve": 2,
+      "Framing": 1,
+      "Anti LH Pitcher": 1,
+      "Burst": 2,
+      "High-Ball Batter": 2,
+      "Iron Wall": 3,
+      "Error Prevention": 2,
+      "No Stolen Bases": 3
+    }
+  },
+  "Hilary": {
+    "1": {
+      "LF's Resolve": 1,
+      "OF Throw God": 2,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Short Swing": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "LF's Resolve": 1,
+      "OF Throw God": 2,
+      "Push-hit": 1,
+      "Super Jump": 1,
+      "Error Prevention": 1,
+      "Short Swing": 2,
+      "Walk-Off Hit": 1
+    },
+    "3": {
+      "LF's Resolve": 1,
+      "OF Throw God": 3,
+      "Push-hit": 2,
+      "Super Jump": 1,
+      "Error Prevention": 2,
+      "Short Swing": 2,
+      "Walk-Off Hit": 1
+    },
+    "4": {
+      "LF's Resolve": 1,
+      "Golden Arm": 1,
+      "OF Throw God": 3,
+      "Push-hit": 2,
+      "Super Jump": 1,
+      "Error Prevention": 2,
+      "Short Swing": 2,
+      "Walk-Off Hit": 1
+    },
+    "5": {
+      "LF's Resolve": 2,
+      "Golden Arm": 1,
+      "OF Throw God": 3,
+      "Push-hit": 2,
+      "Super Jump": 1,
+      "Error Prevention": 2,
+      "Short Swing": 3,
+      "Walk-Off Hit": 2
+    }
+  },
+  "Matilda": {
+    "1": { "Super Slide": 2, "Scoring Chance": 2, "Terminator": 1 },
+    "2": {
+      "OF Throw God": 1,
+      "Super Slide": 2,
+      "Scoring Chance": 2,
+      "Terminator": 1
+    },
+    "3": {
+      "OF Throw God": 1,
+      "Super Slide": 3,
+      "Scoring Chance": 2,
+      "Short Swing": 1,
+      "Terminator": 2
+    },
+    "4": {
+      "OF Throw God": 1,
+      "Super Slide": 3,
+      "Scoring Chance": 2,
+      "Short Swing": 1,
+      "Terminator": 2
+    },
+    "5": {
+      "OF Throw God": 2,
+      "Super Slide": 3,
+      "Point Man": 1,
+      "Scoring Chance": 2,
+      "Short Swing": 2,
+      "Terminator": 2
+    }
+  },
+  "Sarah": {
+    "1": { "Anti RH Pitcher": 2, "Slugger Power": 2, "Human Magnet": 1 },
+    "2": {
+      "Anti RH Pitcher": 2,
+      "High-Ball Batter": 1,
+      "Slugger Power": 2,
+      "Human Magnet": 1
+    },
+    "3": {
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 1,
+      "Target Sighted": 1,
+      "Slugger Power": 2,
+      "Human Magnet": 1
+    },
+    "4": {
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 1,
+      "Target Sighted": 1,
+      "Slugger Power": 2,
+      "Tactical Bunt": 1,
+      "Human Magnet": 2
+    },
+    "5": {
+      "Anti RH Pitcher": 3,
+      "High-Ball Batter": 2,
+      "Target Sighted": 1,
+      "Slugger Power": 2,
+      "Tactical Bunt": 1,
+      "Human Magnet": 2
+    }
+  },
+  "Eva": {
+    "1": {
+      "Dash": 2,
+      "Four-Seam Hunter": 1,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 1
+    },
+    "2": {
+      "Dash": 2,
+      "Four-Seam Hunter": 2,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 2
+    },
+    "3": {
+      "Dash": 3,
+      "Super Slide": 1,
+      "Four-Seam Hunter": 2,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 2
+    },
+    "4": {
+      "Dash": 3,
+      "OF Catch God": 1,
+      "Super Slide": 1,
+      "Four-Seam Hunter": 2,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 2
+    },
+    "5": {
+      "Dash": 3,
+      "OF Catch God": 1,
+      "Super Slide": 2,
+      "Four-Seam Hunter": 2,
+      "Pure Survival": 1,
+      "Walk-Off Hit": 2
+    }
+  },
+  "Liz": {
+    "1": {
+      "Drive": 2,
+      "Point Man": 1,
+      "Tactical Bunt": 1,
+      "Dbl Play Machine": 1
+    },
+    "2": {
+      "Drive": 2,
+      "Walk Machine": 1,
+      "Point Man": 1,
+      "Tactical Bunt": 1,
+      "Dbl Play Machine": 1
+    },
+    "3": {
+      "Drive": 2,
+      "Walk Machine": 1,
+      "Point Man": 2,
+      "Tactical Bunt": 1,
+      "Dbl Play Machine": 2
+    },
+    "4": {
+      "Anti RH Pitcher": 1,
+      "Drive": 3,
+      "Walk Machine": 1,
+      "Point Man": 2,
+      "Tactical Bunt": 1,
+      "Dbl Play Machine": 2
+    },
+    "5": {
+      "Anti RH Pitcher": 1,
+      "Drive": 3,
+      "Walk Machine": 2,
+      "Point Man": 2,
+      "Tactical Bunt": 1,
+      "Dbl Play Machine": 2
+    }
+  },
+  "Jorge": {
+    "1": { "Dash": 1, "Gambler": 2, "Focused Defense": 1 },
+    "2": { "Dash": 1, "OF Throw God": 1, "Gambler": 2, "Focused Defense": 1 },
+    "3": { "Dash": 1, "OF Throw God": 1, "Gambler": 3, "Focused Defense": 2 },
+    "4": {
+      "Dash": 1,
+      "OF Throw God": 1,
+      "Super Jump": 1,
+      "Gambler": 3,
+      "Focused Defense": 2
+    },
+    "5": {
+      "Dash": 1,
+      "OF Throw God": 1,
+      "Super Jump": 1,
+      "Gambler": 3,
+      "Focused Defense": 2,
+      "Walk-Off Hit": 1
+    }
+  },
+  "Ruric": {
+    "1": { "Target Sighted": 1, "Early Challenge": 2, "Walk-Off Hit": 1 },
+    "2": {
+      "IF Catch God": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 2,
+      "Walk-Off Hit": 1
+    },
+    "3": {
+      "IF Catch God": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 3,
+      "Walk-Off Hit": 2
+    },
+    "4": {
+      "IF Catch God": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 3,
+      "Short Swing": 1,
+      "Walk-Off Hit": 2
+    },
+    "5": {
+      "IF Catch God": 1,
+      "Target Sighted": 1,
+      "Early Challenge": 3,
+      "Short Swing": 2,
+      "Walk-Off Hit": 2
+    }
+  },
+  "Gabe": {
+    "1": { "High-Ball Batter": 1, "New Resolution": 2, "Chaser": 1 },
+    "2": { "High-Ball Batter": 2, "New Resolution": 2, "Chaser": 1 },
+    "3": {
+      "High-Ball Batter": 2,
+      "Early Challenge": 1,
+      "New Resolution": 3,
+      "Chaser": 1
+    },
+    "4": {
+      "High-Ball Batter": 2,
+      "Early Challenge": 1,
+      "New Resolution": 3,
+      "Chaser": 1,
+      "Terminator": 1
+    },
+    "5": {
+      "High-Ball Batter": 2,
+      "OF Defense God": 1,
+      "Early Challenge": 1,
+      "New Resolution": 3,
+      "Chaser": 1,
+      "Terminator": 1
+    }
+  },
+  "Micky": {
+    "1": { "Pull-Hit": 1, "New Resolution": 2, "Chaser": 1 },
+    "2": {
+      "Anti RH Pitcher": 1,
+      "Pull-Hit": 1,
+      "New Resolution": 2,
+      "Chaser": 1
+    },
+    "3": {
+      "Anti RH Pitcher": 1,
+      "Pull-Hit": 1,
+      "New Resolution": 3,
+      "Power Swing": 1,
+      "Chaser": 1
+    },
+    "4": {
+      "Anti RH Pitcher": 1,
+      "Pull-Hit": 1,
+      "New Resolution": 3,
+      "Power Swing": 1,
+      "Chaser": 2
+    },
+    "5": {
+      "Anti RH Pitcher": 1,
+      "Pull-Hit": 1,
+      "New Resolution": 3,
+      "Power Swing": 2,
+      "Chaser": 2
+    }
+  }
+}
