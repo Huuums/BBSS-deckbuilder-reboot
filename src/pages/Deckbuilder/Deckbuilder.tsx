@@ -1,15 +1,29 @@
+import DeckDisplay from "@components/DeckDisplay";
 import Trainerlist from "@components/Trainerlist";
-import { Deck } from "@localtypes/types";
-import type { Component } from "solid-js";
+import { Deck, DeckTrainer, Trainer } from "@localtypes/types";
+import { replaceFirstOccasionWithValue } from "@utils/commonHelpers";
+import { Component } from "solid-js";
 import { createStore } from "solid-js/store";
 
 // type DeckbuilderProps = {};
 
 const Deckbuilder: Component = () => {
-  const [deck, setDeck] = createStore<Deck>(
-    Array.from<Deck>(Array(6)).map(() => "empty")
-  );
-  const [roster, setRoster] = useRoster();
+  const [deck, setDeck] = createStore<Deck>([
+    "empty",
+    "empty",
+    "empty",
+    "empty",
+    "empty",
+    "empty",
+  ]);
+
+  const addTrainerToDeck = (trainer: DeckTrainer) => {
+    setDeck((prev) => replaceFirstOccasionWithValue(prev, trainer, "empty"));
+  };
+
+  const removeTrainerFromDeck = (trainer: Trainer["name"]) => {
+    setDeck((prev) => prev === trainer, "empty");
+  };
 
   return (
     <>
@@ -18,8 +32,14 @@ const Deckbuilder: Component = () => {
         class="flex h-full min-w-0 flex-1 flex-col overflow-y-auto"
       >
         <h1 class="pl-5 text-3xl text-gray-100">Deck</h1>
-        <DeckDisplay deck={deck} />
-        <Trainerlist useRoster withPotential />;{/* Your content */}
+        <DeckDisplay deck={deck} removeTrainer={removeTrainerFromDeck} />
+        <Trainerlist
+          useRoster
+          addTrainer={addTrainerToDeck}
+          removeTrainer={removeTrainerFromDeck}
+          deck={deck}
+        />
+        ;{/* Your content */}
       </section>
 
       <aside class="hidden lg:block lg:flex-shrink-0 ">

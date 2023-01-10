@@ -26,3 +26,12 @@ export function getStatsTypeImg(type: Statstype) {
       return GP;
   }
 }
+
+export const replaceFirstOccasionWithValue = <T>(
+  arr: T[],
+  value: T,
+  valueToReplace: T
+) => {
+  const firstIndexOfNull = arr.indexOf(valueToReplace);
+  return arr.map((row, i) => (i === firstIndexOfNull ? value : row));
+};

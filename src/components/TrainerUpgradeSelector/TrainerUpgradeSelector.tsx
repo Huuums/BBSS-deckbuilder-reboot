@@ -5,7 +5,7 @@ import fullUpgrade from "@assets/images/common/FullUpgrade.png";
 import { classNames } from "@utils/commonHelpers";
 
 type TrainerUpgradeSelectorProps = {
-  onChange: (rank: number) => void;
+  onChange: (stars: number) => void;
   activeUpgrade: number;
   class: string;
 };

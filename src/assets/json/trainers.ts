@@ -10583,4 +10583,12 @@ const trainers: Trainer[] = [
   },
 ];
 
+export const trainersObject = trainers.reduce<Record<string, Trainer>>(
+  (acc, trainer) => {
+    acc[trainer.name] = trainer;
+    return acc;
+  },
+  {}
+);
+
 export default trainers;
