@@ -14,12 +14,12 @@ import { A } from "@solidjs/router";
 
 const navigation = [
   { name: "Deckbuilding", href: "/deck", icon: IoHammerOutline },
-  { name: "My Roster", href: "/roster", icon: IoPeopleOutline },
   {
     name: "Saved Decks",
     href: "/decklist",
     icon: IoListOutline,
   },
+  { name: "My Roster", href: "/roster", icon: IoPeopleOutline },
   // { name: "Calendar", href: "#", icon: HiOutlineCalendar },
   // { name: "Documents", href: "#", icon: HiOutlineInbox },
   // { name: "Reports", href: "#", icon: HiOutlineChartBar },
@@ -147,14 +147,14 @@ const Layout: ParentComponent = (props) => {
       </Dialog>
 
       {/* Static sidebar for desktop */}
-      <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+      <div class="hidden md:fixed md:inset-y-0 md:flex md:w-28 md:flex-col">
         {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div class="flex min-h-0 flex-1 flex-col bg-gray-800">
-          <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-            <div class="flex flex-shrink-0 items-center px-4 text-white font-bold">
+        <div class="hidden flex-1 w-28 overflow-y-auto bg-gray-800 md:flex md:flex-col">
+          <div class="flex w-full flex-1 flex-col items-center py-6">
+            <div class="flex flex-shrink-0 items-center justify-center mx-2 text-white font-bold">
               Baseball Superstars Deckbuilder
             </div>
-            <nav class="mt-5 flex-1 space-y-1 px-2">
+            <nav class="mt-6 w-full flex-1 space-y-1 px-2">
               <For each={navigation}>
                 {(item) => (
                   <NavLinkWrapper
@@ -163,7 +163,7 @@ const Layout: ParentComponent = (props) => {
                     activeClass={"bg-gray-900 text-white"}
                     inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white"
                     class={
-                      "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                      "group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium"
                     }
                   >
                     {(isActive) => (
@@ -173,11 +173,11 @@ const Layout: ParentComponent = (props) => {
                             isActive
                               ? "text-gray-300"
                               : "text-gray-400 group-hover:text-gray-300",
-                            "mr-4 flex-shrink-0 h-6 w-6"
+                            "flex-shrink-0 h-6 w-6"
                           )}
                           aria-hidden="true"
                         />
-                        {item.name}
+                        <span class="mt-2">{item.name}</span>
                       </>
                     )}
                   </NavLinkWrapper>
@@ -185,28 +185,22 @@ const Layout: ParentComponent = (props) => {
               </For>
             </nav>
           </div>
-          <div class="flex flex-shrink-0 bg-gray-600 p-4">
-            <A href="/profile" class="group block w-full flex-shrink-0">
-              <div class="flex items-center">
-                <div>
-                  <img
-                    class="inline-block h-9 w-9 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-white">Tom Cook</p>
-                  <p class="text-xs font-medium text-gray-300 group-hover:text-gray-200">
-                    View profile
-                  </p>
-                </div>
-              </div>
+          <div class="flex justify-center flex-shrink-0 pb-5">
+            <A
+              href="/profile"
+              class="flex-1 text-center text-gray-300 p-3 mx-2 rounded-md text-xs font-medium hover:text-white hover:bg-gray-700"
+            >
+              <img
+                class="mx-auto block h-10 w-10 rounded-full"
+                src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <span class="mt-2">My Profile</span>
             </A>
           </div>
         </div>
       </div>
-      <div class="flex flex-1 flex-col md:pl-64">
+      <div class="flex flex-1 flex-col md:pl-28">
         <div class="sticky top-0 z-10 bg-gray-700 px-1 pt-1 sm:pl-3 sm:pt-3 md:hidden justify-between flex">
           <button
             type="button"
@@ -217,7 +211,7 @@ const Layout: ParentComponent = (props) => {
             <HiOutlineMenu class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <main class="flex-1 flex overflow-hidden">{props.children}</main>
+        <main class="flex-1 flex overflow">{props.children}</main>
       </div>
       <div class="md:flex absolute right-1 top-1 hidden" />
     </>

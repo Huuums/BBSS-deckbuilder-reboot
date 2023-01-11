@@ -5,7 +5,7 @@ import fullUpgrade from "@assets/images/common/FullUpgrade.png";
 import { classNames } from "@utils/commonHelpers";
 
 type TrainerUpgradeSelectorProps = {
-  onChange: (stars: number) => void;
+  onChange: (stars: 1 | 2 | 3 | 4 | 5) => void;
   activeUpgrade: number;
   class: string;
 };
@@ -18,9 +18,11 @@ const TrainerUpgradeSelector: Component<TrainerUpgradeSelectorProps> = (
       class={classNames("flex justify-between py-1 space-x-0.5", props.class)}
     >
       <For each={[1, 2, 3, 4, 5]}>
-        {(el) => {
+        {(el: 1 | 2 | 3 | 4 | 5) => {
           return (
-            <button onClick={() => props.onChange(el)}>
+            <button
+              onClick={() => el !== props.activeUpgrade && props.onChange(el)}
+            >
               <Switch>
                 <Match when={props.activeUpgrade === 5}>
                   <img src={fullUpgrade} alt={`Activate ${el} star upgrade`} />

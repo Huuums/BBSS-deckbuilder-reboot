@@ -1,6 +1,6 @@
 import { Trainer } from "@localtypes/types";
 
-const trainers: Trainer[] = [
+const trainers: Omit<Trainer, "stars" | "potential">[] = [
   {
     name: "Mav",
     rarity: "UR",
@@ -10583,12 +10583,11 @@ const trainers: Trainer[] = [
   },
 ];
 
-export const trainersObject = trainers.reduce<Record<string, Trainer>>(
-  (acc, trainer) => {
-    acc[trainer.name] = trainer;
-    return acc;
-  },
-  {}
-);
+export const trainersObject = trainers.reduce<
+  Record<string, Omit<Trainer, "stars" | "potential">>
+>((acc, trainer) => {
+  acc[trainer.name] = trainer;
+  return acc;
+}, {});
 
 export default trainers;

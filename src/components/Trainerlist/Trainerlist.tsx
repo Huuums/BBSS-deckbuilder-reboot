@@ -1,24 +1,26 @@
 import Trainer from "@components/Trainer/Trainer";
-import { Component, createSignal, For, Suspense } from "solid-js";
-import trainers from "../../assets/json/trainers";
+import { Component, For, Suspense } from "solid-js";
 import trainerImages from "../../assets/images/trainer";
-import { Deck, DeckTrainer } from "@localtypes/types";
+import { Deck, DeckTrainer, Trainer as TrainerType } from "@localtypes/types";
 
 type TrainerlistProps = {
   useRoster?: boolean;
-  removeTrainer?: (trainer: DeckTrainer) => void;
+  removeTrainer?: (trainer: TrainerType["name"]) => void;
   addTrainer?: (trainer: DeckTrainer) => void;
   deck: Deck;
+  trainers: TrainerType[];
+  updateTrainer: <K extends keyof TrainerType>(
+    trainerName: string,
+    valuesToUpdate: Partial<Record<K, TrainerType[K]>>
+  ) => void;
 };
-
-const [trainersSignal] = createSignal(trainers);
 
 const Trainerlist: Component<TrainerlistProps> = (props) => {
   // const merged = mergeProps({ trainerDeckIndex: -1 }, props);
 
   return (
     <div class="grid gap-x-3 gap-y-3 max-w-100 grid-cols-auto p-5">
-      <For each={trainersSignal()}>
+      <For each={props.trainers}>
         {(trainer) => {
           return (
             <>
@@ -46,14 +48,21 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                 }
               >
                 <Trainer
-                  {...trainer}
-                  onClickAvatar={(trainer) =>
-                    !props.deck.includes(trainer)
+                  trainer={trainer}
+                  onClickAvatar={(trainerName) =>
+                    !props.deck.some(
+                      (el) => el !== "empty" && el.name === trainerName
+                    )
                       ? props.addTrainer(trainer)
-                      : props.removeTrainer(trainer)
+                      : props.removeTrainer(trainer.name)
                   }
                   src={trainerImages[trainer.name]}
-                  trainerDeckIndex={props.deck.indexOf(trainer.name)}
+                  trainerDeckIndex={props.deck.findIndex(
+                    (row) => row !== "empty" && row.name === trainer.name
+                  )}
+                  onChange={(values) =>
+                    props.updateTrainer(trainer.name, values)
+                  }
                 />
               </Suspense>
             </>

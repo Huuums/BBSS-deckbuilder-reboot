@@ -1,4 +1,4 @@
-import { DeckTrainer, Rarity, Trainer as TrainerType } from "@localtypes/types";
+import { Rarity, Trainer as TrainerType } from "@localtypes/types";
 import { Component } from "solid-js";
 
 import TrainerPosition from "@components/TrainerPosition";
@@ -8,12 +8,16 @@ import TrainerStatsType from "@components/TrainerStatsType";
 import TrainerUpgradeSelector from "@components/TrainerUpgradeSelector";
 import { classNames } from "@utils/commonHelpers";
 
-type TrainerProps = TrainerType & {
+type TrainerProps = {
   src: string;
-  onClickAvatar: (trainer: DeckTrainer) => void;
+  onClickAvatar: (trainer: TrainerType["name"]) => void;
   trainerDeckIndex?: number;
   class?: string;
   cannotAddTrainer?: boolean;
+  trainer: TrainerType;
+  onChange?: <K extends keyof TrainerType>(
+    values: Record<K, TrainerType[K]>
+  ) => void;
 };
 
 const getBorderRarityClass = (rarity: Rarity) => {
@@ -48,21 +52,24 @@ const getBackgroundAndTextRarityClass = (rarity: Rarity) => {
 
 const Trainer: Component<TrainerProps> = (props) => {
   return (
-    <TrainerBorder withGlow rarity={props.rarity} class={props.class}>
+    <TrainerBorder withGlow rarity={props.trainer.rarity} class={props.class}>
       <TrainerAvatar
-        name={props.name}
+        name={props.trainer.name}
         src={props.src}
-        onClick={() => props.onClickAvatar(props.name)}
+        onClick={() => props.onClickAvatar(props.trainer.name)}
         disabled={props.cannotAddTrainer}
         trainerDeckIndex={props.trainerDeckIndex}
       />
       <div class="bg-gray-200 h-8 relative flex justify-between items-center">
-        <TrainerStatsType type={props.type} />
-        <TrainerPosition position={props.position} class="mr-1 inline-flex" />
+        <TrainerStatsType type={props.trainer.type} />
+        <TrainerPosition
+          position={props.trainer.position}
+          class="mr-1 inline-flex"
+        />
       </div>
       <TrainerUpgradeSelector
-        onChange={(stars) => console.log(stars, props.name)}
-        activeUpgrade={2}
+        onChange={(stars) => props.onChange({ stars })}
+        activeUpgrade={props.trainer.stars}
         class="bg-gray-700 relative"
       />
       <div class="relative bg-gray-800 text-gray-200 font-semibold flex justify-between flex-wrap">
@@ -70,7 +77,7 @@ const Trainer: Component<TrainerProps> = (props) => {
           <button
             class={classNames(
               "flex justify-center p-0.5 basis-1/2 items-center text-xs py-1",
-              getBackgroundAndTextRarityClass(props.rarity),
+              getBackgroundAndTextRarityClass(props.trainer.rarity),
               "basis-1/2"
             )}
             onClick={() => null /*togglePotentialSelection(props.name)*/}
@@ -91,10 +98,10 @@ const Trainer: Component<TrainerProps> = (props) => {
         <h3
           class={classNames(
             "border-t border-rarity-UR basis-full text-ellipsis overflow-hidden whitespace-nowrap p-1",
-            getBorderRarityClass(props.rarity)
+            getBorderRarityClass(props.trainer.rarity)
           )}
         >
-          {props.name}
+          {props.trainer.name}
         </h3>
       </div>
     </TrainerBorder>

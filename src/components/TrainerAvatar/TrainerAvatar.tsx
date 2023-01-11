@@ -1,5 +1,5 @@
 import { classNames } from "@utils/commonHelpers";
-import { Component, createEffect, JSX } from "solid-js";
+import { Component, JSX } from "solid-js";
 
 type TrainerAvatarProps = {
   src: string;
@@ -11,9 +11,6 @@ type TrainerAvatarProps = {
 };
 
 const TrainerAvatar: Component<TrainerAvatarProps> = (props) => {
-  createEffect(() => {
-    console.log(props.trainerDeckIndex);
-  });
   return (
     <div class={classNames("bg-gray-700 relative", props.class)}>
       <button

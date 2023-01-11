@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+//eslint-disable-next-line
+const plugin = require("tailwindcss/plugin");
 //eslint-disable-next-line no-undef
 module.exports = {
   content: [
@@ -6,7 +8,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}",
   ],
   darkMode: "class",
-  plugins: [],
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant("stuck", "&[stuck]");
+    }),
+  ],
   theme: {
     extend: {
       gridTemplateColumns: {

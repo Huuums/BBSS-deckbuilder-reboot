@@ -40,8 +40,8 @@ export type Trainer = {
   bonusTeam: Team[];
   skills: TrainerSkillRanks;
   order: number;
-  stars?: 1 | 2 | 3 | 4 | 5;
-  potential?: RosterTrainer["potential"];
+  stars: 1 | 2 | 3 | 4 | 5;
+  potential: RosterTrainer["potential"];
 };
 
 export type SkillType =
@@ -200,11 +200,14 @@ export type SkillDefinition = {
 
 export type Roster = Record<string, RosterTrainer>;
 
-export type RosterTrainer = { stars: number; potential: Record<Skill, 1 | 2> };
+export type RosterTrainer = {
+  stars: 1 | 2 | 3 | 4 | 5;
+  potential: Record<Skill, number> | Record<string, never>;
+};
 
 export type Deck = DeckTrainer[];
 
-export type DeckTrainer = Trainer["name"] | "empty";
+export type DeckTrainer = Required<Trainer> | "empty";
 
 export type User = {
   roster: string;
