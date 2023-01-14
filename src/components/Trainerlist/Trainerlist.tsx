@@ -1,14 +1,26 @@
 import Trainer from "@components/Trainer/Trainer";
 import { Component, For, Suspense } from "solid-js";
 import trainerImages from "../../assets/images/trainer";
-import { Deck, DeckTrainer, Trainer as TrainerType } from "@localtypes/types";
+import {
+  Deck,
+  DeckSlot,
+  RankLevels,
+  Trainer as TrainerType,
+} from "@localtypes/types";
 
 type TrainerlistProps = {
   useRoster?: boolean;
   removeTrainer?: (trainer: TrainerType["name"]) => void;
-  addTrainer?: (trainer: DeckTrainer) => void;
+  addTrainer?: (trainer: DeckSlot) => void;
   deck: Deck;
   trainers: TrainerType[];
+  onMouseEnterTrainerAvatar?: (trainer: TrainerType) => void;
+  onMouseLeaveTrainerAvatar?: () => void;
+  onMouseEnterUpgradeSelector?: (
+    trainer: TrainerType,
+    stars: RankLevels
+  ) => void;
+  onMouseLeaveUpgradeSelector?: () => void;
   updateTrainer: <K extends keyof TrainerType>(
     trainerName: string,
     valuesToUpdate: Partial<Record<K, TrainerType[K]>>
@@ -49,12 +61,22 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
               >
                 <Trainer
                   trainer={trainer}
-                  onClickAvatar={(trainerName) =>
+                  onClickAvatar={() =>
                     !props.deck.some(
-                      (el) => el !== "empty" && el.name === trainerName
+                      (el) => el !== "empty" && el.name === trainer.name
                     )
                       ? props.addTrainer(trainer)
                       : props.removeTrainer(trainer.name)
+                  }
+                  onMouseEnterAvatar={() =>
+                    props.onMouseEnterTrainerAvatar?.(trainer)
+                  }
+                  onMouseLeaveAvatar={() => props.onMouseLeaveTrainerAvatar?.()}
+                  onMouseEnterUpgradeSelector={(stars) =>
+                    props.onMouseEnterUpgradeSelector?.(trainer, stars)
+                  }
+                  onMouseLeaveUpgradeSelector={() =>
+                    props.onMouseLeaveTrainerAvatar()
                   }
                   src={trainerImages[trainer.name]}
                   trainerDeckIndex={props.deck.findIndex(

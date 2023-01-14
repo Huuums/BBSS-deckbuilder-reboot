@@ -1,7 +1,9 @@
-import { Trainer } from "@localtypes/types";
+import { RosterTrainer, Trainer, TrainerNames } from "@localtypes/types";
 
-export const createRosterObject = (arr: Trainer[]) =>
-  arr.reduce((acc, row) => {
-    acc[row.name] = { stars: row.stars, potential: row.potential || {} };
+export const createRosterObject = (
+  arr: Omit<Trainer, "stars" | "potential">[]
+) =>
+  arr.reduce<Partial<Record<TrainerNames, RosterTrainer>>>((acc, row) => {
+    acc[row.name] = { stars: 1, potential: {} };
     return acc;
   }, {});

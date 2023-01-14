@@ -3,40 +3,52 @@ import type { Component } from "solid-js";
 
 import trainerImages from "@assets/images/trainer";
 import Trainer from "@components/Trainer";
-import { Deck, Trainer as TrainerType } from "@localtypes/types";
+import { Deck, RankLevels, Trainer as TrainerType } from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
 
 type DeckDisplayProps = {
   deck: Deck;
+  tempDeck: Deck;
   removeTrainer: (trainerName: string) => void;
   updateTrainer: <K extends keyof TrainerType>(
     trainerName: string,
     valuesToUpdate: Partial<Record<K, TrainerType[K]>>
   ) => void;
+  onMouseEnterTrainerAvatar?: (trainer: TrainerType) => void;
+  onMouseLeaveTrainerAvatar?: () => void;
+  onMouseEnterUpgradeSelector?: (
+    trainer: TrainerType,
+    stars: RankLevels
+  ) => void;
+  onMouseLeaveUpgradeSelector?: () => void;
+  updateExchangeIndex?: (index: number) => void;
+  exchangeIndex?: number | undefined;
 };
 
 const DeckDisplay: Component<DeckDisplayProps> = (props) => {
-  let observerel: HTMLDivElement | undefined;
-  let stuckel: HTMLDivElement | undefined;
+  let observerElement: HTMLDivElement | undefined;
+  let stuckElement: HTMLDivElement | undefined;
 
   const intersectionObserver = new IntersectionObserver(
-    ([el]) => stuckel.toggleAttribute("stuck", el.intersectionRatio < 1),
+    ([el]) => {
+      stuckElement?.toggleAttribute("stuck", el.intersectionRatio < 1);
+    },
     { threshold: [1] }
   );
 
-  onMount(() => intersectionObserver.observe(observerel));
+  onMount(() => intersectionObserver.observe(observerElement));
   onCleanup(() => intersectionObserver.disconnect());
 
   return (
     <div
-      ref={observerel}
+      ref={observerElement}
       class={classNames(
-        "w-full mx-auto mt-5 max-w-5xl sticky top-[-1px] z-10 pointer-events-none"
+        "w-full mx-auto mt-5 max-w-5xl sticky top-[-1px] z-10 pointer-events-none flex"
       )}
     >
       <div
-        ref={stuckel}
-        class="transition-all scale-100 bg-gray-800 flex justify-between p-5 stuck:scale-50 stuck:-translate-y-1/4 pointer-events-auto"
+        ref={stuckElement}
+        class="transition-all flex-1 scale-100 bg-gray-800 flex justify-between p-5 stuck:scale-50 hover:stuck:scale-100 stuck:-translate-y-1/4 hover:stuck:translate-y-0 pointer-events-auto"
       >
         <For each={props.deck}>
           {(trainer, i) => (
@@ -66,7 +78,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
               >
                 <Switch>
                   <Match when={trainer === "empty"}>
-                    <div class="flex-1 h-full min-h-[250px] max-w-[150px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
+                    <div class="flex-1 h-full min-h-[250px] max-w-[135px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
                       {i() + 1}
                     </div>
                   </Match>
@@ -79,7 +91,19 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                           values
                         )
                       }
+                      markedForExchange={i() === props.exchangeIndex}
+                      showButtonsOnAvatar={!props.deck.includes("empty")}
+                      onClickExchange={() => props.updateExchangeIndex(i())}
                       trainer={trainer as Required<TrainerType>}
+                      onMouseEnterUpgradeSelector={(stars) =>
+                        props.onMouseEnterUpgradeSelector?.(
+                          trainer as TrainerType,
+                          stars
+                        )
+                      }
+                      onMouseLeaveUpgradeSelector={() =>
+                        props.onMouseLeaveTrainerAvatar()
+                      }
                       src={trainerImages[(trainer as TrainerType).name]}
                       onClickAvatar={() =>
                         props.removeTrainer((trainer as TrainerType).name)

@@ -20,10 +20,15 @@ module.exports = {
       },
       colors: {
         rarity: {
+          "UR-dark": "#381e00",
           UR: "#dcc261",
+          "SSR-dark": "#28090a",
           SSR: "#ff4242",
+          "SR-dark": "#230c28",
           SR: "#4B1C86",
+          "R-dark": "#0b1622",
           R: "#1927D0",
+          "N-dark": "#0f2416",
           N: "#65CF24",
         },
         custom: {
@@ -31,12 +36,17 @@ module.exports = {
           batting: "#0ABA9B",
         },
       },
-      background: {
-        "gradient-UR": `background: -webkit-linear-gradient(top, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%);
-background: -o-linear-gradient(top, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%);
-background: -ms-linear-gradient(top, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%);
-background: -moz-linear-gradient(top, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%);
-background: linear-gradient(to bottom, rgb(245, 196, 48) 0%, rgb(255, 233, 137) 20%, rgb(248, 233, 159) 40%, rgb(220, 195, 101) 66%, rgb(196, 160, 44) 86%, rgb(175, 136, 14) 100%);`,
+      boxShadow: {
+        maxSkill: "0px 0px 15px 7px rgba(209,183,52,1)",
+      },
+      animation: {
+        "pulse-full": "pulse-full 4s linear infinite alternate",
+      },
+      keyframes: {
+        "pulse-full": {
+          "0%, 20%, 80%, 100%": { opacity: 1 },
+          "25%, 75%": { opacity: 0 },
+        },
       },
     },
   },

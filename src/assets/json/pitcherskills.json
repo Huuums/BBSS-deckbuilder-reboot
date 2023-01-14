@@ -237,7 +237,7 @@
       "Anti Walk": 2
     }
   },
-  "Nicki/Mary": {
+  "Nicki": {
     "1": {
       "CP's Resolve": 1,
       "Knuckleball": 1,
@@ -296,7 +296,66 @@
       "No Runs For You": 2
     }
   },
-  "Artamiel/Lucis": {
+  "Mary": {
+    "1": {
+      "CP's Resolve": 1,
+      "Knuckleball": 1,
+      "Super Right Arm": 1,
+      "Accuracy Control": 1,
+      "Hit Blockade": 2,
+      "Maximum Effort": 2,
+      "Anti LH Batter": 2,
+      "No Runs For You": 2
+    },
+    "2": {
+      "CP's Resolve": 1,
+      "Knuckleball": 1,
+      "Super Right Arm": 1,
+      "Accuracy Control": 1,
+      "Hit Blockade": 2,
+      "Maximum Effort": 2,
+      "Slurve": 1,
+      "Anti LH Batter": 2,
+      "No Runs For You": 2
+    },
+    "3": {
+      "CP's Resolve": 1,
+      "Knuckleball": 2,
+      "Super Right Arm": 1,
+      "Accuracy Control": 1,
+      "Hit Blockade": 2,
+      "Maximum Effort": 3,
+      "Monstrous Pitch": 1,
+      "Slurve": 1,
+      "Anti LH Batter": 2,
+      "No Runs For You": 2
+    },
+    "4": {
+      "CP's Resolve": 1,
+      "Knuckleball": 2,
+      "Super Right Arm": 1,
+      "Accuracy Control": 2,
+      "Hit Blockade": 2,
+      "Maximum Effort": 3,
+      "Monstrous Pitch": 2,
+      "Slurve": 1,
+      "Anti LH Batter": 2,
+      "No Runs For You": 2
+    },
+    "5": {
+      "CP's Resolve": 2,
+      "Knuckleball": 2,
+      "Super Right Arm": 1,
+      "Accuracy Control": 2,
+      "Hit Blockade": 3,
+      "Maximum Effort": 3,
+      "Monstrous Pitch": 2,
+      "Slurve": 2,
+      "Anti LH Batter": 2,
+      "No Runs For You": 2
+    }
+  },
+  "Artamiel": {
     "1": {
       "MRP's Resolve": 1,
       "Perfect Pitch": 1,
@@ -355,6 +414,63 @@
       "Fire Baller": 2
     }
   },
+  "Lucis": { "1": {
+      "MRP's Resolve": 1,
+      "Perfect Pitch": 1,
+      "Super Left Arm": 1,
+      "Monstrous Pitch": 2,
+      "Screwball": 1,
+      "Super Fastball": 2,
+      "Forkball": 2,
+      "Fire Baller": 2
+    },
+    "2": {
+      "MRP's Resolve": 1,
+      "Perfect Pitch": 1,
+      "Super Left Arm": 1,
+      "Heavy Ball": 1,
+      "Monstrous Pitch": 2,
+      "Screwball": 1,
+      "Super Fastball": 2,
+      "Forkball": 2,
+      "Fire Baller": 2
+    },
+    "3": {
+      "MRP's Resolve": 1,
+      "Perfect Pitch": 2,
+      "Super Left Arm": 1,
+      "Heavy Ball": 1,
+      "Hit Blockade": 1,
+      "Monstrous Pitch": 3,
+      "Screwball": 1,
+      "Super Fastball": 2,
+      "Forkball": 2,
+      "Fire Baller": 2
+    },
+    "4": {
+      "MRP's Resolve": 1,
+      "Perfect Pitch": 2,
+      "Super Left Arm": 1,
+      "Heavy Ball": 2,
+      "Hit Blockade": 2,
+      "Monstrous Pitch": 3,
+      "Screwball": 1,
+      "Super Fastball": 2,
+      "Forkball": 2,
+      "Fire Baller": 2
+    },
+    "5": {
+      "MRP's Resolve": 2,
+      "Perfect Pitch": 2,
+      "Super Left Arm": 1,
+      "Heavy Ball": 2,
+      "Hit Blockade": 2,
+      "Monstrous Pitch": 3,
+      "Screwball": 2,
+      "Super Fastball": 3,
+      "Forkball": 2,
+      "Fire Baller": 2
+    }},
   "Scofield": {
     "1": {
       "CP's Resolve": 1,

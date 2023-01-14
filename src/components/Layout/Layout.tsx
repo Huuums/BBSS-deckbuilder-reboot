@@ -211,7 +211,7 @@ const Layout: ParentComponent = (props) => {
             <HiOutlineMenu class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <main class="flex-1 flex overflow">{props.children}</main>
+        <main class="flex-1 flex">{props.children}</main>
       </div>
       <div class="md:flex absolute right-1 top-1 hidden" />
     </>

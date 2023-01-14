@@ -22,13 +22,13 @@ export const getRosterById = async (
       if (data.exists()) {
         return data.val();
       } else {
-        return getRosterFromLocalStorage();
+        return getRosterFromLocalStorage() as Roster;
       }
     } catch (e) {
       return e;
     }
   }
-  return getRosterFromLocalStorage();
+  return getRosterFromLocalStorage() as Roster;
 };
 
 export const setRosterById = async ({ id, value }) => {

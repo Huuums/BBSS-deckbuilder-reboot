@@ -24,15 +24,21 @@ export type Team =
   | "Victory Swallows";
 
 export type TrainerSkillRanks = {
-  "1": Record<string, 1 | 2 | 3 | 4 | 5>;
-  "2": Record<string, 1 | 2 | 3 | 4 | 5>;
-  "3": Record<string, 1 | 2 | 3 | 4 | 5>;
-  "4": Record<string, 1 | 2 | 3 | 4 | 5>;
-  "5": Record<string, 1 | 2 | 3 | 4 | 5>;
+  "1": SkillRanks;
+  "2": SkillRanks;
+  "3": SkillRanks;
+  "4": SkillRanks;
+  "5": SkillRanks;
 };
 
+export type RankLevels = 0 | 1 | 2 | 3 | 4 | 5;
+
+export type SkillRanks = Partial<Record<Skill, RankLevels>>;
+
+export type SkillDiff = Partial<Record<Skill, { value: number; from: number }>>;
+
 export type Trainer = {
-  name: string;
+  name: TrainerNames;
   rarity: Rarity;
   position: BattingPosition | PitchingPosition;
   type: Statstype[];
@@ -40,7 +46,7 @@ export type Trainer = {
   bonusTeam: Team[];
   skills: TrainerSkillRanks;
   order: number;
-  stars: 1 | 2 | 3 | 4 | 5;
+  stars: RankLevels;
   potential: RosterTrainer["potential"];
 };
 
@@ -198,18 +204,213 @@ export type SkillDefinition = {
   >;
 };
 
-export type Roster = Record<string, RosterTrainer>;
+export type Roster = Partial<Record<TrainerNames, RosterTrainer>>;
 
 export type RosterTrainer = {
-  stars: 1 | 2 | 3 | 4 | 5;
+  stars: RankLevels;
   potential: Record<Skill, number> | Record<string, never>;
 };
 
-export type Deck = DeckTrainer[];
+export type Deck = DeckSlot[];
 
-export type DeckTrainer = Required<Trainer> | "empty";
+export type DeckSlot = Required<Trainer> | "empty";
 
 export type User = {
   roster: string;
   username: string;
 } | null;
+
+export type TrainerNames =
+  | "Yeomra"
+  | "Rache"
+  | "Francis"
+  | "MED"
+  | "Taesung"
+  | "Nicki"
+  | "Mary"
+  | "Artamiel"
+  | "Lucis"
+  | "Scofield"
+  | "Hayley"
+  | "Annie"
+  | "Code-J"
+  | "Echo"
+  | "Lazi"
+  | "Claris"
+  | "Hathor"
+  | "Isis"
+  | "Ceres"
+  | "Kunio"
+  | "Eve"
+  | "Lilith"
+  | "Belita"
+  | "Dragona"
+  | "Regret"
+  | "Leon"
+  | "Rowena"
+  | "Violet"
+  | "Leonie"
+  | "Pluto"
+  | "Valentine"
+  | "Ditto"
+  | "Psyker"
+  | "Penelope"
+  | "Misako"
+  | "Hannibal"
+  | "Aliana"
+  | "Allen"
+  | "MK-3"
+  | "Miho"
+  | "Captain Jack"
+  | "Psyche"
+  | "Hunter G"
+  | "Soldia"
+  | "Bora"
+  | "Lucia"
+  | "Hellfire"
+  | "Zhizi"
+  | "Base Angel"
+  | "Onestone"
+  | "Boomiger"
+  | "Yomi"
+  | "Anetta"
+  | "Shuri"
+  | "Popo"
+  | "Tera"
+  | "Cami"
+  | "Stinger"
+  | "Drake"
+  | "John Roger"
+  | "Dice"
+  | "Lupina"
+  | "Sherlia"
+  | "Amir"
+  | "Reuben"
+  | "Marcus"
+  | "Gryllson"
+  | "Wendell"
+  | "Snipe"
+  | "Wendy"
+  | "Serena"
+  | "Venomizer"
+  | "Magmizer"
+  | "Lilo"
+  | "Casta"
+  | "Firelord"
+  | "Aqualord"
+  | "Zett"
+  | "Kang"
+  | "Nick"
+  | "Roland"
+  | "Choco"
+  | "Soda"
+  | "Mocha"
+  | "Frill"
+  | "Aria"
+  | "Bill"
+  | "Pansy"
+  | "Johanna"
+  | "Kinsley"
+  | "Velvet"
+  | "Ziz"
+  | "Behemoth"
+  | "Leviathan"
+  | "Mav"
+  | "Bebe"
+  | "Camilla"
+  | "Freyja"
+  | "Hyper"
+  | "Loki"
+  | "Sun Wukong"
+  | "Nox"
+  | "Caroline"
+  | "Anubis"
+  | "Bastet"
+  | "Dion"
+  | "Roy"
+  | "Ines"
+  | "Clefina"
+  | "Rachel"
+  | "Michaella"
+  | "Tsubaki"
+  | "Luther"
+  | "Flamesh"
+  | "Britra"
+  | "Chael"
+  | "Helga"
+  | "Seiryu"
+  | "Kai"
+  | "Nina"
+  | "Sohyang"
+  | "Ara"
+  | "King Tiger"
+  | "Luna"
+  | "Daphne"
+  | "Kyoko"
+  | "Zia"
+  | "Magnus"
+  | "Monique"
+  | "Sophie"
+  | "Nameless"
+  | "Mei Mei"
+  | "Albert"
+  | "Base Hero"
+  | "Tauric"
+  | "Helen"
+  | "NOM"
+  | "Golden Boy"
+  | "Elfin"
+  | "Lucy"
+  | "Policia"
+  | "Basedevil"
+  | "Pi"
+  | "Kryzer"
+  | "Mia"
+  | "Zena"
+  | "Liew"
+  | "Guy-E"
+  | "Velour"
+  | "Medica"
+  | "Scumbag Joe"
+  | "Rose"
+  | "Riki"
+  | "Lina"
+  | "Kate"
+  | "Rex"
+  | "Flora"
+  | "Paris"
+  | "Eia"
+  | "Patricia"
+  | "Siren"
+  | "Brokel"
+  | "Gladius"
+  | "Pazuzu"
+  | "Hell Guy"
+  | "Zen"
+  | "Pale"
+  | "Talas"
+  | "Acro"
+  | "Soun"
+  | "Nio"
+  | "Liuxia"
+  | "Liuxing"
+  | "Nahyun"
+  | "Eunwoo"
+  | "Genie"
+  | "Marvel"
+  | "Titania"
+  | "Kalisto"
+  | "Brant"
+  | "Drucker"
+  | "Daisy"
+  | "Phrygia"
+  | "Wonhee"
+  | "Hilary"
+  | "Matilda"
+  | "Sarah"
+  | "Eva"
+  | "Liz"
+  | "Jorge"
+  | "Ruric"
+  | "Gabe"
+  | "Micky";

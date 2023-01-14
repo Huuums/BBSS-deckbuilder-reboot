@@ -35,3 +35,7 @@ export const replaceFirstOccasionWithValue = <T>(
   const firstIndexOfNull = arr.indexOf(valueToReplace);
   return arr.map((row, i) => (i === firstIndexOfNull ? value : row));
 };
+
+export const replaceValueAtIndex = <T>(arr: T[], value: T, index: number) => {
+  return arr.map((row, i) => (i === index ? value : row));
+};
