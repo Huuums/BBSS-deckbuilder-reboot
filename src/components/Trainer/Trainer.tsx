@@ -1,5 +1,6 @@
 import { RankLevels, Rarity, Trainer as TrainerType } from "@localtypes/types";
-import { Component, JSX, Show } from "solid-js";
+import { Component, For, JSX, Show } from "solid-js";
+import teamImages from "@assets/images/teams";
 
 import TrainerPosition from "@components/TrainerPosition";
 import TrainerBorder from "@components/TrainerBorder";
@@ -69,6 +70,13 @@ const Trainer: Component<TrainerProps> = (props) => {
           rarity={props.trainer.rarity}
           class={props.class}
         >
+          {props.trainer?.bonusTeam?.length > 0 && (
+            <div class="absolute flex top-1 left-1 m-auto p-0.5 z-[1] border-2 border-blue-400 bg-gray-800 rounded-2xl space-x-0.5">
+              <For each={props.trainer.bonusTeam}>
+                {(team) => <img class="w-7 h-7" src={teamImages[team]} />}
+              </For>
+            </div>
+          )}
           <TrainerAvatar
             imgClass={props.imgClass}
             name={props.trainer.name}

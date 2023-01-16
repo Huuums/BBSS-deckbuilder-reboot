@@ -8,7 +8,7 @@ type TrainerBorderProps = {
   class?: string;
 };
 
-const glowDisabled = false;
+const glowDisabled = true;
 
 const getBgGradientColorClass = (rarity: Rarity) => {
   switch (rarity) {

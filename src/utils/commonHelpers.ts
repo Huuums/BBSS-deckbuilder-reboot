@@ -1,4 +1,4 @@
-import { Statstype } from "@localtypes/types";
+import { FilterTypes, Statstype } from "@localtypes/types";
 import DEX from "@assets/images/common/DEX.png";
 import STR from "@assets/images/common/STR.png";
 import INT from "@assets/images/common/INT.png";
@@ -38,4 +38,13 @@ export const replaceFirstOccasionWithValue = <T>(
 
 export const replaceValueAtIndex = <T>(arr: T[], value: T, index: number) => {
   return arr.map((row, i) => (i === index ? value : row));
+};
+
+export const filterTypeToName: Record<FilterTypes, string> = {
+  skill: "Skill",
+  type: "Type",
+  position: "Position",
+  team: "Team",
+  rarity: "Rarity",
+  name: "Name",
 };

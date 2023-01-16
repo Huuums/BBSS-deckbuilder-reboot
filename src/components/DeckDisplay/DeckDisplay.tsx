@@ -43,7 +43,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
     <div
       ref={observerElement}
       class={classNames(
-        "w-full mx-auto mt-5 max-w-5xl sticky top-[-1px] z-10 pointer-events-none flex"
+        "w-full mx-auto mt-5 max-w-5xl sticky top-[-1px] z-50 pointer-events-none flex"
       )}
     >
       <div
@@ -78,7 +78,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
               >
                 <Switch>
                   <Match when={trainer === "empty"}>
-                    <div class="flex-1 h-full min-h-[250px] max-w-[135px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
+                    <div class="flex-1 h-full min-h-[260px] max-w-[150px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
                       {i() + 1}
                     </div>
                   </Match>

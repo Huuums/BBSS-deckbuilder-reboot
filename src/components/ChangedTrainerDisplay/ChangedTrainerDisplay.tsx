@@ -1,15 +1,7 @@
 import Trainer from "@components/Trainer";
 import { DeckSlot, Trainer as TrainerType } from "@localtypes/types";
 import { HiOutlineArrowRight } from "solid-icons/hi";
-import {
-  Component,
-  createEffect,
-  For,
-  Show,
-  Switch,
-  Match,
-  Suspense,
-} from "solid-js";
+import { Component, For, Show, Switch, Match, Suspense } from "solid-js";
 import trainerImages from "../../assets/images/trainer";
 
 type ChangedTrainerDisplayProps = { trainerDiff: [DeckSlot, DeckSlot] };
@@ -17,10 +9,6 @@ type ChangedTrainerDisplayProps = { trainerDiff: [DeckSlot, DeckSlot] };
 const ChangedTrainerDisplay: Component<ChangedTrainerDisplayProps> = (
   props
 ) => {
-  createEffect(() => {
-    console.log(props.trainerDiff);
-  });
-
   return (
     <Show when={props.trainerDiff !== null} fallback={null}>
       <div class="relative flex justify-between">

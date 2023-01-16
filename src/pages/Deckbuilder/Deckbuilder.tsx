@@ -149,7 +149,7 @@ const Deckbuilder: Component = () => {
     <>
       <section
         aria-labelledby="primary-heading"
-        class="min-w-0 flex-1 h-full max-h-screen flex-col overflow-hidden overflow-y-scroll"
+        class="min-w-0 flex-1 h-full max-h-screen min-h-screen flex-col overflow-hidden overflow-y-auto"
       >
         <DeckDisplay
           deck={deck()}

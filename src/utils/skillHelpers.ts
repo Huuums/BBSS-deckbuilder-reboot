@@ -20,9 +20,15 @@ export const getSkillLevelsSum = (deck: Deck) => {
 
     curTrainerSkills.forEach(([skillName, skillLevel]) => {
       if (acc[skillName]) {
-        acc[skillName] = Math.min(acc[skillName] + skillLevel, 5);
+        acc[skillName] = Math.min(
+          acc[skillName] + skillLevel + (trainer.potential[skillName] || 0),
+          5
+        );
       } else {
-        acc[skillName] = Math.min(skillLevel, 5);
+        acc[skillName] = Math.min(
+          skillLevel + (trainer.potential[skillName] || 0),
+          5
+        );
       }
     }, {});
     return acc;

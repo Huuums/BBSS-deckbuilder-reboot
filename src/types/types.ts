@@ -11,12 +11,24 @@ export type BattingPosition =
   | "SS";
 export type PitchingPosition = "SP" | "RP" | "CP";
 
+export type FilterTypes =
+  | "skill"
+  | "position"
+  | "name"
+  | "rarity"
+  | "type"
+  | "team";
+
+export type Filter = [FilterTypes, string];
+
+export type Position = BattingPosition | PitchingPosition;
+
 export type Statstype = "MNT" | "STR" | "DEX" | "INT" | "GP" | "SP";
 
 export type Team =
   | "Shining Angels"
   | "Cruel Pumas"
-  | "River City"
+  | "River City High"
   | "Mystic Unicorns"
   | "Zenonia Knights"
   | "Forest Elves"
@@ -42,10 +54,8 @@ export type Trainer = {
   rarity: Rarity;
   position: BattingPosition | PitchingPosition;
   type: Statstype[];
-  comboEvents: string[];
   bonusTeam: Team[];
   skills: TrainerSkillRanks;
-  order: number;
   stars: RankLevels;
   potential: RosterTrainer["potential"];
 };

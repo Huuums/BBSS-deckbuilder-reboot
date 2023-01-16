@@ -9,6 +9,7 @@ module.exports = {
   ],
   darkMode: "class",
   plugins: [
+    require("@tailwindcss/forms"),
     plugin(({ addVariant }) => {
       addVariant("stuck", "&[stuck]");
     }),
