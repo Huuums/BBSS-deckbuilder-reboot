@@ -13,7 +13,7 @@ import {
   replaceValueAtIndex,
 } from "@utils/commonHelpers";
 import useRoster from "@hooks/useRoster";
-import { Component, createEffect, createSignal, on } from "solid-js";
+import { batch, Component, createEffect, createSignal, on } from "solid-js";
 import { createStore } from "solid-js/store";
 import SkillDisplay from "@components/SkillDisplay";
 import { getSkillLevelDiff, getSkillLevelsSum } from "@utils/skillHelpers";
@@ -57,11 +57,14 @@ const Deckbuilder: Component = () => {
     );
   });
   const addTrainerToDeck = (trainer: DeckSlot) => {
-    setDeck((prev) => {
-      if (exchangeIndex() !== null) {
-        return replaceValueAtIndex(prev, trainer, exchangeIndex());
-      }
-      return replaceFirstOccasionWithValue(prev, trainer, "empty");
+    batch(() => {
+      setDeck((prev) => {
+        if (exchangeIndex() !== null) {
+          return replaceValueAtIndex(prev, trainer, exchangeIndex());
+        }
+        return replaceFirstOccasionWithValue(prev, trainer, "empty");
+      });
+      setTempDeck(null);
     });
   };
 
@@ -72,10 +75,13 @@ const Deckbuilder: Component = () => {
   );
 
   const removeTrainerFromDeck = (trainer: Trainer["name"]) => {
-    setExchangeIndex(null);
-    setDeck((prev) =>
-      prev.map((el) => (el !== "empty" && el.name === trainer ? "empty" : el))
-    );
+    batch(() => {
+      setExchangeIndex(null);
+      setDeck((prev) =>
+        prev.map((el) => (el !== "empty" && el.name === trainer ? "empty" : el))
+      );
+      setTempDeck(null);
+    });
   };
 
   const updateTrainer = <K extends keyof Trainer>(
@@ -113,16 +119,31 @@ const Deckbuilder: Component = () => {
   };
 
   const onMouseEnterTrainerAvatar = (trainer: Trainer) => {
+    let tempDeck = null;
+
     if (
-      deck().includes("empty") &&
-      !deck().find((row) => row !== "empty" && row.name === trainer.name)
+      exchangeIndex() === null &&
+      !deck().includes("empty") &&
+      !deck().find((slot: Trainer) => slot.name === trainer.name)
     ) {
-      const tempDeck = replaceFirstOccasionWithValue(deck(), trainer, "empty");
-      setTempDeck(tempDeck);
-    } else if (exchangeIndex() !== null) {
-      const tempDeck = replaceValueAtIndex(deck(), trainer, exchangeIndex());
-      setTempDeck(tempDeck);
+      setTempDeck(null);
+      return;
     }
+
+    if (exchangeIndex() !== null) {
+      tempDeck = replaceValueAtIndex(deck(), trainer, exchangeIndex());
+    } else {
+      const trainerIndex = deck().findIndex(
+        (deckslot) => deckslot !== "empty" && deckslot.name === trainer.name
+      );
+      if (trainerIndex === -1) {
+        tempDeck = replaceFirstOccasionWithValue(deck(), trainer, "empty");
+      } else {
+        tempDeck = replaceValueAtIndex(deck(), "empty", trainerIndex);
+      }
+    }
+    console.log(tempDeck);
+    setTempDeck(tempDeck);
   };
 
   const tempSkills = () => (tempDeck() ? getSkillLevelsSum(tempDeck()) : null);
@@ -130,19 +151,38 @@ const Deckbuilder: Component = () => {
   const skillDiff = () =>
     tempDeck() ? getSkillLevelDiff(tempSkills(), skills()) : null;
 
-  const trainerDiff = (): [Trainer, Trainer] | null => {
+  const trainerDiff = (): [[DeckSlot, DeckSlot], number] | null => {
     if (!tempDeck()) return null;
 
-    const index = tempDeck().findIndex((tempTrainer, i) => {
+    let index;
+    if (exchangeIndex()) {
+      if (deck[exchangeIndex()] !== tempDeck[exchangeIndex()]) {
+        index = exchangeIndex();
+      }
+    }
+    index = tempDeck().findIndex((tempTrainer, i) => {
       const activeTrainer = deck()[i];
-      if (activeTrainer === "empty" || tempTrainer === "empty") return false;
-      return (
-        activeTrainer.name !== tempTrainer.name ||
-        activeTrainer.stars !== tempTrainer.stars
-      );
+      if (
+        (activeTrainer === "empty" && tempTrainer !== "empty") ||
+        (tempTrainer === "empty" && activeTrainer !== "empty")
+      ) {
+        return true;
+      }
+      if (activeTrainer === "empty" && tempTrainer === "empty") {
+        return false;
+      }
+      if (activeTrainer !== "empty" && tempTrainer !== "empty") {
+        return (
+          activeTrainer.name !== tempTrainer.name ||
+          activeTrainer.stars !== tempTrainer.stars
+        );
+      }
     });
 
-    return [deck()[index], tempDeck()[index]] as [Trainer, Trainer];
+    return [[deck()[index], tempDeck()[index]], index] as [
+      [DeckSlot, DeckSlot],
+      number
+    ];
   };
 
   return (
@@ -179,7 +219,7 @@ const Deckbuilder: Component = () => {
 
       <aside class="hidden lg:block lg:flex-shrink-0">
         <div class="flex max-h-screen h-full w-80 flex-col overflow-y-auto border-r border-gray-200 bg-gray-800 p-3">
-          {tempDeck() !== null && !deck().includes("empty") && (
+          {tempDeck() !== null && (
             <ChangedTrainerDisplay trainerDiff={trainerDiff()} />
           )}
           <SkillDisplay

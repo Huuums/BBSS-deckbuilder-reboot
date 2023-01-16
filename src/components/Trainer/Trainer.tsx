@@ -119,9 +119,11 @@ const Trainer: Component<TrainerProps> = (props) => {
 
               <button
                 class={classNames(
-                  "flex text-gray-300 justify-center items-center text-center text-xs py-1",
+                  "flex text-gray-300 justify-center items-center text-center text-xs py-1 cursor-not-allowed",
                   "basis-1/2"
                 )}
+                title="Will be added later"
+                disabled
                 onClick={() => null /*showTrainerInfo(props.name) */}
               >
                 Details

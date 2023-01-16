@@ -248,7 +248,7 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
       >
         <div class="relative flex items-center">
           {filtertype() !== null && (
-            <span class="flex w-20 items-center h-12 border-gray-500 bg-gray-800 px-3 text-gray-300 sm:text-sm">
+            <span class="flex w-[90px] items-center h-12 border-gray-500 bg-gray-800 px-3 text-gray-300 sm:text-sm">
               {filterTypeToName[filtertype()]}:
             </span>
           )}

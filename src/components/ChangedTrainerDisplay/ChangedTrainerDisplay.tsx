@@ -1,22 +1,35 @@
 import Trainer from "@components/Trainer";
 import { DeckSlot, Trainer as TrainerType } from "@localtypes/types";
 import { HiOutlineArrowRight } from "solid-icons/hi";
-import { Component, For, Show, Switch, Match, Suspense } from "solid-js";
+import {
+  Component,
+  For,
+  Show,
+  Switch,
+  Match,
+  Suspense,
+  createEffect,
+} from "solid-js";
 import trainerImages from "../../assets/images/trainer";
 
-type ChangedTrainerDisplayProps = { trainerDiff: [DeckSlot, DeckSlot] };
+type ChangedTrainerDisplayProps = {
+  trainerDiff: [[DeckSlot, DeckSlot], number];
+};
 
 const ChangedTrainerDisplay: Component<ChangedTrainerDisplayProps> = (
   props
 ) => {
+  createEffect(() => {
+    console.log(props.trainerDiff);
+  });
   return (
     <Show when={props.trainerDiff !== null} fallback={null}>
-      <div class="relative flex justify-between">
+      <div class="relative flex justify-between items-stretch">
         <div class="absolute top-0 bottom-0 right-0 left-0 flex items-center justify-center">
           <HiOutlineArrowRight class="stroke-gray-200 w-12 h-12" />
         </div>
-        <For each={props.trainerDiff}>
-          {(trainer, i) => (
+        <For each={props.trainerDiff[0]}>
+          {(trainer) => (
             <>
               <Suspense
                 fallback={
@@ -43,8 +56,8 @@ const ChangedTrainerDisplay: Component<ChangedTrainerDisplayProps> = (
               >
                 <Switch>
                   <Match when={trainer === "empty" || !trainer}>
-                    <div class="flex-1 h-[80px] max-w-[135px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
-                      {i() + 1}
+                    <div class="basis-1/3 bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
+                      {props.trainerDiff[1] + 1}
                     </div>
                   </Match>
                   <Match when={trainer !== "empty"}>

@@ -92,7 +92,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                         )
                       }
                       markedForExchange={i() === props.exchangeIndex}
-                      showButtonsOnAvatar={!props.deck.includes("empty")}
+                      showButtonsOnAvatar
                       onClickExchange={() => props.updateExchangeIndex(i())}
                       trainer={trainer as Required<TrainerType>}
                       onMouseEnterUpgradeSelector={(stars) =>
