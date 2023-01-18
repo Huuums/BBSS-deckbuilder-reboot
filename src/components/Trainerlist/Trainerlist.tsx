@@ -110,9 +110,9 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
 
     if (sortBy() === "Skill Compatibility") {
       return visibleTrainers().sort((a, b) => {
-        if (trainersInDeck.includes[a.name]) {
+        if (trainersInDeck.includes(a.name)) {
           return -1;
-        } else if (trainersInDeck.includes[b.name]) {
+        } else if (trainersInDeck.includes(b.name)) {
           return 1;
         }
         return (
@@ -122,9 +122,9 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
       });
     } else if (sortBy() === "Skill Compatibility with Encyclopedia") {
       return visibleTrainers().sort((a, b) => {
-        if (trainersInDeck.includes[a.name]) {
+        if (trainersInDeck.includes(a.name)) {
           return -1;
-        } else if (trainersInDeck.includes[b.name]) {
+        } else if (trainersInDeck.includes(b.name)) {
           return 1;
         }
         return (
