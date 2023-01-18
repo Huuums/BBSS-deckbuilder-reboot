@@ -72,16 +72,14 @@ const Deckbuilder: Component = () => {
     setExchangeIndex((prev) => (i === prev ? null : i));
   };
 
-  createEffect(
-    on(useRosterTrainers, () => {
-      setDeck(["empty", "empty", "empty", "empty", "empty", "empty"]);
-      setTrainerList(
-        useRosterTrainers()
-          ? rosterQuery?.data?.filter((val) => val.stars !== 0) || []
-          : trainers.map((row) => ({ ...row, stars: 1, potential: [] }))
-      );
-    })
-  );
+  createEffect(() => {
+    setDeck(["empty", "empty", "empty", "empty", "empty", "empty"]);
+    setTrainerList(
+      useRosterTrainers()
+        ? rosterQuery?.data?.filter((val) => val.stars !== 0) || []
+        : trainers.map((row) => ({ ...row, stars: 1, potential: [] }))
+    );
+  });
 
   const addTrainerToDeck = (trainer: DeckSlot) => {
     batch(() => {

@@ -100,20 +100,41 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
       });
     });
 
-    if (sortBy() === "Skill Compatibility") {
-      return filteredTrainers.sort(
-        (a, b) =>
-          props.trainerSkillContribution[b.name]?.default -
-          props.trainerSkillContribution[a.name]?.default
-      );
-    } else if (sortBy() === "Skill Compatibility with Encyclopedia")
-      return filteredTrainers.sort(
-        (a, b) =>
-          props.trainerSkillContribution[b.name]?.encyclopedia -
-          props.trainerSkillContribution[a.name]?.encyclopedia
-      );
     return filteredTrainers;
   });
+
+  const sortedTrainers = () => {
+    const trainersInDeck = props.deck
+      .filter((val) => val !== "empty")
+      .map((trainer) => (trainer as TrainerType).name);
+
+    if (sortBy() === "Skill Compatibility") {
+      return visibleTrainers().sort((a, b) => {
+        if (trainersInDeck.includes[a.name]) {
+          return -1;
+        } else if (trainersInDeck.includes[b.name]) {
+          return 1;
+        }
+        return (
+          props.trainerSkillContribution[b.name]?.default -
+          props.trainerSkillContribution[a.name]?.default
+        );
+      });
+    } else if (sortBy() === "Skill Compatibility with Encyclopedia") {
+      return visibleTrainers().sort((a, b) => {
+        if (trainersInDeck.includes[a.name]) {
+          return -1;
+        } else if (trainersInDeck.includes[b.name]) {
+          return 1;
+        }
+        return (
+          props.trainerSkillContribution[b.name]?.encyclopedia -
+          props.trainerSkillContribution[a.name]?.encyclopedia
+        );
+      });
+    }
+    return visibleTrainers();
+  };
 
   return (
     <div class="flex flex-col">
@@ -186,7 +207,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
               </div>
             )}
             <div class="grid gap-x-3 gap-y-3 max-w-100 grid-cols-auto p-5">
-              <For each={visibleTrainers()}>
+              <For each={sortedTrainers()}>
                 {(trainer) => {
                   return (
                     <>
