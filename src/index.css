@@ -46,3 +46,36 @@
     transform: rotate(360deg);
   }
 }
+
+@layer components{
+  .solid-select-container{
+    @apply flex-1 relative
+  }
+  .solid-select-control {
+    @apply relative flex items-center
+  }
+  .solid-select-input{
+    @apply w-full bg-gray-900 h-12
+  }
+  .solid-select-list{
+    @apply absolute left-0 right-0 z-20 max-h-60 overflow-y-auto shadow-gray-600 shadow-xl
+  }
+  .solid-select-placeholder{
+    @apply text-gray-200
+  }
+  .solid-select-option{
+    @apply text-gray-200 bg-gray-900 border-b px-1 py-2
+  }
+  .solid-select-option:hover{
+    @apply text-white bg-gray-700 border-b
+  }
+  .solid-select-option:last-child{
+    @apply border-b-0 p-1
+  } .solid-select-option[data-disabled="true"]{
+    @apply text-gray-600
+  }
+  .solid-select-single-value,  .solid-select-placeholder{
+    @apply  p-1 absolute
+  }
+}
+

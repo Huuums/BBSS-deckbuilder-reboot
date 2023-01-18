@@ -3,7 +3,7 @@ import { filterTypeToName } from "@utils/commonHelpers";
 import { HiOutlineX } from "solid-icons/hi";
 import { Component, For } from "solid-js";
 
-type FilterListProps = { filters: Filter[]; onRemove: (index: number) => void };
+type FilterListProps = { filters: Filter[]; removeTrainerFromRoster: (index: number) => void };
 
 const FilterList: Component<FilterListProps> = (props) => {
   return (
@@ -16,7 +16,7 @@ const FilterList: Component<FilterListProps> = (props) => {
             </span>
             <button
               class="ml-auto text-red-500"
-              onClick={() => props.onRemove(i())}
+              onClick={() => props.removeTrainerFromRoster(i())}
             >
               <HiOutlineX />
             </button>

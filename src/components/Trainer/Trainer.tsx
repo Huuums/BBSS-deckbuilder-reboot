@@ -1,4 +1,9 @@
-import { RankLevels, Rarity, Trainer as TrainerType } from "@localtypes/types";
+import {
+  RankLevels,
+  Rarity,
+  Trainer as TrainerType,
+  TrainerNames,
+} from "@localtypes/types";
 import { Component, For, JSX, Show } from "solid-js";
 import teamImages from "@assets/images/teams";
 
@@ -9,14 +14,28 @@ import TrainerStatsType from "@components/TrainerStatsType";
 import TrainerUpgradeSelector from "@components/TrainerUpgradeSelector";
 import { classNames } from "@utils/commonHelpers";
 
+import clickOutside from "@hooks/clickOutside";
+
+import TrainerPotential from "@components/TrainerPotential";
+
+import Modal from "@components/Modal";
+import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
+
+//don't remove this.
+//eslint-disable-next-line
+const clickOutsideDirective = clickOutside;
+
 type TrainerProps = {
   src: string;
   onClickAvatar?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onMouseEnterAvatar?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onMouseLeaveAvatar?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onClickExchange?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
+  removeTrainerFromRoster?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onMouseEnterUpgradeSelector?: (stars: RankLevels) => void;
   onMouseLeaveUpgradeSelector?: () => void;
+  setPotentialSelectionTrainer?: (name: TrainerNames | "") => void;
+  showPotentialSelectionSmall?: boolean;
   trainerDeckIndex?: number;
   class?: string;
   cannotAddTrainer?: boolean;
@@ -28,6 +47,18 @@ type TrainerProps = {
   markedForExchange?: boolean;
   imgClass?: string;
   onlyAvatarAndStars?: boolean;
+  updateTrainer?: <K extends keyof TrainerType>(
+    trainerName: string,
+    valuesToUpdate: Partial<Record<K, TrainerType[K]>>
+  ) => void;
+  rosterView?: boolean;
+  trainerSkillContribution?:
+    | { default: number; encyclopedia: number }
+    | undefined;
+  deckSkillValue?: {
+    default: number;
+    encyclopedia: number;
+  };
 };
 
 const getBorderRarityClass = (rarity: Rarity) => {
@@ -65,11 +96,7 @@ const Trainer: Component<TrainerProps> = (props) => {
     <Show
       when={props.onlyAvatarAndStars}
       fallback={
-        <TrainerBorder
-          withGlow
-          rarity={props.trainer.rarity}
-          class={props.class}
-        >
+        <TrainerBorder rarity={props.trainer.rarity} class={props.class}>
           {props.trainer?.bonusTeam?.length > 0 && (
             <div class="absolute flex top-1 left-1 m-auto p-0.5 z-[1] border-2 border-blue-400 bg-gray-800 rounded-2xl space-x-0.5">
               <For each={props.trainer.bonusTeam}>
@@ -78,6 +105,7 @@ const Trainer: Component<TrainerProps> = (props) => {
             </div>
           )}
           <TrainerAvatar
+            rosterView={props.rosterView}
             imgClass={props.imgClass}
             name={props.trainer.name}
             src={props.src}
@@ -88,7 +116,9 @@ const Trainer: Component<TrainerProps> = (props) => {
             trainerDeckIndex={props.trainerDeckIndex}
             showButtons={props.showButtonsOnAvatar}
             markedForExchange={props.markedForExchange}
+            removeTrainerFromRoster={props.removeTrainerFromRoster}
             onClickExchange={(e) => props.onClickExchange(e)}
+            class={props.trainer.stars === 0 ? "opacity-40" : ""}
           />
           <div class="bg-gray-200 h-8 relative flex justify-between items-center">
             <TrainerStatsType type={props.trainer.type} />
@@ -106,17 +136,56 @@ const Trainer: Component<TrainerProps> = (props) => {
           />
           <div class="relative bg-gray-800 text-gray-200 font-semibold flex justify-between flex-wrap">
             <div class="basis-full flex">
+              {props.deckSkillValue !== undefined && (
+                <>
+                  <div class="basis-1/2 border-r text-xs items-center flex border-gray-200 p-1">
+                    <IoStarSharp class="w-4 h-4" />
+                    {props.trainerSkillContribution?.default === undefined
+                      ? "-"
+                      : props.trainerSkillContribution?.default -
+                        (props.deckSkillValue?.default || 0)}
+                  </div>
+                  <div class="basis-1/2 flex text-xs items-center border-gray-200 p-1">
+                    <IoStarHalfSharp class="w-4 h-4" />
+                    {props.trainerSkillContribution?.encyclopedia === undefined
+                      ? "-"
+                      : props.trainerSkillContribution?.encyclopedia -
+                        (props.deckSkillValue?.encyclopedia || 0)}
+                  </div>
+                </>
+              )}
+            </div>
+            <div class="basis-full flex">
               <button
                 class={classNames(
                   "flex justify-center p-0.5 basis-1/2 items-center text-xs py-1",
                   getBackgroundAndTextRarityClass(props.trainer.rarity),
                   "basis-1/2"
                 )}
-                onClick={() => null /*togglePotentialSelection(props.name)*/}
+                onClick={() =>
+                  props.setPotentialSelectionTrainer(props.trainer.name)
+                }
               >
                 Potential
               </button>
-
+              {props.showPotentialSelectionSmall && (
+                <Modal
+                  isOpen={props.showPotentialSelectionSmall}
+                  onClose={() => props.setPotentialSelectionTrainer("")}
+                >
+                  <div class="2xl:basis-1/4 flex-grow my-2 mx-2 2xl:max-w-1/2">
+                    <TrainerPotential
+                      trainer={props.trainer}
+                      mode="large"
+                      updateTrainer={(potential) =>
+                        props.updateTrainer(props.trainer.name, {
+                          potential,
+                        })
+                      }
+                    />
+                  </div>
+                </Modal>
+              )}
               <button
                 class={classNames(
                   "flex text-gray-300 justify-center items-center text-center text-xs py-1 cursor-not-allowed",
@@ -152,10 +221,10 @@ const Trainer: Component<TrainerProps> = (props) => {
           trainerDeckIndex={props.trainerDeckIndex}
           showButtons={props.showButtonsOnAvatar}
           markedForExchange={props.markedForExchange}
-          onClickExchange={(e) => props.onClickExchange(e)}
+          onClickExchange={(e) => props.onClickExchange?.(e)}
         />
         <TrainerUpgradeSelector
-          onChange={(stars) => props.onChange({ stars })}
+          onChange={(stars) => props.onChange?.({ stars })}
           onMouseEnter={(stars) => props.onMouseEnterUpgradeSelector?.(stars)}
           onMouseLeave={() => props.onMouseLeaveUpgradeSelector?.()}
           activeUpgrade={props.trainer.stars}

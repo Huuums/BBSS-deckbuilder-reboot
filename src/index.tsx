@@ -12,11 +12,11 @@ const queryClient = new QueryClient();
 render(
   () => (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <Router>
+      <Router>
+        <AuthProvider>
           <App />
-        </Router>
-      </AuthProvider>
+        </AuthProvider>
+      </Router>
     </QueryClientProvider>
   ),
   document.getElementById("root") as HTMLElement

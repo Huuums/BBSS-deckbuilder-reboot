@@ -1,5 +1,12 @@
-import { RankLevels, Rarity, Skill as SkillNames } from "@localtypes/types";
+import {
+  RankLevels,
+  Rarity,
+  Skill as SkillNames,
+  SkillValue,
+} from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
+
+import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
 import { Component, Match } from "solid-js";
 import { Switch } from "solid-js";
 
@@ -7,6 +14,10 @@ type SkillProps = {
   grade: Rarity;
   rank: RankLevels;
   name: SkillNames;
+  isBestSkill?: boolean;
+  isBestSkillEncyclopedia?: boolean;
+  value: SkillValue;
+  valueDiff?: number;
   diff?: number;
 };
 
@@ -32,7 +43,7 @@ const Skill: Component<SkillProps> = (props) => {
         props.rank === 0
           ? "line-through bg-gray-600 border-l-gray-600"
           : getBgClass(props.grade),
-        "overflow-visible h-8 p-1 pl-5 ml-4 mr-2 relative",
+        "overflow-visible h-8 p-1 pl-5 ml-4 mr-2 relative flex items-center",
         "after:content[''] after:top-0 after:absolute after:right-0 after:translate-x-full after:border-t-[1rem] after:border-t-transparent after:border-l-[.75rem] after:border-l-inherit after:border-b-[1rem] after:border-b-transparent"
       )}
     >
@@ -73,7 +84,38 @@ const Skill: Component<SkillProps> = (props) => {
           </Match>
         </Switch>
       )}
+      <Switch>
+        <Match when={!props.valueDiff}>
+          <span class="text-white text-sm font-medium mr-1">
+            [{props.value}]
+          </span>
+        </Match>
+        <Match when={props.valueDiff > 0}>
+          <span class="text-green-400 text-sm font-medium mr-1 animate-pulse-full">
+            [+{props.valueDiff}]
+          </span>
+          <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
+            [{props.value}]
+          </span>
+        </Match>
+        <Match when={props.valueDiff < 0}>
+          <span class="text-red-400 text-sm font-medium mr-1 animate-pulse-full">
+            [{props.valueDiff}]
+          </span>
+          <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
+            [{props.value}]
+          </span>
+        </Match>
+      </Switch>
       <span class="text-gray-200 text-sm font-medium">{props.name}</span>
+      <Switch>
+        <Match when={props.isBestSkill}>
+          <IoStarSharp class="ml-auto w-6 h-6 fill-white line-through " />
+        </Match>
+        <Match when={props.isBestSkillEncyclopedia}>
+          <IoStarHalfSharp class="ml-auto w-6 h-6 fill-white line-through " />
+        </Match>
+      </Switch>
     </div>
   );
 };

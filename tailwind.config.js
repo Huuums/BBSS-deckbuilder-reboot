@@ -42,11 +42,12 @@ module.exports = {
       },
       animation: {
         "pulse-full": "pulse-full 4s linear infinite alternate",
+        "pulse-full-reverse": "pulse-full 4s linear infinite alternate-reverse",
       },
       keyframes: {
         "pulse-full": {
-          "0%, 20%, 80%, 100%": { opacity: 1 },
-          "25%, 75%": { opacity: 0 },
+          "0%, 45%": { opacity: 1 },
+          "55%, 100%": { opacity: 0 },
         },
       },
     },

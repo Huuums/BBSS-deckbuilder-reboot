@@ -1,16 +1,26 @@
-import { createSignal, For, ParentComponent, Show } from "solid-js";
+import {
+  createSignal,
+  For,
+  ParentComponent,
+  Show,
+  Switch,
+  Match,
+} from "solid-js";
 import { Dialog, DialogPanel } from "solid-headless";
 import { HiOutlineMenu, HiOutlineX } from "solid-icons/hi";
 import {
   IoHammerOutline,
   IoPeopleOutline,
   IoListOutline,
+  IoPerson,
 } from "solid-icons/io";
 
 import { classNames } from "@utils/commonHelpers";
 import { Motion, Presence } from "@motionone/solid";
 import NavLinkWrapper from "@components/NavLinkWrapper";
 import { A } from "@solidjs/router";
+
+import { useAuth } from "@hooks/useAuth";
 
 const navigation = [
   { name: "Deckbuilding", href: "/deck", icon: IoHammerOutline },
@@ -27,6 +37,7 @@ const navigation = [
 
 const Layout: ParentComponent = (props) => {
   const [sidebarOpen, setSidebarOpen] = createSignal(false);
+  const user = useAuth();
 
   return (
     <>
@@ -186,17 +197,26 @@ const Layout: ParentComponent = (props) => {
             </nav>
           </div>
           <div class="flex justify-center flex-shrink-0 pb-5">
-            <A
-              href="/profile"
-              class="flex-1 text-center text-gray-300 p-3 mx-2 rounded-md text-xs font-medium hover:text-white hover:bg-gray-700"
-            >
-              <img
-                class="mx-auto block h-10 w-10 rounded-full"
-                src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-              <span class="mt-2">My Profile</span>
-            </A>
+            <Switch>
+              <Match when={user()?.username}>
+                <A
+                  href="/profile"
+                  class="flex-1 text-center text-gray-300 p-3 mx-2 rounded-md text-xs font-medium hover:text-white hover:bg-gray-700"
+                >
+                  <IoPerson class="h-8 w-8 mx-auto" />
+                  <span class="mt-2">My Profile</span>
+                </A>
+              </Match>
+              <Match when={!user()}>
+                <A
+                  href="/login"
+                  class="flex-1 text-center text-gray-300 p-3 mx-2 rounded-md text-xs font-medium hover:text-white hover:bg-gray-700"
+                >
+                  <IoPerson class="h-8 w-8 mx-auto" />
+                  <span class="mt-2">Login</span>
+                </A>
+              </Match>
+            </Switch>
           </div>
         </div>
       </div>

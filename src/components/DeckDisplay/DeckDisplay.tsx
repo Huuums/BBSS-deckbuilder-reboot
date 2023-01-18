@@ -3,13 +3,18 @@ import type { Component } from "solid-js";
 
 import trainerImages from "@assets/images/trainer";
 import Trainer from "@components/Trainer";
-import { Deck, RankLevels, Trainer as TrainerType } from "@localtypes/types";
+import {
+  Deck,
+  RankLevels,
+  Trainer as TrainerType,
+  TrainerNames,
+} from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
 
 type DeckDisplayProps = {
   deck: Deck;
   tempDeck: Deck;
-  removeTrainer: (trainerName: string) => void;
+  removeTrainerFromDeck: (trainerName: string) => void;
   updateTrainer: <K extends keyof TrainerType>(
     trainerName: string,
     valuesToUpdate: Partial<Record<K, TrainerType[K]>>
@@ -23,6 +28,7 @@ type DeckDisplayProps = {
   onMouseLeaveUpgradeSelector?: () => void;
   updateExchangeIndex?: (index: number) => void;
   exchangeIndex?: number | undefined;
+  setPotentialSelectionTrainer: (name: TrainerNames | "") => void;
 };
 
 const DeckDisplay: Component<DeckDisplayProps> = (props) => {
@@ -91,6 +97,9 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                           values
                         )
                       }
+                      setPotentialSelectionTrainer={(name: TrainerNames | "") =>
+                        props.setPotentialSelectionTrainer(name)
+                      }
                       markedForExchange={i() === props.exchangeIndex}
                       showButtonsOnAvatar
                       onClickExchange={() => props.updateExchangeIndex(i())}
@@ -106,7 +115,9 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                       }
                       src={trainerImages[(trainer as TrainerType).name]}
                       onClickAvatar={() =>
-                        props.removeTrainer((trainer as TrainerType).name)
+                        props.removeTrainerFromDeck(
+                          (trainer as TrainerType).name
+                        )
                       }
                       class="flex-1 max-w-[150px]"
                     />

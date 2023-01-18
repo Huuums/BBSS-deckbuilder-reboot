@@ -8,20 +8,24 @@ import {
   createSignal,
   onCleanup,
   Accessor,
+  Show,
+  batch,
 } from "solid-js";
 
-export const AuthContext = createContext<Accessor<User>>();
+export const AuthContext = createContext<Accessor<User | null>>();
 
 const AuthProvider: ParentComponent = (props) => {
-  const [user, setUser] = createSignal<User>(null);
-  const [isLoading, setIsLoading] = createSignal(true);
+  const [user, setUser] = createSignal<User | null>(null);
+  const [isLoading, setIsLoading] = createSignal<boolean>(true);
 
   const listener = onAuthStateChanged(auth, async (user) => {
     if (user) {
       const { uid, displayName, email } = user;
       const userData = await getOrCreateUser(uid);
-      setIsLoading(false);
-      setUser({ uid, displayName, email, ...userData });
+      batch(() => {
+        setIsLoading(false);
+        setUser({ uid, displayName, email, ...userData });
+      });
     } else {
       setIsLoading(false);
       setUser(null);
@@ -31,7 +35,11 @@ const AuthProvider: ParentComponent = (props) => {
   onCleanup(() => listener());
 
   return (
-    <AuthContext.Provider value={user}>{props.children}</AuthContext.Provider>
+    <AuthContext.Provider value={user}>
+      <Show when={!isLoading()} fallback={null}>
+        {props.children}
+      </Show>
+    </AuthContext.Provider>
   );
 };
 

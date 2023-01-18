@@ -7,10 +7,11 @@ import { RankLevels } from "@localtypes/types";
 
 type TrainerUpgradeSelectorProps = {
   onChange: (stars: RankLevels) => void;
-  onMouseEnter: (stars: RankLevels) => void;
-  onMouseLeave: () => void;
+  onMouseEnter?: (stars: RankLevels) => void;
+  onMouseLeave?: () => void;
+  ignoreUpdateCheck?: boolean;
   activeUpgrade: number;
-  class: string;
+  class?: string;
 };
 
 const TrainerUpgradeSelector: Component<TrainerUpgradeSelectorProps> = (
@@ -26,7 +27,11 @@ const TrainerUpgradeSelector: Component<TrainerUpgradeSelectorProps> = (
         {(el: RankLevels) => {
           return (
             <button
-              onClick={() => el !== props.activeUpgrade && props.onChange(el)}
+              onClick={() =>
+                props.ignoreUpdateCheck
+                  ? props.onChange(el)
+                  : el !== props.activeUpgrade && props.onChange(el)
+              }
               onMouseEnter={() =>
                 el !== props.activeUpgrade && props.onMouseEnter?.(el)
               }

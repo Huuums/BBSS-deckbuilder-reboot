@@ -1,5 +1,5 @@
 import { classNames } from "@utils/commonHelpers";
-import { HiOutlineSwitchHorizontal } from "solid-icons/hi";
+import { HiOutlineSwitchHorizontal, HiOutlineX } from "solid-icons/hi";
 import { Component, JSX } from "solid-js";
 
 type TrainerAvatarProps = {
@@ -11,10 +11,12 @@ type TrainerAvatarProps = {
   onMouseEnter?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onMouseLeave?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onClickExchange?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
+  removeTrainerFromRoster?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   disabled?: boolean;
   showButtons?: boolean;
   trainerDeckIndex?: number;
   markedForExchange?: boolean;
+  rosterView?: boolean;
 };
 
 const TrainerAvatar: Component<TrainerAvatarProps> = (props) => {
@@ -22,12 +24,26 @@ const TrainerAvatar: Component<TrainerAvatarProps> = (props) => {
     <div class={classNames("bg-gray-700 relative", props.class)}>
       <button
         class="relative flex justify-center w-full"
-        onClick={(e) => props.onClickAvatar(e)}
+        onClick={(e) => props.onClickAvatar?.(e)}
         onMouseEnter={(e) => props.onMouseEnter?.(e)}
         onMouseLeave={(e) => props.onMouseLeave?.(e)}
         disabled={props.disabled}
       >
         <img src={props.src} alt={props.name} class={props.imgClass} />
+        {props.rosterView && (
+          <div class="absolute top-1 right-1 flex justify-end items-end ">
+            <button
+              class={classNames("p-1 bg-red-400 hover:bg-gray-300")}
+              title="Remove Trainer from Roster"
+              onClick={(e) => {
+                props.removeTrainerFromRoster?.(e);
+                e.stopPropagation();
+              }}
+            >
+              <HiOutlineX class="h-6 w-6" />
+            </button>
+          </div>
+        )}
         {props.showButtons && (
           <div class="absolute top-0 left-0 bottom-0 right-0 flex justify-end items-end pb-2 pr-2">
             <button
@@ -35,7 +51,7 @@ const TrainerAvatar: Component<TrainerAvatarProps> = (props) => {
                 "rounded-full p-2 bg-gray-400 hover:bg-gray-300",
                 props.markedForExchange ? "bg-blue-400 hover:bg-blue-300" : ""
               )}
-              title="Set Trainer to exchange with another one"
+              title="Click to compare or swap Trainer with another one"
               onClick={(e) => {
                 props.onClickExchange?.(e);
                 e.stopPropagation();

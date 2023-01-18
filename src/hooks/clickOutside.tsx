@@ -12,7 +12,7 @@ declare module "solid-js" {
   namespace JSX {
     interface Directives {
       // use:model
-      clickOutsideDirective: () => boolean;
+      clickOutsideDirective: () => unknown;
     }
   }
 }

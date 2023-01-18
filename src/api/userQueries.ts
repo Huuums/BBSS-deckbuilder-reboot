@@ -9,8 +9,14 @@ export const getOrCreateUser = async (uid: string) => {
   let userData = await getUserData(uid);
   if (!userData) {
     await createInitialUser(uid, JSON.parse(localStorage.getItem("roster")));
-    userData = await getUserData(uid);
+    try {
+      userData = await getUserData(uid);
+      localStorage.removeItem("roster");
+    } catch (e) {
+      new Error(e);
+    }
   }
+
   return userData;
 };
 

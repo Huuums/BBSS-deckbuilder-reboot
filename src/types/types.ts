@@ -47,7 +47,13 @@ export type RankLevels = 0 | 1 | 2 | 3 | 4 | 5;
 
 export type SkillRanks = Partial<Record<Skill, RankLevels>>;
 
-export type SkillDiff = Partial<Record<Skill, { value: number; from: number }>>;
+export type SkillDiff = Partial<
+  Record<Skill, { levelDiff: number; valueDiff: number; from: number }>
+>;
+
+export type SkillData = [Skill, RankLevels, SkillValue];
+
+export type SkillValue = number;
 
 export type Trainer = {
   name: TrainerNames;
@@ -218,7 +224,7 @@ export type Roster = Partial<Record<TrainerNames, RosterTrainer>>;
 
 export type RosterTrainer = {
   stars: RankLevels;
-  potential: Record<Skill, number> | Record<string, never>;
+  potential: [Skill | undefined, Skill | undefined, Skill | undefined] | [];
 };
 
 export type Deck = DeckSlot[];
