@@ -384,6 +384,7 @@ const Deckbuilder: Component = () => {
                   skillInformation().deck.bestSkillsValueEncyclopedia,
               }}
               deck={deck()}
+              isDeckBuilder
               onMouseEnterTrainerAvatar={onMouseEnterTrainerAvatar}
               onMouseLeaveTrainerAvatar={() => setTempDeck(null)}
               onMouseEnterUpgradeSelector={onMouseEnterTrainerUpgrade}

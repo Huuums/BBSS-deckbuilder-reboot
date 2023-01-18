@@ -60,6 +60,7 @@ type TrainerlistProps = {
   updateAllTrainers?: <K extends keyof TrainerType>(
     valuesToUpdate: Partial<Record<K, TrainerType[K]>>
   ) => void;
+  isDeckBuilder?: boolean;
 };
 
 const Trainerlist: Component<TrainerlistProps> = (props) => {
@@ -148,40 +149,42 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
         </Match>
         <Match when={!props.potentialListView}>
           <>
-            <div class="flex justify-center space-x-10 px-5 -mb-2 mt-2">
-              <div class="flex text-gray-200 items-center font-semibold">
-                Set all Trainer Ranks:
-                <TrainerUpgradeSelector
-                  ignoreUpdateCheck
-                  onChange={(stars) => props.updateAllTrainers({ stars })}
-                  activeUpgrade={5}
-                  class="w-32"
-                />
+            {props.isDeckBuilder && (
+              <div class="flex justify-center space-x-10 px-5 -mb-2 mt-2">
+                <div class="flex text-gray-200 items-center font-semibold">
+                  Set all Trainer Ranks:
+                  <TrainerUpgradeSelector
+                    ignoreUpdateCheck
+                    onChange={(stars) => props.updateAllTrainers({ stars })}
+                    activeUpgrade={5}
+                    class="w-32"
+                  />
+                </div>
+                <div class="flex text-gray-200 items-center font-semibold">
+                  Sort By:
+                  <RadioButton
+                    onClick={(value) => setSortBy(value)}
+                    value={"Rarity"}
+                    isActive={sortBy() === "Rarity"}
+                    class="mx-2 flex-grow-0 py-1.5"
+                  />
+                  <RadioButton
+                    onClick={(value) => setSortBy(value)}
+                    value={"Skill Compatibility"}
+                    isActive={sortBy() === "Skill Compatibility"}
+                    class="mx-2 py-1.5"
+                  />{" "}
+                  <RadioButton
+                    onClick={(value) => setSortBy(value)}
+                    value={"Skill Compatibility with Encyclopedia"}
+                    isActive={
+                      sortBy() === "Skill Compatibility with Encyclopedia"
+                    }
+                    class="mx-2 py-1.5 whitespace-nowrap"
+                  />
+                </div>
               </div>
-              <div class="flex text-gray-200 items-center font-semibold">
-                Sort By:
-                <RadioButton
-                  onClick={(value) => setSortBy(value)}
-                  value={"Rarity"}
-                  isActive={sortBy() === "Rarity"}
-                  class="mx-2 flex-grow-0 py-1.5"
-                />
-                <RadioButton
-                  onClick={(value) => setSortBy(value)}
-                  value={"Skill Compatibility"}
-                  isActive={sortBy() === "Skill Compatibility"}
-                  class="mx-2 py-1.5"
-                />{" "}
-                <RadioButton
-                  onClick={(value) => setSortBy(value)}
-                  value={"Skill Compatibility with Encyclopedia"}
-                  isActive={
-                    sortBy() === "Skill Compatibility with Encyclopedia"
-                  }
-                  class="mx-2 py-1.5 whitespace-nowrap"
-                />
-              </div>
-            </div>
+            )}
             <div class="grid gap-x-3 gap-y-3 max-w-100 grid-cols-auto p-5">
               <For each={visibleTrainers()}>
                 {(trainer) => {
