@@ -104,7 +104,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
   });
 
   const sortedTrainers = () => {
-    const trainersInDeck = props.deck
+    const trainersInDeck = (props.deck || [])
       .filter((val) => val !== "empty")
       .map((trainer) => (trainer as TrainerType).name);
 
