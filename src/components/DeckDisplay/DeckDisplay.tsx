@@ -83,12 +83,12 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                 }
               >
                 <Switch>
-                  <Match when={trainer === "empty"}>
+                  <Match when={trainer === "empty" || trainer === undefined}>
                     <div class="flex-1 h-full min-h-[260px] max-w-[150px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
                       {i() + 1}
                     </div>
                   </Match>
-                  <Match when={trainer !== "empty"}>
+                  <Match when={typeof trainer === "object"}>
                     <Trainer
                       // safeguard is typeof trainer !== "string" in <Match> above so casting as type is okay
                       onChange={(values) =>

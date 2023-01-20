@@ -209,10 +209,10 @@ const SkillDisplay: Component<SkillDisplayProps> = (props) => {
                           props.skillInformationTemp !== undefined
                             ? props.skillInformationTemp
                                 .listOfBestSkillsDefault[skillName] !==
-                              undefined
+                                undefined && skillValue > 0
                             : props.skillInformationDeck
                                 .listOfBestSkillsDefault[skillName] !==
-                              undefined
+                                undefined && skillValue > 0
                         }
                         isBestSkillEncyclopedia={
                           props.skillInformationTemp
@@ -221,13 +221,15 @@ const SkillDisplay: Component<SkillDisplayProps> = (props) => {
                                 undefined &&
                               props.skillInformationTemp
                                 .listOfBestSkillsEncyclopedia[skillName] !==
-                                undefined
+                                undefined &&
+                              skillValue > 0
                             : props.skillInformationDeck
                                 .listOfBestSkillsDefault[skillName] ===
                                 undefined &&
                               props.skillInformationDeck
                                 .listOfBestSkillsEncyclopedia[skillName] !==
-                                undefined
+                                undefined &&
+                              skillValue > 0
                         }
                         valueDiff={
                           props.diff && props.diff?.[skillName]?.valueDiff

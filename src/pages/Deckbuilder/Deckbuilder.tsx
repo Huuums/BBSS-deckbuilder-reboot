@@ -1,12 +1,14 @@
 import trainers from "@assets/json/trainers";
 import DeckDisplay from "@components/DeckDisplay";
 import Trainerlist from "@components/Trainerlist";
+
 import {
   Deck,
   DeckSlot,
   Position,
   RankLevels,
-  SkillRanks,
+  Roster,
+  RosterTrainer,
   Trainer,
   TrainerNames,
 } from "@localtypes/types";
@@ -23,9 +25,10 @@ import {
   createMemo,
   createSignal,
   on,
+  onMount,
   Show,
 } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createStore, reconcile } from "solid-js/store";
 import SkillDisplay from "@components/SkillDisplay";
 import {
   getBestSkills,
@@ -37,48 +40,105 @@ import {
 } from "@utils/skillHelpers";
 import ChangedTrainerDisplay from "@components/ChangedTrainerDisplay";
 import PositionChoice from "@components/PositionChoice";
-import { A } from "@solidjs/router";
+import { A, Params, useSearchParams } from "@solidjs/router";
 import { Toggle } from "solid-headless";
+import { useAuth } from "@hooks/useAuth";
 
 // type DeckbuilderProps = {};
 
-const Deckbuilder: Component = () => {
-  const [deck, setDeck] = createSignal<Deck>([
-    "empty",
-    "empty",
-    "empty",
-    "empty",
-    "empty",
-    "empty",
-  ]);
+const getTrainersFromParams = (params: Params | undefined): Partial<Roster> => {
+  if (!params || !params.trainers) return undefined;
+  return Object.fromEntries(
+    JSON.parse(atob(decodeURIComponent(params.trainers)))
+  );
+};
 
-  const [useRosterTrainers, setUseRosterTrainers] = createSignal(true);
+const setInitialTrainerList = (paramTrainers: Partial<Roster> | undefined) => {
+  return trainers.map<Trainer>((trainer) => {
+    if (paramTrainers !== undefined && paramTrainers[trainer.name]) {
+      return { ...trainer, ...paramTrainers[trainer.name] };
+    }
+    return { ...trainer, stars: 1, potential: [] };
+  });
+};
+
+const Deckbuilder: Component = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const user = useAuth();
+
+  const [useRosterTrainers, setUseRosterTrainers] = createSignal<boolean>(
+    searchParams.trainers === undefined ||
+      (searchParams.trainers !== undefined &&
+        searchParams.rosterid !== undefined)
+  );
+  const [rosterId] = createSignal<string | undefined>(searchParams.rosterid);
+  const [rosterQuery, queryId] = useRoster(() => rosterId());
+
+  createEffect(() => {
+    console.log(rosterQuery.data);
+  });
+
+  onMount(() => {
+    if (useRosterTrainers()) {
+      if (!searchParams.rosterid) {
+        setSearchParams({ rosterid: queryId?.() || user()?.roster });
+      }
+    }
+  });
+
   const [targetPosition, setTargetPosition] = createSignal<Position | "0">("0");
-  const rosterQuery = useRoster();
 
   const [potentialSelectionTrainer, setPotentialSelectionTrainer] =
     createSignal<TrainerNames | "">("");
 
-  const [trainerList, setTrainerList] = createStore<Trainer[]>([]);
-  const [skills, setSkills] = createSignal<SkillRanks>({});
+  const paramTrainers = getTrainersFromParams(searchParams);
+
+  const [trainerList, setTrainerList] = createStore<Trainer[]>(
+    setInitialTrainerList(paramTrainers)
+  );
+  const [deck, setDeck] = createSignal<(DeckSlot | undefined)[]>(
+    paramTrainers
+      ? trainerList
+          .filter((trainer) => paramTrainers[trainer.name])
+          .concat(
+            Array(6 - Object.keys(paramTrainers || {})?.length).fill("empty")
+          )
+      : Array(6).fill("empty")
+  );
+
   const [tempDeck, setTempDeck] = createSignal<Deck | null>(null);
   const [exchangeIndex, setExchangeIndex] = createSignal<number | null>(null);
 
-  createEffect(() => {
-    setSkills(() => getSkillLevelsSum(deck()));
-  });
+  const skills = () => getSkillLevelsSum(deck());
 
   const updateExchangeIndex = (i: number) => {
     setExchangeIndex((prev) => (i === prev ? null : i));
   };
 
   createEffect(() => {
-    setDeck(["empty", "empty", "empty", "empty", "empty", "empty"]);
-    setTrainerList(
-      useRosterTrainers()
-        ? rosterQuery?.data?.filter((val) => val.stars !== 0) || []
-        : trainers.map((row) => ({ ...row, stars: 1, potential: [] }))
-    );
+    if (useRosterTrainers() && rosterQuery?.data) {
+      setTrainerList(
+        reconcile(
+          rosterQuery?.data.trainers.filter((trainer) => trainer.stars !== 0),
+          { key: "name" }
+        )
+      );
+      setDeck((prev) =>
+        prev.map((val) =>
+          val === "empty" ||
+          trainerList.some((trainer) => trainer.name === val.name)
+            ? val
+            : "empty"
+        )
+      );
+    } else if (!useRosterTrainers()) {
+      setTrainerList(
+        reconcile(
+          trainers.map((trainer) => ({ ...trainer, stars: 1, potential: [] })),
+          { key: "name", merge: true }
+        )
+      );
+    }
   });
 
   const addTrainerToDeck = (trainer: DeckSlot) => {
@@ -94,9 +154,27 @@ const Deckbuilder: Component = () => {
   };
 
   createEffect(
-    on(deck, () => {
-      setExchangeIndex(null);
-    })
+    on(
+      deck,
+      () => {
+        setExchangeIndex(null);
+        if (deck().every((val) => val === "empty")) {
+          setSearchParams({ trainers: "" });
+        } else {
+          const trainers = (
+            deck().filter((val) => val !== "empty") as Trainer[]
+          ).map<[TrainerNames, RosterTrainer]>((val) => [
+            val.name,
+            { stars: val.stars, potential: val.potential },
+          ]);
+
+          setSearchParams({
+            trainers: encodeURIComponent(btoa(JSON.stringify(trainers))),
+          });
+        }
+      },
+      { defer: true }
+    )
   );
 
   const removeTrainerFromDeckFromDeck = (trainer: Trainer["name"]) => {
@@ -113,26 +191,20 @@ const Deckbuilder: Component = () => {
     trainerName: Trainer["name"],
     valuesToUpdate: Partial<Record<K, Trainer[K]>>
   ) => {
-    setTrainerList(
-      (el) => el.name === trainerName,
-      (el) => ({ ...el, ...valuesToUpdate })
-    );
+    batch(() => {
+      setTrainerList(
+        (el) => el.name === trainerName,
+        (el) => ({ ...el, ...valuesToUpdate })
+      );
+    });
   };
 
   const updateAllTrainers = <K extends keyof Trainer>(
     valuesToUpdate: Partial<Record<K, Trainer[K]>>
   ) => {
-    setTrainerList((prev) =>
-      prev.map((trainer) => ({ ...trainer, ...valuesToUpdate }))
-    );
-    //iffy but since whole trainerlist updates the reference in the deck to the trainer gets lost. Have to update it so trainers in deck and trainerlist stay in sync
-    setDeck((prev) =>
-      prev.map((deckslot) => {
-        if (deckslot !== "empty") {
-          return trainerList.find((trainer) => trainer.name === deckslot.name);
-        }
-        return deckslot;
-      })
+    setTrainerList(
+      (prev) => prev !== undefined,
+      (el) => ({ ...el, ...valuesToUpdate })
     );
   };
 
@@ -197,12 +269,14 @@ const Deckbuilder: Component = () => {
   const tempSkills = () => (tempDeck() ? getSkillLevelsSum(tempDeck()) : null);
 
   const skillDiff = () =>
-    tempSkills() ? getSkillLevelDiff(tempSkills(), skills()) : null;
+    tempSkills()
+      ? getSkillLevelDiff(tempSkills(), skills(), targetPosition())
+      : null;
 
   const trainerDiff = (): [[DeckSlot, DeckSlot], number] | null => {
     if (!tempDeck()) return null;
 
-    let index;
+    let index: number;
     if (exchangeIndex()) {
       if (deck[exchangeIndex()] !== tempDeck[exchangeIndex()]) {
         index = exchangeIndex();
@@ -347,7 +421,20 @@ const Deckbuilder: Component = () => {
             </span>
             <Toggle
               pressed={useRosterTrainers()}
-              onChange={() => setUseRosterTrainers((prev) => !prev)}
+              onChange={() =>
+                setUseRosterTrainers((prev) => {
+                  if (!prev) {
+                    setTimeout(() => {
+                      setSearchParams({
+                        rosterid: queryId?.() || user()?.roster,
+                      });
+                    }, 200);
+                  } else {
+                    setSearchParams({ rosterid: "" });
+                  }
+                  return !prev;
+                })
+              }
               class={classNames(
                 useRosterTrainers() ? "bg-gray-900" : "bg-gray-200",
                 "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -363,8 +450,28 @@ const Deckbuilder: Component = () => {
             </Toggle>
             <span class="ml-3 shrink-0">
               <span class="text-sm font-medium text-gray-400">
-                Use Roster trainers
+                Use{" "}
+                <Show
+                  when={
+                    rosterQuery?.data?.owner && queryId?.() !== user()?.roster
+                  }
+                >
+                  <span class="font-bold text-white">
+                    {rosterQuery?.data?.owner}
+                  </span>{" "}
+                </Show>
+                Roster trainers
               </span>
+              {/* <input
+                type="text"
+                defaultValue={}
+                placeholder="Enter Rosterid"
+                class="bg-gray-900 border-0 placeholder-gray-500 p-1 ml-2"
+                onChange={(e) => {
+                  setSearchParams({ rosterid: e.currentTarget.value });
+                  setRosterId(e.currentTarget.value);
+                }}
+              /> */}
             </span>
           </div>
         </div>

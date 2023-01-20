@@ -11,35 +11,45 @@ import {
   Trainer,
 } from "@localtypes/types";
 import skillDefinitions from "@assets/json/skillDefinitions";
+import { pitchingPositions } from "@assets/positions";
 
 export const getSkillLevelsSum = (deck: Deck) => {
   const nonEmptyTrainers = deck.filter(
     (el): el is Required<Trainer> => el !== "empty"
   );
 
-  return nonEmptyTrainers.reduce<SkillRanks>((acc, trainer) => {
-    const curTrainerSkills = Object.entries<RankLevels>(
-      trainer.skills[trainer.stars]
-    );
+  return nonEmptyTrainers.reduce<SkillRanks>(
+    (acc, trainer) => {
+      const curTrainerSkills = Object.entries<RankLevels>(
+        trainer.skills[trainer.stars]
+      );
 
-    curTrainerSkills.forEach(([skillName, skillLevel]) => {
-      if (acc[skillName]) {
-        acc[skillName] = Math.min(
-          acc[skillName] +
+      curTrainerSkills.forEach(([skillName, skillLevel]) => {
+        if (acc[skillName]) {
+          acc[skillName] = Math.min(
+            acc[skillName] +
+              skillLevel +
+              (trainer.potential.filter((row) => row === skillName).length ||
+                0),
+            5
+          );
+        } else {
+          acc[skillName] = Math.min(
             skillLevel +
-            (trainer.potential.filter((row) => row === skillName).length || 0),
-          5
-        );
-      } else {
-        acc[skillName] = Math.min(
-          skillLevel +
-            (trainer.potential.filter((row) => row === skillName).length || 0),
-          5
-        );
-      }
-    }, {});
-    return acc;
-  }, {});
+              (trainer.potential.filter((row) => row === skillName).length ||
+                0),
+            5
+          );
+        }
+      }, {});
+      return acc;
+    },
+    nonEmptyTrainers.some((trainer) =>
+      pitchingPositions.some((val) => val === trainer.position)
+    )
+      ? { "Four-Seam": 1 }
+      : {}
+  );
 };
 
 const skillGradeFactors = {
@@ -116,7 +126,8 @@ export const makeSkillData = (
 
 export const getSkillLevelDiff = (
   newSkills: SkillRanks,
-  oldSkills: SkillRanks
+  oldSkills: SkillRanks,
+  position: Position | "0"
 ): SkillDiff => {
   const changedSkills = Object.keys(newSkills)
     .filter((row) => newSkills[row] !== oldSkills[row])
@@ -125,15 +136,15 @@ export const getSkillLevelDiff = (
         acc[key] = {
           levelDiff: newSkills[key],
           from: 0,
-          valueDiff: getSkillValue(key as Skill, newSkills[key]),
+          valueDiff: getSkillValue(key as Skill, newSkills[key], position),
         };
       } else {
         acc[key] = {
           levelDiff: newSkills[key] - oldSkills[key],
           from: oldSkills[key],
           valueDiff:
-            getSkillValue(key as Skill, newSkills[key]) -
-            getSkillValue(key as Skill, oldSkills[key]),
+            getSkillValue(key as Skill, newSkills[key], position) -
+            getSkillValue(key as Skill, oldSkills[key], position),
         };
       }
       return acc;
@@ -145,7 +156,7 @@ export const getSkillLevelDiff = (
       acc[key] = {
         levelDiff: -oldSkills[key],
         from: oldSkills[key],
-        valueDiff: 0 - getSkillValue(key as Skill, oldSkills[key]),
+        valueDiff: 0 - getSkillValue(key as Skill, oldSkills[key], position),
       };
       return acc;
     }, {});

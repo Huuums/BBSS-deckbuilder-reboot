@@ -14,6 +14,7 @@ import SignUp from "@pages/SignUp";
 const App: Component = () => {
   const user = useAuth();
 
+  console.log(user());
   return (
     <Layout>
       <Routes>
@@ -21,7 +22,7 @@ const App: Component = () => {
         <Route
           path="/login"
           element={
-            <Show when={!user()?.username} fallback={<Navigate href="/deck" />}>
+            <Show when={!user()} fallback={<Navigate href="/deck" />}>
               <Login />
             </Show>
           }
@@ -30,7 +31,7 @@ const App: Component = () => {
         <Route
           path="/reset-password"
           element={
-            <Show when={!user()?.username} fallback={<Navigate href="/deck" />}>
+            <Show when={!user()} fallback={<Navigate href="/deck" />}>
               <ResetPassword />
             </Show>
           }
@@ -38,7 +39,7 @@ const App: Component = () => {
         <Route
           path="/sign-up"
           element={
-            <Show when={!user()?.username} fallback={<Navigate href="/deck" />}>
+            <Show when={!user()} fallback={<Navigate href="/deck" />}>
               <SignUp />
             </Show>
           }
@@ -46,7 +47,7 @@ const App: Component = () => {
         <Route
           path="/forgot-password"
           element={
-            <Show when={!user()?.username} fallback={<Navigate href="/deck" />}>
+            <Show when={user()} fallback={<Navigate href="/deck" />}>
               <ForgotPassword />
             </Show>
           }
@@ -55,10 +56,10 @@ const App: Component = () => {
           path="/profile"
           element={
             <Switch>
-              <Match when={!user()?.username}>
+              <Match when={!user()}>
                 <Navigate href="/login" />
               </Match>
-              <Match when={user()?.username}>
+              <Match when={user()}>
                 <Profile />
               </Match>
             </Switch>

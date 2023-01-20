@@ -107,7 +107,7 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
       setIsFocus(true);
     }
     const option = options.find(
-      (option) => e.currentTarget.value === `${option.shortcut}:`
+      (option) => e.currentTarget.value.toLowerCase() === `${option.shortcut}:`
     );
     if (option) {
       batch(() => {

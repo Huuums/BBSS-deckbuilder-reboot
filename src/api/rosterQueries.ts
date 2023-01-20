@@ -36,18 +36,29 @@ const getRosterFromLocalStorage = () => {
 export const getRosterById = async (
   _: unknown,
   id: string
-): Promise<Trainer[]> => {
+): Promise<{ isShared: boolean; owner: string; trainers: Trainer[] }> => {
   console.log;
   if (id) {
     const dbRef = ref(db);
-    const data = await get(child(dbRef, `/rosters/${id}/trainers`));
+    const data = await get(child(dbRef, `/rosters/${id}`));
     if (data.exists()) {
-      return makeLocalTrainerData(data.val());
+      return {
+        ...data.val(),
+        trainers: makeLocalTrainerData(data.val().trainers),
+      };
     } else {
-      return makeLocalTrainerData(await getRosterFromLocalStorage());
+      return {
+        isShared: false,
+        owner: "mine",
+        trainers: makeLocalTrainerData(await getRosterFromLocalStorage()),
+      };
     }
   }
-  return makeLocalTrainerData(await getRosterFromLocalStorage());
+  return {
+    isShared: false,
+    owner: "mine",
+    trainers: makeLocalTrainerData(await getRosterFromLocalStorage()),
+  };
 };
 
 export const setRosterById = async ({ id, value }) => {

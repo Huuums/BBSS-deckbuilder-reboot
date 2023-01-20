@@ -232,6 +232,7 @@ export type Deck = DeckSlot[];
 export type DeckSlot = Required<Trainer> | "empty";
 
 export type User = {
+  uid: string;
   roster: string;
   username: string;
 } | null;

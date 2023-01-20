@@ -2,29 +2,15 @@ import ImportRosterModal from "@components/ImportRosterModal";
 import Trainerlist from "@components/Trainerlist";
 import { useAuth } from "@hooks/useAuth";
 import useRoster from "@hooks/useRoster";
-import { useSaveCompleteRoster, useSaveTrainer } from "@hooks/useSaveRoster";
-import {
-  Skill,
-  Trainer,
-  TrainerNames,
-  Roster as RosterType,
-  RankLevels,
-} from "@localtypes/types";
+import { useSaveTrainer } from "@hooks/useSaveRoster";
+import { Trainer, TrainerNames } from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
-import Papa from "papaparse";
 
-import {
-  Component,
-  Switch,
-  Match,
-  createSignal,
-  createEffect,
-  JSX,
-} from "solid-js";
+import { Component, Switch, Match, createSignal, createEffect } from "solid-js";
 
 const Roster: Component = () => {
   const saveTrainer = useSaveTrainer();
-  const saveRoster = useSaveCompleteRoster();
+
   const [showImportModal, setShowImportModal] = createSignal(false);
 
   const user = useAuth();
@@ -34,56 +20,13 @@ const Roster: Component = () => {
   const [potentialSelectionTrainer, setPotentialSelectionTrainer] =
     createSignal<TrainerNames | "">("");
 
-  const rosterQuery = useRoster();
+  const [rosterQuery] = useRoster();
 
   createEffect(() => {
-    if (user()?.username) {
+    if (user()) {
       rosterQuery.refetch();
     }
   });
-
-  const importRosterFromCSV: JSX.EventHandler<HTMLInputElement, InputEvent> = (
-    e
-  ) => {
-    const file = e.currentTarget.files[0];
-    Papa.parse<{
-      Name: TrainerNames;
-      "Potential 1": Skill;
-      "Potential 2": Skill;
-      "Potential 3": Skill;
-      Level: string;
-    }>(file, {
-      header: true,
-      complete(results) {
-        const rosterObj = results.data.reduce<RosterType>((acc, trainer) => {
-          if (trainer.Name.includes("/")) {
-            const trainerNames = trainer.Name.split("/");
-            trainerNames.forEach((name) => {
-              acc[name] = {
-                stars: parseInt(trainer.Level || "0", 10) as RankLevels,
-                potential: [
-                  trainer["Potential 1"],
-                  trainer["Potential 2"],
-                  trainer["Potential 3"],
-                ],
-              };
-            });
-          } else {
-            acc[trainer.Name] = {
-              stars: parseInt(trainer.Level || "0", 10) as RankLevels,
-              potential: [
-                trainer["Potential 1"],
-                trainer["Potential 2"],
-                trainer["Potential 3"],
-              ],
-            };
-          }
-          return acc;
-        }, {});
-        saveRoster(rosterObj);
-      },
-    });
-  };
 
   const updateTrainer = <K extends keyof Trainer>(
     trainerName: Trainer["name"],
@@ -146,7 +89,7 @@ const Roster: Component = () => {
               setPotentialSelectionTrainer={(name: TrainerNames | "") =>
                 setPotentialSelectionTrainer(name)
               }
-              trainers={rosterQuery.data}
+              trainers={rosterQuery?.data.trainers}
               updateTrainer={updateTrainer}
               rosterView
               potentialListView={showPotentialView()}

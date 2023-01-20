@@ -21,6 +21,7 @@ const Login: Component = () => {
   const onSubmit: JSX.EventHandler<HTMLFormElement, SubmitEvent> = async (
     e
   ) => {
+    console.log("here");
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(

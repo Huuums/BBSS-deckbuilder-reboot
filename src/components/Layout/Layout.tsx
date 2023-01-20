@@ -198,7 +198,7 @@ const Layout: ParentComponent = (props) => {
           </div>
           <div class="flex justify-center flex-shrink-0 pb-5">
             <Switch>
-              <Match when={user()?.username}>
+              <Match when={user()}>
                 <A
                   href="/profile"
                   class="flex-1 text-center text-gray-300 p-3 mx-2 rounded-md text-xs font-medium hover:text-white hover:bg-gray-700"
