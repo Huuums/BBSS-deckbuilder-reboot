@@ -22,9 +22,16 @@ export const useSaveTrainer = () => {
       ]);
 
       // Optimistically update to the new value
-      queryClient.setQueryData<Trainer[]>(["roster", user()?.roster], (old) =>
-        old.map((val) => (val.name === trainer ? { ...val, ...value } : val))
-      );
+      queryClient.setQueryData<{
+        isShared: boolean;
+        username: string;
+        trainers: Trainer[];
+      }>(["roster", user()?.roster], (old) => ({
+        ...old,
+        trainers: old.trainers.map((val) =>
+          val.name === trainer ? { ...val, ...value } : val
+        ),
+      }));
 
       // Return a context object with the snapshotted value
       return { previousRoster };
