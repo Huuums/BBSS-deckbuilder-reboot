@@ -138,7 +138,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
 
   return (
     <div class="flex flex-col">
-      <section class="max-w-2xl my-4 mx-auto w-full text-gray-300">
+      <section class="max-w-full lg:max-w-2xl my-4 mx-auto w-full text-gray-300">
         {filters().length > 0 && (
           <>
             <h5 class="text-gray-300 font-semibold mb-1">Active Filters:</h5>
@@ -155,7 +155,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
           <div class="flex flex-wrap">
             <For each={visibleTrainers().filter((val) => val.stars)}>
               {(trainer) => (
-                <div class="basis-1/3 2xl:basis-1/4 flex-grow my-2 mx-2 max-w-1/3 2xl:max-w-1/2">
+                <div class="basis-1/3 flex-grow max-w-1/2 mr-auto 2xl:basis-1/4 lg:basis-1/3 lg:flex-grow my-2 mx-2 2xl:max-w-1/3">
                   <TrainerPotential
                     trainer={trainer}
                     mode="large"
@@ -171,17 +171,34 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
         <Match when={!props.potentialListView}>
           <>
             {props.isDeckBuilder && (
-              <div class="flex justify-center space-x-10 px-5 -mb-2 mt-2">
-                <div class="flex text-gray-200 items-center font-semibold">
-                  Set all Trainer Ranks:
+              <div class="flex flex-wrap justify-between max-w-full px-5 -mb-2 mt-2">
+                <div class="flex flex-1 lg:flex-auto text-gray-200 justify-between lg:justify-start items-center font-semibold">
+                  <span>Set all Trainer Ranks:</span>
                   <TrainerUpgradeSelector
                     ignoreUpdateCheck
                     onChange={(stars) => props.updateAllTrainers({ stars })}
                     activeUpgrade={5}
-                    class="w-32"
+                    class="w-32 ml-2"
                   />
                 </div>
-                <div class="flex text-gray-200 items-center font-semibold">
+                <div class="flex lg:hidden text-gray-200 items-center font-semibold overflow-hidden">
+                  <div class="basis-20">Sort By:</div>
+                  <div class="flex-1">
+                    <select
+                      class="bg-gray-900 text-ellipsis overflow-hidden w-full"
+                      onChange={(e) => setSortBy(e.currentTarget.value)}
+                    >
+                      <option value="Rarity">Rarity</option>
+                      <option value="Skill Compatibility">
+                        Skill Compatibility
+                      </option>
+                      <option value="Skill Compatibility with Encyclopedia">
+                        Skill Compatibility with Encyclopedia
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="hidden lg:flex flex-wrap text-gray-200 items-center font-semibold">
                   Sort By:
                   <RadioButton
                     onClick={(value) => setSortBy(value)}
@@ -206,7 +223,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                 </div>
               </div>
             )}
-            <div class="grid gap-x-3 gap-y-3 max-w-100 grid-cols-auto p-5">
+            <div class="grid gap-x-1 gap-y-3 max-w-100 lg:grid-cols-auto grid-cols-auto-small p-5">
               <For each={sortedTrainers()}>
                 {(trainer) => {
                   return (

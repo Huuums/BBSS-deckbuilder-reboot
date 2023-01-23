@@ -49,12 +49,13 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
     <div
       ref={observerElement}
       class={classNames(
-        "w-full mx-auto mt-5 max-w-5xl sticky top-[-1px] z-50 pointer-events-none flex"
+        "w-full mx-auto max-w-5xl lg:sticky lg:top-[-1px] lg:z-50 pointer-events-none flex"
       )}
     >
       <div
         ref={stuckElement}
-        class="transition-all flex-1 scale-100 bg-gray-800 flex justify-between p-5 stuck:scale-50 hover:stuck:scale-100 stuck:-translate-y-1/4 hover:stuck:translate-y-0 pointer-events-auto"
+        id="deckviewer"
+        class="transition-all max-w-full space-x-1 flex-1 lg:scale-100 bg-gray-800 flex overflow-x-auto overflow-hidden justify-between p-5 lg:stuck:scale-50 hover:stuck:scale-100 lg:stuck:-translate-y-1/4 lg:hover:stuck:translate-y-0 pointer-events-auto"
       >
         <For each={props.deck}>
           {(trainer, i) => (
@@ -84,7 +85,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
               >
                 <Switch>
                   <Match when={trainer === "empty" || trainer === undefined}>
-                    <div class="flex-1 h-full min-h-[260px] max-w-[150px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
+                    <div class="h-full min-h-[210px] lg:min-h-[260px] min-w-[100px] lg:flex-1 lg:max-w-[150px] bg-gray-700 text-3xl justify-center items-center flex text-gray-100">
                       {i() + 1}
                     </div>
                   </Match>
@@ -119,7 +120,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                           (trainer as TrainerType).name
                         )
                       }
-                      class="flex-1 max-w-[150px]"
+                      class="max-w-[100px] lg:max-w-[150px]"
                     />
                   </Match>
                 </Switch>

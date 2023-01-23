@@ -16,8 +16,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "1/2": "calc(50% - .5rem)",
+        "1/3": "calc(33% - .5rem)",
+      },
       gridTemplateColumns: {
         auto: "repeat(auto-fill, minmax(125px, 1fr))",
+        "auto-small": "repeat(auto-fill, minmax(100px, 1fr))",
       },
       colors: {
         rarity: {

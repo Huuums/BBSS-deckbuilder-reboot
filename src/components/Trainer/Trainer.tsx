@@ -14,13 +14,12 @@ import TrainerStatsType from "@components/TrainerStatsType";
 import TrainerUpgradeSelector from "@components/TrainerUpgradeSelector";
 import { classNames } from "@utils/commonHelpers";
 
-import clickOutside from "@hooks/clickOutside";
-
 import TrainerPotential from "@components/TrainerPotential";
 
 import Modal from "@components/Modal";
 import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
 
+import clickOutside from "@hooks/clickOutside";
 //don't remove this.
 //eslint-disable-next-line
 const clickOutsideDirective = clickOutside;
@@ -97,8 +96,8 @@ const Trainer: Component<TrainerProps> = (props) => {
       when={props.onlyAvatarAndStars}
       fallback={
         <TrainerBorder rarity={props.trainer.rarity} class={props.class}>
-          {props.trainer?.bonusTeam?.length > 0 && (
-            <div class="absolute flex top-1 left-1 m-auto p-0.5 z-[1] border-2 border-blue-400 bg-gray-800 rounded-2xl space-x-0.5">
+          {!props.rosterView && props.trainer?.bonusTeam?.length > 0 && (
+            <div class="absolute flex top-1 left-1 m-auto p-0.5 z-[1] border-2 border-blue-400 bg-gray-800 rounded-2xl space-x-0.5 pointer-events-none">
               <For each={props.trainer.bonusTeam}>
                 {(team) => <img class="w-7 h-7" src={teamImages[team]} />}
               </For>
