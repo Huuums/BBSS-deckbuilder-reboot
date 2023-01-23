@@ -54,6 +54,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
     >
       <div
         ref={stuckElement}
+        id="deckviewer"
         class="transition-all max-w-full space-x-1 flex-1 lg:scale-100 bg-gray-800 flex overflow-x-auto overflow-hidden justify-between p-5 lg:stuck:scale-50 hover:stuck:scale-100 lg:stuck:-translate-y-1/4 lg:hover:stuck:translate-y-0 pointer-events-auto"
       >
         <For each={props.deck}>

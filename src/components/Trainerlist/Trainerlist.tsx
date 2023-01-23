@@ -155,7 +155,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
           <div class="flex flex-wrap">
             <For each={visibleTrainers().filter((val) => val.stars)}>
               {(trainer) => (
-                <div class="basis-1/3 2xl:basis-1/4 flex-grow my-2 mx-2 max-w-1/3 2xl:max-w-1/2">
+                <div class="basis-1/3 flex-grow max-w-1/2 mr-auto 2xl:basis-1/4 lg:basis-1/3 lg:flex-grow my-2 mx-2 2xl:max-w-1/3">
                   <TrainerPotential
                     trainer={trainer}
                     mode="large"

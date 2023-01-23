@@ -43,6 +43,15 @@ import PositionChoice from "@components/PositionChoice";
 import { A, Params, useSearchParams } from "@solidjs/router";
 import { Toggle } from "solid-headless";
 import { useAuth } from "@hooks/useAuth";
+import clickOutside from "@hooks/clickOutside";
+import { swipeLeft, swipeRight } from "@hooks/swipe";
+import { HiOutlineX } from "solid-icons/hi";
+
+//don't remove this.
+//eslint-disable-next-line
+const clickOutsideDirective = clickOutside;
+const swipeLeftDirective = swipeLeft;
+const swipeRightDirective = swipeRight;
 
 // type DeckbuilderProps = {};
 
@@ -65,6 +74,7 @@ const setInitialTrainerList = (paramTrainers: Partial<Roster> | undefined) => {
 const Deckbuilder: Component = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const user = useAuth();
+  const [showSkillsOnMobile, setShowSkillsOnMobile] = createSignal(false);
 
   const [useRosterTrainers, setUseRosterTrainers] = createSignal<boolean>(
     searchParams.trainers === undefined ||
@@ -73,10 +83,6 @@ const Deckbuilder: Component = () => {
   );
   const [rosterId] = createSignal<string | undefined>(searchParams.rosterid);
   const [rosterQuery, queryId] = useRoster(() => rosterId());
-
-  createEffect(() => {
-    console.log(rosterQuery.data);
-  });
 
   onMount(() => {
     if (useRosterTrainers()) {
@@ -392,6 +398,19 @@ const Deckbuilder: Component = () => {
       <section
         aria-labelledby="primary-heading"
         class="min-w-0 max-w-full flex-1 h-full max-h-screen min-h-screen flex-col lg:overflow-hidden lg:overflow-y-auto"
+        use:swipeLeftDirective={(e) => {
+          if (!e.closest("#deckviewer")) {
+            setShowSkillsOnMobile(true);
+          }
+
+          const deckviewer = document.getElementById("deckviewer");
+          if (
+            deckviewer.scrollLeft + deckviewer.clientWidth ===
+            deckviewer.scrollWidth
+          ) {
+            setShowSkillsOnMobile(true);
+          }
+        }}
       >
         <DeckDisplay
           deck={deck()}
@@ -512,9 +531,50 @@ const Deckbuilder: Component = () => {
           </span>
         </Show>
       </section>
-
-      <aside class="hidden lg:block lg:flex-shrink-0">
-        <div class="flex max-h-screen h-full w-80 flex-col overflow-y-auto border-r border-gray-200 bg-gray-800 p-3">
+      <button
+        class={
+          "block fixed bg-gray-800 z-20 top-10 -right-1 p-2 border border-gray-200 text-gray-200 lg:hidden"
+        }
+        onClick={() => setShowSkillsOnMobile(true)}
+      >
+        Show Skills
+      </button>
+      <div
+        class={classNames(
+          showSkillsOnMobile()
+            ? "fixed left-0 right-0 top-0 bottom-0 z-30 bg-gray-600 bg-opacity-75"
+            : "hidden"
+        )}
+      />
+      <aside
+        use:clickOutsideDirective={() => {
+          if (showSkillsOnMobile()) {
+            setShowSkillsOnMobile(false);
+          }
+        }}
+        class={classNames(
+          "lg:block lg:flex-shrink-0",
+          showSkillsOnMobile()
+            ? "block fixed right-0 top-0 z-50 h-full"
+            : "hidden"
+        )}
+      >
+        <div class="fixed top-0 left-0 pt-2">
+          <button
+            type="button"
+            class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            onClick={() => setShowSkillsOnMobile(false)}
+          >
+            <span class="sr-only">Close sidebar</span>
+            <HiOutlineX class="h-8 w-8 stroke-white" aria-hidden="true" />
+          </button>
+        </div>
+        <div
+          class="flex max-h-screen h-full w-80 flex-col overflow-y-auto border-r border-gray-200 bg-gray-800 p-3"
+          use:swipeRightDirective={() => {
+            if (showSkillsOnMobile()) setShowSkillsOnMobile(false);
+          }}
+        >
           {tempDeck() !== null && (
             <ChangedTrainerDisplay trainerDiff={trainerDiff()} />
           )}

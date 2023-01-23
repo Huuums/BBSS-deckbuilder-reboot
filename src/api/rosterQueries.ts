@@ -37,7 +37,6 @@ export const getRosterById = async (
   _: unknown,
   id: string
 ): Promise<{ isShared: boolean; owner: string; trainers: Trainer[] }> => {
-  console.log;
   if (id) {
     const dbRef = ref(db);
     const data = await get(child(dbRef, `/rosters/${id}`));
@@ -90,7 +89,7 @@ export const updateRosterTrainer = async ({
       "roster",
       JSON.stringify({
         ...currentRoster,
-        [trainer]: { ...currentRoster[trainer], ...value },
+        [trainer]: { ...currentRoster?.[trainer], ...value },
       })
     );
   }

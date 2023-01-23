@@ -18,9 +18,13 @@ import {
 import { classNames } from "@utils/commonHelpers";
 import { Motion, Presence } from "@motionone/solid";
 import NavLinkWrapper from "@components/NavLinkWrapper";
-import { A } from "@solidjs/router";
+import { A, useBeforeLeave } from "@solidjs/router";
 
 import { useAuth } from "@hooks/useAuth";
+import { swipeLeft } from "@hooks/swipe";
+
+//eslint-disable-next-line
+const swipeLeftDirective = swipeLeft;
 
 const navigation = [
   { name: "Deckbuilding", href: "/deck", icon: IoHammerOutline },
@@ -38,6 +42,10 @@ const navigation = [
 const Layout: ParentComponent = (props) => {
   const [sidebarOpen, setSidebarOpen] = createSignal(false);
   const user = useAuth();
+
+  useBeforeLeave(() => {
+    setSidebarOpen(false);
+  });
 
   return (
     <>
@@ -59,7 +67,10 @@ const Layout: ParentComponent = (props) => {
             </Motion.span>
           </Show>
         </Presence>
-        <div class="fixed inset-0 z-40 flex">
+        <div
+          class="fixed inset-0 z-40 flex"
+          use:swipeLeftDirective={() => setSidebarOpen(false)}
+        >
           <Presence>
             <Show when={sidebarOpen()}>
               <Motion.span
@@ -127,25 +138,39 @@ const Layout: ParentComponent = (props) => {
                     </nav>
                   </div>
                   <div class="flex flex-shrink-0 bg-gray-600 p-4">
-                    <a href="#" class="group block flex-shrink-0">
-                      <div class="flex items-center">
-                        <div>
-                          <img
-                            class="inline-block h-10 w-10 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-base font-medium text-white">
-                            Tom Cook
-                          </p>
-                          <p class="text-sm font-medium text-gray-400 group-hover:text-gray-300">
-                            View profile
-                          </p>
-                        </div>
-                      </div>
-                    </a>
+                    <Switch>
+                      <Match when={user()}>
+                        <A href="/profile" class="group block flex-shrink-0">
+                          <div class="flex items-center">
+                            <div>
+                              <IoPerson class="h-8 w-8 mx-auto fill-gray-400" />
+                            </div>
+                            <div class="ml-3">
+                              <p class="text-base font-medium text-white">
+                                {user()?.username}
+                              </p>
+                              <p class="text-sm font-medium text-gray-400 group-hover:text-gray-300">
+                                View profile
+                              </p>
+                            </div>
+                          </div>
+                        </A>
+                      </Match>
+                      <Match when={!user()}>
+                        <A href="/login">
+                          <div class="flex items-center">
+                            <div>
+                              <IoPerson class="h-8 w-8 mx-auto fill-gray-400" />
+                            </div>
+                            <div class="ml-3">
+                              <p class="text-sm font-medium text-gray-400 group-hover:text-gray-300">
+                                Login
+                              </p>
+                            </div>
+                          </div>
+                        </A>
+                      </Match>
+                    </Switch>
                   </div>
                 </DialogPanel>
               </Motion.span>
