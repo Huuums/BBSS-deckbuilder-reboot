@@ -559,7 +559,7 @@ const Deckbuilder: Component = () => {
             : "hidden"
         )}
       >
-        <div class="fixed top-0 left-0 pt-2">
+        <div class="absolute top-0 left-0 -ml-12 pt-2 lg:hidden">
           <button
             type="button"
             class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"

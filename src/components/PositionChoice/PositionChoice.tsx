@@ -17,7 +17,7 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
           Player Position
         </h4>
       </div>
-      <div class="space-x-3 flex lg:flex-nowrap lg:flex-1 items-start">
+      <div class="space-x-3 flex lg:flex-nowrap basis-full lg:basis-auto lg:flex-1 items-start">
         <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5 lg:w-auto">
           Batting
         </h4>
@@ -38,7 +38,7 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
           </For>
         </div>
       </div>
-      <div class="flex space-x-3 lg:flex-nowrap items-start flex-1 mt-2 lg:mt-0">
+      <div class="flex space-x-3 lg:flex-nowrap items-start basis-full lg:basis-auto flex-1 mt-2 lg:mt-0">
         <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5 lg:w-auto">
           Pitching
         </h4>
