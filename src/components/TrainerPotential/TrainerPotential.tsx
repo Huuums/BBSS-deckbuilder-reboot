@@ -52,15 +52,15 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
         </div>
       </Match>
       <Match when={props.mode === "large"}>
-        <div class="w-full bg-gray-800 p-2 flex justify-between">
+        <div class="w-full bg-gray-800 p-2 flex flex-wrap justify-between ">
           <Trainer
             onlyAvatarAndStars
             trainer={props.trainer}
             src={trainerImages[props.trainer.name]}
-            class="h-full w-20"
+            class="h-full basis-full lg:basis-auto lg:w-20"
           />
-          <div class="flex flex-wrap flex-1 justify-between space-x-2 text-gray-200">
-            <h4 class="basis-full text-gray-200 font-semibold mx-2">
+          <div class="flex flex-col lg:flex-row lg:flex-wrap flex-1 justify-between text-gray-200 lg:space-x-2">
+            <h4 class="basis-full text-gray-200 font-semibold">
               {props.trainer.name}
             </h4>
             <div class="flex flex-col flex-1">

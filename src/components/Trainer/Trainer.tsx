@@ -97,7 +97,7 @@ const Trainer: Component<TrainerProps> = (props) => {
       when={props.onlyAvatarAndStars}
       fallback={
         <TrainerBorder rarity={props.trainer.rarity} class={props.class}>
-          {props.trainer?.bonusTeam?.length > 0 && (
+          {!props.rosterView && props.trainer?.bonusTeam?.length > 0 && (
             <div class="absolute flex top-1 left-1 m-auto p-0.5 z-[1] border-2 border-blue-400 bg-gray-800 rounded-2xl space-x-0.5">
               <For each={props.trainer.bonusTeam}>
                 {(team) => <img class="w-7 h-7" src={teamImages[team]} />}
