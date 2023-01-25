@@ -431,3 +431,13 @@ export type TrainerNames =
   | "Ruric"
   | "Gabe"
   | "Micky";
+
+declare module "solid-js" {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface CustomEvents {
+      // use:model
+      keydown: KeyboardEvent;
+    }
+  }
+}

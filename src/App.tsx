@@ -14,7 +14,6 @@ import SignUp from "@pages/SignUp";
 const App: Component = () => {
   const user = useAuth();
 
-  console.log(user());
   return (
     <Layout>
       <Routes>

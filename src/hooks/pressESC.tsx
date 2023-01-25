@@ -4,10 +4,14 @@ export default function pressedESC(
   el: HTMLElement,
   callback: Accessor<() => void>
 ) {
-  const onkeyup = (e: KeyboardEvent) => e.key === "Escape" && callback()?.();
-  el.addEventListener("keyup", onkeyup);
+  const onkeydown = (e: KeyboardEvent) => {
+    console.log(el, e.defaultPrevented);
+    if (e.key === "Escape") callback()?.();
+    return false;
+  };
+  el.addEventListener("keydown", onkeydown);
 
-  onCleanup(() => document.body.removeEventListener("onkeyup", onkeyup));
+  onCleanup(() => el.removeEventListener("onkeydown", onkeydown));
 }
 
 declare module "solid-js" {

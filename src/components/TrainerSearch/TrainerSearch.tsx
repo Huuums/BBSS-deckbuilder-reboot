@@ -201,7 +201,7 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
     if (!searchValue) return arr;
     return arr.filter((val) => {
       if (typeof val === "string") {
-        return val.includes(searchValue.trim());
+        return val.toLowerCase().includes(searchValue.toLowerCase().trim());
       }
 
       return keys.some((key) => {

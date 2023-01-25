@@ -1,8 +1,8 @@
 import Trainer from "@components/Trainer/Trainer";
 import trainerImages from "@assets/images/trainer";
-import { Skill, Trainer as TrainerType } from "@localtypes/types";
-import { Component, Switch, Match, createSignal } from "solid-js";
-import { Select, createOptions } from "@thisbeyond/solid-select";
+import { Trainer as TrainerType } from "@localtypes/types";
+import { Component, Switch, Match } from "solid-js";
+import Combobox from "@components/Combobox";
 
 type TrainerPotentialProps = {
   mode: "large" | "small";
@@ -11,25 +11,9 @@ type TrainerPotentialProps = {
 };
 
 const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
-  const [initialValue1] = createSignal(props.trainer.potential[0] || undefined);
-  const [initialValue2] = createSignal(props.trainer.potential[1] || undefined);
-  const [initialValue3] = createSignal(props.trainer.potential[2] || undefined);
+  const options = () =>
+    Object.keys(props.trainer.skills?.[props.trainer.stars] || {});
 
-  const potentialSkills = createOptions(
-    Object.keys(props.trainer.skills?.[props.trainer.stars] || {}),
-    {
-      disable(value) {
-        return (
-          props.trainer.potential.filter((val) => val === value).length > 1
-        );
-      },
-    }
-  );
-
-  //really have to get rid of solid-select package. It sucks
-  //eslint-disable-next-line
-
-  // TBD: get rid of shitty select component and then refactor all of this
   return (
     <Switch>
       <Match when={props.trainer.stars === 0}>
@@ -57,7 +41,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
             onlyAvatarAndStars
             trainer={props.trainer}
             src={trainerImages[props.trainer.name]}
-            class="h-full basis-2/3 lg:basis-auto lg:w-20"
+            class="h-full basis-20"
           />
           <div class="flex basis-full flex-col lg:flex-row lg:flex-wrap flex-1 justify-between text-gray-200 lg:space-x-2">
             <h4 class="basis-full text-gray-200 font-semibold text-center">
@@ -65,47 +49,62 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
             </h4>
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 1</label>
-              <Select
-                initialValue={initialValue1() || undefined}
-                onChange={(val: Skill) => {
-                  val !== initialValue1() &&
-                    props.updateTrainer([
-                      val,
-                      props.trainer.potential?.[1] || "",
-                      props.trainer.potential?.[2] || "",
-                    ] as TrainerType["potential"]);
+              <Combobox
+                value={props.trainer.potential?.[0]}
+                valueDisplayText={props.trainer.potential?.[0]}
+                placeholder="Potential 1"
+                optionIsDisabled={(val) =>
+                  props.trainer.potential.filter((skill) => skill === val)
+                    .length >= 2 || val === "Switch Hitter"
+                }
+                onChange={(val) => {
+                  props.updateTrainer([
+                    val,
+                    props.trainer.potential?.[1] || "",
+                    props.trainer.potential?.[2] || "",
+                  ] as TrainerType["potential"]);
                 }}
-                {...potentialSkills}
+                options={options()}
               />
             </div>
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 2</label>
-              <Select
-                initialValue={initialValue2() || undefined}
-                onChange={(val: Skill) => {
-                  val !== initialValue2() &&
-                    props.updateTrainer([
-                      props.trainer.potential?.[0] || "",
-                      val,
-                      props.trainer.potential?.[2] || "",
-                    ] as TrainerType["potential"]);
+              <Combobox
+                options={options()}
+                placeholder="Potential 2"
+                value={props.trainer.potential?.[1]}
+                valueDisplayText={props.trainer.potential?.[1]}
+                optionIsDisabled={(val) =>
+                  props.trainer.potential.filter((skill) => skill === val)
+                    .length >= 2
+                }
+                onChange={(val) => {
+                  props.updateTrainer([
+                    props.trainer.potential?.[0] || "",
+                    val,
+                    props.trainer.potential?.[2] || "",
+                  ] as TrainerType["potential"]);
                 }}
-                {...potentialSkills}
               />
             </div>
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 3</label>
-              <Select
-                initialValue={initialValue3() || undefined}
-                onChange={(val: Skill) => {
-                  val !== initialValue3() &&
-                    props.updateTrainer([
-                      props.trainer.potential?.[0] || "",
-                      props.trainer.potential?.[1] || "",
-                      val,
-                    ] as TrainerType["potential"]);
+              <Combobox
+                optionIsDisabled={(val) =>
+                  props.trainer.potential.filter((skill) => skill === val)
+                    .length >= 2
+                }
+                placeholder="Potential 3"
+                value={props.trainer.potential?.[2]}
+                valueDisplayText={props.trainer.potential?.[2]}
+                onChange={(val) => {
+                  props.updateTrainer([
+                    props.trainer.potential?.[0] || "",
+                    props.trainer.potential?.[1] || "",
+                    val,
+                  ] as TrainerType["potential"]);
                 }}
-                {...potentialSkills}
+                options={options()}
               />
             </div>
           </div>

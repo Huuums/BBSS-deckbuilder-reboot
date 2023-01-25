@@ -19,11 +19,6 @@ import TrainerPotential from "@components/TrainerPotential";
 import Modal from "@components/Modal";
 import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
 
-import clickOutside from "@hooks/clickOutside";
-//don't remove this.
-//eslint-disable-next-line
-const clickOutsideDirective = clickOutside;
-
 type TrainerProps = {
   src: string;
   onClickAvatar?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
@@ -172,7 +167,7 @@ const Trainer: Component<TrainerProps> = (props) => {
                   isOpen={props.showPotentialSelectionSmall}
                   onClose={() => props.setPotentialSelectionTrainer("")}
                 >
-                  <div class="2xl:basis-1/4 flex-grow my-2 mx-2 2xl:max-w-1/2">
+                  <div class="2xl:basis-1/4 flex-grow my-2 mx-2">
                     <TrainerPotential
                       trainer={props.trainer}
                       mode="large"
