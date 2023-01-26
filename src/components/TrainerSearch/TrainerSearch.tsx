@@ -45,22 +45,24 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
 
   return (
     <div class="flex flex-col flex-1 space-y-4">
-      <div>
-        <label class="text-gray-200 font-medium lg:w-auto">Trainer </label>
-        <SearchInput
-          onInput={(e) => props.setFilters("name", e.currentTarget.value)}
-          placeholder="Enter Trainer Name"
-        />
-      </div>
-      <div>
-        <label class="text-gray-200 font-medium lg:w-auto">Skill</label>
-        <Combobox
-          options={Object.keys(skillDefinitions)}
-          onChange={(val: Skill) => props.setFilters("skill", [val])}
-          placeholder="Enter Skill Name"
-          value={props.filters.skill?.[0]}
-          valueDisplayText={props.filters.skill?.[0]}
-        />
+      <div class="flex flex-wrap space-y-2 lg:space-y-0 space-x-0 lg:space-x-2">
+        <div class="basis-full lg:basis-auto flex-1">
+          <label class="text-gray-200 font-medium lg:w-auto">Trainer </label>
+          <SearchInput
+            onInput={(e) => props.setFilters("name", e.currentTarget.value)}
+            placeholder="Enter Trainer Name"
+          />
+        </div>
+        <div class="flex-1 basis-full lg:basis-auto">
+          <label class="text-gray-200 font-medium lg:w-auto">Skill</label>
+          <Combobox
+            options={Object.keys(skillDefinitions)}
+            onChange={(val: Skill) => props.setFilters("skill", [val])}
+            placeholder="Enter Skill Name"
+            value={props.filters.skill?.[0]}
+            valueDisplayText={props.filters.skill?.[0]}
+          />
+        </div>
       </div>
       <div class="flex">
         <CheckboxList
@@ -71,7 +73,7 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
           }
           checkboxIsChecked={(val) => props.filters.position.includes(val)}
           checkboxLabel={(val) => <>{val}</>}
-          checkboxClass={"w-[70px]"}
+          checkboxClass={"w-[70px] h-10"}
           class="flex-1"
         />
         <CheckboxList
@@ -82,34 +84,17 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
           }
           checkboxIsChecked={(val) => props.filters.position.includes(val)}
           checkboxLabel={(val) => <>{val}</>}
-          checkboxClass={"w-[70px]"}
+          checkboxClass={"w-[70px] h-10"}
           class="flex-1"
         />
       </div>
-      <CheckboxList
-        options={bonusTeams}
-        label="Team"
-        onChange={(isChecked, val) => updateFilter("team", isChecked, val)}
-        checkboxIsChecked={(val) => props.filters.team.includes(val)}
-        checkboxLabel={(val) => (
-          <div class="flex items-center">
-            <img
-              class="w-7 h-7 mr-0.5"
-              src={teamImages[val]}
-              alt={teamAbbreviations[val]}
-            />
-            {teamAbbreviations[val]}
-          </div>
-        )}
-        checkboxClass={"w-[70px]"}
-      />
       <CheckboxList
         options={rarities}
         label="Rarity"
         onChange={(isChecked, val) => updateFilter("rarity", isChecked, val)}
         checkboxIsChecked={(val) => props.filters.rarity.includes(val)}
         checkboxLabel={(val) => <>{val}</>}
-        checkboxClass={"w-[70px]"}
+        checkboxClass={"w-[70px] h-10"}
       />
       <CheckboxList
         options={statsTypes}
@@ -126,9 +111,25 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
             {val}
           </div>
         )}
-        checkboxClass={"w-[70px]"}
+        checkboxClass={"w-[70px] h-10"}
       />
-
+      <CheckboxList
+        options={bonusTeams}
+        label="Team"
+        onChange={(isChecked, val) => updateFilter("team", isChecked, val)}
+        checkboxIsChecked={(val) => props.filters.team.includes(val)}
+        checkboxLabel={(val) => (
+          <div class="flex items-center">
+            <img
+              class="w-7 h-7 mr-0.5"
+              src={teamImages[val]}
+              alt={teamAbbreviations[val]}
+            />
+            {teamAbbreviations[val]}
+          </div>
+        )}
+        checkboxClass={"w-[70px] h-10"}
+      />
       <div class="flex" />
     </div>
   );

@@ -24,6 +24,7 @@ const Checkbox: Component<CheckboxProps> = (props) => {
       <input
         name={props.name}
         type="checkbox"
+        checked={props.isChecked}
         class="sr-only"
         aria-labelledby={`${props.value}Picker`}
         onChange={(e) => props.onChange(e.currentTarget.checked, props.value)}
