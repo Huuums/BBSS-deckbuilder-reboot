@@ -8,6 +8,7 @@ import {
   SkillDiff,
   SkillType,
   SkillValue,
+  TrainerNames,
 } from "@localtypes/types";
 
 import {
@@ -24,6 +25,12 @@ type SkillDisplayProps = {
     listOfBestSkillsEncyclopedia: Partial<Record<SkillNames, SkillData>>;
     bestSkillsValueDefault: number;
     bestSkillsValueEncyclopedia: number;
+    trainerContribution: Partial<
+      Record<
+        SkillNames,
+        Partial<Record<TrainerNames, { total: number; potential: number }>>
+      >
+    >;
   };
   skillInformationTemp:
     | {
@@ -205,6 +212,11 @@ const SkillDisplay: Component<SkillDisplayProps> = (props) => {
                         name={skillName}
                         rank={skillRank}
                         value={skillValue}
+                        trainerContribution={
+                          props.skillInformationDeck.trainerContribution[
+                            skillName
+                          ]
+                        }
                         isBestSkill={
                           props.skillInformationTemp !== undefined
                             ? props.skillInformationTemp

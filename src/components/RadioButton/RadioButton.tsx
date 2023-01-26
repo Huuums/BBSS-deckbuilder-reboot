@@ -6,18 +6,20 @@ type RadioButtonProps<T extends string | number> = {
   value: T;
   label?: string;
   class?: string;
+  name?: string;
 };
 
 const RadioButton = <T extends string | number>(props: RadioButtonProps<T>) => {
   return (
     <label
       class={classNames(
-        "border py-3 px-3 flex items-center justify-center text-sm font-medium cursor-pointer focus:outline-none",
+        "border py-3 px-3 flex items-center justify-center text-sm font-medium cursor-pointer focus:outline-blue:200 ",
         props.isActive ? "bg-gray-400 text-gray-700" : "bg-gray-600 text-white",
         props.class
       )}
     >
       <input
+        name={props.name}
         type="radio"
         class="sr-only"
         aria-labelledby={`${props.value}Picker`}

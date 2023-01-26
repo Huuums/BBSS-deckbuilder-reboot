@@ -19,7 +19,14 @@ export type FilterTypes =
   | "type"
   | "team";
 
-export type Filter = [FilterTypes, string];
+export type Filters = Partial<{
+  skill: Skill[];
+  position: (Position | "batters" | "pitchers")[];
+  name: string;
+  rarity: Rarity[];
+  type: Statstype[];
+  team: Team[];
+}>;
 
 export type Position = BattingPosition | PitchingPosition;
 
@@ -441,3 +448,12 @@ declare module "solid-js" {
     }
   }
 }
+export type Entry<T> = {
+  [K in keyof T]: [K, T[K]];
+}[keyof T];
+
+export type FilterEntry = Entry<Filters>;
+
+export type ElementType<T> =
+  // is type T an array of elements of type U? If so, return U. Otherwise, return the "never" type (the input is not an array).
+  T extends (infer U)[] ? U : never;

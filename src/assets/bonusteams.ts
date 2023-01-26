@@ -11,4 +11,15 @@ const bonusTeams: Team[] = [
   "Victory Swallows",
 ];
 
+export const teamAbbreviations = {
+  "Shining Angels": "SA",
+  "Cruel Pumas": "CP",
+  "River City High": "RCH",
+  "Mystic Unicorns": "MU",
+  "Zenonia Knights": "ZK",
+  "Forest Elves": "FE",
+  "Perfect Lions": "PL",
+  "Victory Swallows": "VS",
+};
+
 export default bonusTeams;

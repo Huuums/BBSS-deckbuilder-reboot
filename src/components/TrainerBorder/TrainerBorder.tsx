@@ -29,7 +29,7 @@ const TrainerBorder: ParentComponent<TrainerBorderProps> = (props) => {
   return (
     <div
       class={classNames(
-        "relative border-4",
+        "relative border-4 rounded-lg",
         getBgGradientColorClass(props.rarity),
         props.class
       )}

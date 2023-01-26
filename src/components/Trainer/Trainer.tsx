@@ -133,14 +133,14 @@ const Trainer: Component<TrainerProps> = (props) => {
               {props.deckSkillValue !== undefined && (
                 <>
                   <div class="basis-1/2 border-r text-xs items-center flex border-gray-200 p-1">
-                    <IoStarSharp class="w-4 h-4" />
+                    <IoStarSharp class="w-3 h-3 lg:w-4 lg:h-4" />
                     {props.trainerSkillContribution?.default === undefined
                       ? "-"
                       : props.trainerSkillContribution?.default -
                         (props.deckSkillValue?.default || 0)}
                   </div>
                   <div class="basis-1/2 flex text-xs items-center border-gray-200 p-1">
-                    <IoStarHalfSharp class="w-4 h-4" />
+                    <IoStarHalfSharp class="w-3 h-3 lg:w-4 lg:h-4" />
                     {props.trainerSkillContribution?.encyclopedia === undefined
                       ? "-"
                       : props.trainerSkillContribution?.encyclopedia -

@@ -7,26 +7,35 @@ import {
   Suspense,
   Switch,
   Match,
+  Show,
 } from "solid-js";
 import trainerImages from "../../assets/images/trainer";
 import {
   Deck,
   DeckSlot,
-  Filter,
-  FilterTypes,
+  FilterEntry,
+  Filters,
   RankLevels,
-  Statstype,
-  Team,
+  Skill,
   Trainer as TrainerType,
   TrainerNames,
 } from "@localtypes/types";
 
-import TrainerSearch from "@components/TrainerSearch";
-import FilterList from "@components/FilterList";
 import { battingPositions, pitchingPositions } from "@assets/positions";
 import TrainerPotential from "@components/TrainerPotential";
 import TrainerUpgradeSelector from "@components/TrainerUpgradeSelector";
 import RadioButton from "@components/RadioButton";
+import TrainerSearch from "@components/TrainerSearch";
+import { createStore } from "solid-js/store";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionHeader,
+  AccordionItem,
+  AccordionPanel,
+} from "solid-headless";
+import { IoChevronUpOutline } from "solid-icons/io";
+import { HiOutlineX } from "solid-icons/hi";
 
 type TrainerlistProps = {
   useRoster?: boolean;
@@ -64,40 +73,48 @@ type TrainerlistProps = {
 };
 
 const Trainerlist: Component<TrainerlistProps> = (props) => {
-  const [filters, setFilters] = createSignal<Filter[]>([]);
+  const [filters, setFilters] = createStore<Filters>({
+    position: [],
+    team: [],
+    rarity: [],
+    type: [],
+  });
   const [sortBy, setSortBy] = createSignal<string>("Rarity");
 
-  const addFilters = (filter: [FilterTypes, string]) => {
-    setFilters((prev) => prev.concat([filter]));
-  };
-
-  const removeFilter = (filterIndex: number) => {
-    setFilters((prev) => prev.filter((_, i) => i !== filterIndex));
-  };
-
   const visibleTrainers = createMemo(() => {
+    let positionsToCheck = filters.position;
+    //doing this for every trainer would be too expensive
+    if (filters.position) {
+      if (filters.position.includes("pitchers")) {
+        positionsToCheck = positionsToCheck.concat(pitchingPositions);
+      }
+      if (filters.position.includes("batters")) {
+        positionsToCheck = positionsToCheck.concat(battingPositions);
+      }
+    }
+
     const filteredTrainers = props.trainers.filter((trainer) => {
-      return filters().every(([type, value]) => {
-        switch (type) {
-          case "name":
-            return trainer.name.toLowerCase().includes(value.toLowerCase());
-          case "position":
-            if (value.toLowerCase() === "pitchers") {
-              return pitchingPositions.some((pos) => trainer.position === pos);
-            } else if (value.toLowerCase() === "batters") {
-              return battingPositions.some((pos) => trainer.position === pos);
+      return Object.entries(filters)
+        .filter((entry) => entry[1] && entry[1].length > 0)
+        .every(([type, value]: FilterEntry) => {
+          switch (type) {
+            case "name":
+              return trainer.name.toLowerCase().includes(value.toLowerCase());
+            case "position": {
+              return positionsToCheck.includes(trainer.position);
             }
-            return trainer.position.toLowerCase() === value.toLowerCase();
-          case "rarity":
-            return trainer.rarity.toLowerCase() === value.toLowerCase();
-          case "team":
-            return trainer.bonusTeam.includes(value as Team);
-          case "type":
-            return trainer.type.includes(value.toUpperCase() as Statstype);
-          case "skill":
-            return Object.keys(trainer.skills[trainer.stars]).includes(value);
-        }
-      });
+            case "rarity":
+              return value.includes(trainer.rarity);
+            case "team":
+              return trainer.bonusTeam.some((team) => value.includes(team));
+            case "type":
+              return trainer.type.some((type) => value.includes(type));
+            case "skill":
+              return Object.keys(trainer.skills[trainer.stars]).some(
+                (skill: Skill) => value.includes(skill)
+              );
+          }
+        });
     });
 
     return filteredTrainers;
@@ -138,18 +155,41 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
 
   return (
     <div class="flex flex-col">
-      <section class="max-w-full lg:max-w-2xl my-4 mx-auto w-full text-gray-300">
-        {filters().length > 0 && (
-          <>
-            <h5 class="text-gray-300 font-semibold mb-1">Active Filters:</h5>
-            <FilterList
-              filters={filters()}
-              removeTrainerFromRoster={removeFilter}
-            />
-          </>
-        )}
-        <TrainerSearch onChange={addFilters} />
-      </section>
+      {props.isDeckBuilder && (
+        <section class="max-w-full lg:max-w-5xl my-10 mx-auto w-full max-h-full text-gray-300">
+          <Accordion defaultValue={undefined} toggleable>
+            <AccordionItem value={"filter"} class="mt-2">
+              <AccordionHeader>
+                <AccordionButton
+                  as="h2"
+                  class={
+                    "flex justify-center items-center bg-gray-800 py-2 text-xl text-center font-bold px-4"
+                  }
+                >
+                  {({ isSelected }) => (
+                    <>
+                      Filtering
+                      <div class="ml-auto">
+                        <Show
+                          when={!isSelected()}
+                          fallback={<HiOutlineX class="w-8 h-8 text-gray-50" />}
+                        >
+                          <IoChevronUpOutline
+                            class={`flex-0 transform rotate-180 w-8 h-8 text-gray-50 `}
+                          />
+                        </Show>
+                      </div>
+                    </>
+                  )}
+                </AccordionButton>
+              </AccordionHeader>
+              <AccordionPanel class="px-4 pt-4 pb-2 text-sm text-gray-900 bg-gray-800 dark:text-gray-50">
+                <TrainerSearch filters={filters} setFilters={setFilters} />
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </section>
+      )}
       <Switch>
         <Match when={props.potentialListView}>
           <div class="flex flex-wrap">
@@ -172,7 +212,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
           <>
             {props.isDeckBuilder && (
               <div class="flex flex-wrap justify-between max-w-full px-5 -mb-2 mt-2">
-                <div class="flex flex-1 lg:flex-auto text-gray-200 justify-between lg:justify-start items-center font-semibold">
+                <div class="flex flex-1 mb-3 lg:mb-0 lg:flex-auto text-gray-200 justify-between lg:justify-start items-center font-semibold">
                   <span>Set all Trainer Ranks:</span>
                   <TrainerUpgradeSelector
                     ignoreUpdateCheck
@@ -223,6 +263,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                 </div>
               </div>
             )}
+
             <div class="grid gap-x-1 lg:gap-x-2 gap-y-2 max-w-100 lg:grid-cols-auto grid-cols-auto-small p-5">
               <For each={sortedTrainers()}>
                 {(trainer) => {

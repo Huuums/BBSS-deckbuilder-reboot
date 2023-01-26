@@ -8,7 +8,7 @@ import { For, createSignal, JSX, createEffect, Switch, Match } from "solid-js";
 const clickOutsideDirective = clickOutside;
 
 type ComboboxProps<T extends string | number | object> = {
-  onChange?: (value: T, event) => void;
+  onChange?: (value: T | string, event) => void;
   onInput?: JSX.EventHandler<HTMLInputElement, Event>;
   options: T[];
   value?: T;
@@ -73,6 +73,7 @@ const Combobox = <T extends string | number | object>(
         if (highlightedIndex() !== null) {
           props.onChange(props.options[highlightedIndex()], e);
           setIsOpen(false);
+          return;
         }
         break;
       case "Escape":
@@ -98,7 +99,7 @@ const Combobox = <T extends string | number | object>(
           placeholder={props.placeholder}
           onInput={(e) => {
             setSearchValue(e.currentTarget.value);
-            if (!isOpen) setIsOpen(true);
+            if (!isOpen()) setIsOpen(true);
             props.onInput?.(e);
           }}
           on:keydown={(e) => {
@@ -126,12 +127,15 @@ const Combobox = <T extends string | number | object>(
           {(option: T, i) => (
             <li
               ref={(el) => {
-                optionRefs[i()] = [el, props.optionIsDisabled(option)];
+                optionRefs[i()] = [el, props.optionIsDisabled?.(option)];
               }}
               role="button"
-              aria-disabled={props.optionIsDisabled(option)}
+              aria-disabled={props.optionIsDisabled?.(option)}
               onClick={(e) => {
-                if (option !== props.value && !props.optionIsDisabled(option)) {
+                if (
+                  option !== props.value &&
+                  !props.optionIsDisabled?.(option)
+                ) {
                   props.onChange?.(option, e);
                   setIsOpen(false);
                 }
@@ -141,7 +145,7 @@ const Combobox = <T extends string | number | object>(
                 i() === highlightedIndex() || props.value === option
                   ? "bg-gray-800 text-white"
                   : "",
-                props.optionIsDisabled(option) && props.value !== option
+                props.optionIsDisabled?.(option) && props.value !== option
                   ? "bg-gray-700 text-gray-300 cursor-not-allowed"
                   : "hover:bg-gray-800 hover:text-white"
               )}

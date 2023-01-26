@@ -1,14 +1,14 @@
 import { BattingPosition, PitchingPosition } from "@localtypes/types";
 
 export const battingPositions: BattingPosition[] = [
+  "C",
   "1B",
   "2B",
   "3B",
-  "C",
+  "SS",
+  "RF",
   "CF",
   "LF",
-  "RF",
-  "SS",
 ];
 
 export const pitchingPositions: PitchingPosition[] = ["SP", "RP", "CP"];

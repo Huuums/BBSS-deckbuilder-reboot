@@ -325,6 +325,24 @@ const Deckbuilder: Component = () => {
     const bestSkillsTemp =
       tempSkills() !== null ? getBestSkills(skillDataTemp) : undefined;
 
+    const trainerContribution = Object.keys(skills()).reduce((acc, skill) => {
+      const trainersWithSkill = deck().filter(
+        (slot: DeckSlot) =>
+          slot !== "empty" && slot.skills[slot.stars][skill] !== undefined
+      ) as Trainer[];
+      acc[skill] = trainersWithSkill.reduce((skillAcc, trainer) => {
+        const potential = trainer.potential.filter(
+          (val) => val === skill
+        ).length;
+        skillAcc[trainer.name] = {
+          total: trainer.skills[trainer.stars][skill] + potential,
+          potential,
+        };
+        return skillAcc;
+      }, {});
+      return acc;
+    }, {});
+
     return {
       deck: {
         skillData: skillDataDeck,
@@ -336,6 +354,7 @@ const Deckbuilder: Component = () => {
         bestSkillsValueEncyclopedia: sumValuesOfBestSkills(
           Object.values(bestSkills.listOfBestSkillsEncyclopedia)
         ),
+        trainerContribution,
       },
       temp:
         tempSkills() === null
@@ -427,10 +446,17 @@ const Deckbuilder: Component = () => {
             setPotentialSelectionTrainer(name)
           }
         />
-        <PositionChoice
-          onChange={(val) => setTargetPosition(val)}
-          currentPosition={targetPosition()}
-        />
+        <div class="bg-gray-800 px-3 lg:py-3 flex space-x-3 items-start justify-around max-w-5xl mx-auto flex-wrap ">
+          <div class="flex basis-full text-white">
+            <h4 class="text-white flex-1 text-center font-semibold mb-3">
+              Player Position
+            </h4>
+          </div>
+          <PositionChoice
+            onChange={(val) => setTargetPosition(val)}
+            currentPosition={targetPosition()}
+          />
+        </div>{" "}
         <div class="max-w-5xl mx-auto bg-gray-800 p-2">
           <div class="flex justify-center items-center mx-auto">
             <span class="mr-3 shrink-0 whitespace-nowrap">

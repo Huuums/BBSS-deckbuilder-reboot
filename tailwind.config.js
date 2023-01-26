@@ -47,7 +47,10 @@ module.exports = {
       },
       animation: {
         "pulse-full": "pulse-full 4s linear infinite alternate",
+        "pulse-full-fast": "pulse-full 2s linear infinite alternate",
         "pulse-full-reverse": "pulse-full 4s linear infinite alternate-reverse",
+        "pulse-full-reverse-fast":
+          "pulse-full 2s linear infinite alternate-reverse",
       },
       keyframes: {
         "pulse-full": {
