@@ -50,6 +50,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 1</label>
               <Combobox
+                clearable
                 value={props.trainer.potential?.[0]}
                 valueDisplayText={props.trainer.potential?.[0]}
                 placeholder="Potential 1"
@@ -70,6 +71,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 2</label>
               <Combobox
+                clearable
                 options={options()}
                 placeholder="Potential 2"
                 value={props.trainer.potential?.[1]}
@@ -90,6 +92,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 3</label>
               <Combobox
+                clearable
                 optionIsDisabled={(val) =>
                   props.trainer.potential.filter((skill) => skill === val)
                     .length >= 2
@@ -98,7 +101,6 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
                 value={props.trainer.potential?.[2]}
                 valueDisplayText={props.trainer.potential?.[2]}
                 onChange={(val) => {
-                  console.log(val);
                   props.updateTrainer([
                     props.trainer.potential?.[0] || "",
                     props.trainer.potential?.[1] || "",

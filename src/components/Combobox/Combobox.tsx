@@ -17,6 +17,7 @@ type ComboboxProps<T extends string | number | object> = {
   filterFn?: (value: T, i: number, arr: T[]) => boolean;
   optionIsDisabled?: (value: T) => boolean;
   optionLabel?: ((option: T) => JSX.Element) | keyof T;
+  clearable?: boolean;
 };
 
 const Combobox = <T extends string | number | object>(
@@ -59,13 +60,18 @@ const Combobox = <T extends string | number | object>(
   };
 
   const options = () => {
-    return props.filterFn
+    const filteredOptions = props.filterFn
       ? props.options.filter(props.filterFn)
       : props.options.filter((val) =>
           typeof val === "string"
             ? val.toLowerCase().includes(searchValue().toLowerCase())
             : true
         );
+
+    if (props.clearable) {
+      return ["-"].concat(filteredOptions);
+    }
+    return filteredOptions;
   };
 
   const handleSpecialKeys: JSX.EventHandler<HTMLInputElement, KeyboardEvent> = (
@@ -80,7 +86,11 @@ const Combobox = <T extends string | number | object>(
         break;
       case "Enter":
         if (highlightedIndex() !== null) {
-          props.onChange(options()[highlightedIndex()], e);
+          if (options()[highlightedIndex()] === "-") {
+            props.onChange("", e);
+          } else {
+            props.onChange(options()[highlightedIndex()], e);
+          }
           setIsOpen(false);
           return;
         }
@@ -135,7 +145,11 @@ const Combobox = <T extends string | number | object>(
                   option !== props.value &&
                   !props.optionIsDisabled?.(option)
                 ) {
-                  props.onChange?.(option, e);
+                  if (option === "-") {
+                    props.onChange?.("", e);
+                  } else {
+                    props.onChange?.(option, e);
+                  }
                   setIsOpen(false);
                 }
               }}
