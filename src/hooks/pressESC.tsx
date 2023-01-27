@@ -5,7 +5,6 @@ export default function pressedESC(
   callback: Accessor<() => void>
 ) {
   const onkeydown = (e: KeyboardEvent) => {
-    console.log(el, e.defaultPrevented);
     if (e.key === "Escape") callback()?.();
     return false;
   };

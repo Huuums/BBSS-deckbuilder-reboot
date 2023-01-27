@@ -58,10 +58,19 @@ const Combobox = <T extends string | number | object>(
     setHighlightedIndex((prev) => getNextHighlightIndex(prev, value));
   };
 
+  const options = () => {
+    return props.filterFn
+      ? props.options.filter(props.filterFn)
+      : props.options.filter((val) =>
+          typeof val === "string"
+            ? val.toLowerCase().includes(searchValue().toLowerCase())
+            : true
+        );
+  };
+
   const handleSpecialKeys: JSX.EventHandler<HTMLInputElement, KeyboardEvent> = (
     e
   ) => {
-    console.log(e);
     switch (e.key) {
       case "ArrowDown":
         updateHighlightedIndex(1);
@@ -71,7 +80,7 @@ const Combobox = <T extends string | number | object>(
         break;
       case "Enter":
         if (highlightedIndex() !== null) {
-          props.onChange(props.options[highlightedIndex()], e);
+          props.onChange(options()[highlightedIndex()], e);
           setIsOpen(false);
           return;
         }
@@ -113,17 +122,7 @@ const Combobox = <T extends string | number | object>(
           !isOpen() ? "hidden" : ""
         )}
       >
-        <For
-          each={
-            props.filterFn
-              ? props.options.filter(props.filterFn)
-              : props.options.filter((val) =>
-                  typeof val === "string"
-                    ? val.toLowerCase().includes(searchValue().toLowerCase())
-                    : true
-                )
-          }
-        >
+        <For each={options()}>
           {(option: T, i) => (
             <li
               ref={(el) => {

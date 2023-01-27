@@ -14,10 +14,6 @@ import SignUp from "@pages/SignUp";
 const App: Component = () => {
   const user = useAuth();
 
-  createEffect(() => {
-    console.log(user());
-  });
-
   return (
     <Layout>
       <Routes>

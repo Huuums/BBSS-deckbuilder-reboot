@@ -98,6 +98,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
                 value={props.trainer.potential?.[2]}
                 valueDisplayText={props.trainer.potential?.[2]}
                 onChange={(val) => {
+                  console.log(val);
                   props.updateTrainer([
                     props.trainer.potential?.[0] || "",
                     props.trainer.potential?.[1] || "",
