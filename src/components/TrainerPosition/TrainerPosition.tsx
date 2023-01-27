@@ -8,6 +8,7 @@ import pitcherIcon from "@assets/images/common/pitcher.png";
 type TrainerPositionProps = {
   position: BattingPosition | PitchingPosition;
   class?: string;
+  large?: boolean;
 };
 
 const TrainerPosition: Component<TrainerPositionProps> = (props) => {
@@ -21,12 +22,13 @@ const TrainerPosition: Component<TrainerPositionProps> = (props) => {
     <div
       class={classNames(
         isPitcher() ? "bg-custom-pitching" : "bg-custom-batting",
-        "rounded-xl w-10 justify-center items-center",
+        props.large ? "w-12 py-1" : "w-10",
+        "rounded-xl justify-center items-center",
         newProps.class
       )}
     >
       <img
-        class="mr-0.5 h-3.5 w-3.5"
+        class={classNames("mr-0.5 ", props.large ? "h-4 w-4" : "h-3.5 w-3.5")}
         src={isPitcher() ? pitcherIcon : batterIcon}
       />
       <span class="text-sm font-semibold">{newProps.position}</span>

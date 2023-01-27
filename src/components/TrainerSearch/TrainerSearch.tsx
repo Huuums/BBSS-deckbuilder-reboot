@@ -2,7 +2,13 @@ import bonusTeams, { teamAbbreviations } from "@assets/bonusteams";
 import CheckboxList from "@components/CheckboxList";
 
 import SearchInput from "@components/SearchInput";
-import { ElementType, Filters, Skill } from "@localtypes/types";
+import {
+  BattingPosition,
+  ElementType,
+  Filters,
+  PitchingPosition,
+  Skill,
+} from "@localtypes/types";
 import type { Component } from "solid-js";
 import { SetStoreFunction } from "solid-js/store";
 import teamImages from "@assets/images/teams";
@@ -36,10 +42,12 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
   const updateFilter = <T extends keyof Omit<Filters, "name">>(
     key: T,
     isChecked: boolean,
-    val: ElementType<Filters[T]>
+    val: ElementType<Omit<Filters, "name">[T]>
   ) => {
+    //this works fuck off typescript
     if (isChecked) props.setFilters(key, (prev) => prev.concat(val));
     if (!isChecked)
+      //this works fuck off typescript
       props.setFilters(key, (prev) => prev.filter((el) => el !== val));
   };
 
@@ -66,23 +74,41 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
       </div>
       <div class="flex">
         <CheckboxList
-          options={battingPositions}
+          options={["All"].concat(battingPositions)}
           label="Batting"
-          onChange={(isChecked, val) =>
-            updateFilter("position", isChecked, val)
+          onChange={(isChecked, val: BattingPosition | "All") => {
+            if (val === "All") {
+              props.setFilters("position", (prev) =>
+                prev.length === battingPositions.length ? [] : battingPositions
+              );
+            } else {
+              updateFilter("position", isChecked, val);
+            }
+          }}
+          checkboxIsChecked={(val: BattingPosition | "All") =>
+            val !== "All" && props.filters.position.includes(val)
           }
-          checkboxIsChecked={(val) => props.filters.position.includes(val)}
           checkboxLabel={(val) => <>{val}</>}
           checkboxClass={"w-[70px] h-10"}
           class="flex-1"
         />
         <CheckboxList
-          options={pitchingPositions}
+          options={["All"].concat(pitchingPositions)}
           label="Pitching"
-          onChange={(isChecked, val) =>
-            updateFilter("position", isChecked, val)
+          onChange={(isChecked, val: PitchingPosition | "All") => {
+            if (val === "All") {
+              props.setFilters("position", (prev) =>
+                prev.length === pitchingPositions.length
+                  ? []
+                  : pitchingPositions
+              );
+            } else {
+              updateFilter("position", isChecked, val);
+            }
+          }}
+          checkboxIsChecked={(val: PitchingPosition | "All") =>
+            val !== "All" && props.filters.position.includes(val)
           }
-          checkboxIsChecked={(val) => props.filters.position.includes(val)}
           checkboxLabel={(val) => <>{val}</>}
           checkboxClass={"w-[70px] h-10"}
           class="flex-1"

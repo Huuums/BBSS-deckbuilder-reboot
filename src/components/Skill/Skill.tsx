@@ -25,10 +25,12 @@ type SkillProps = {
   name: SkillNames;
   isBestSkill?: boolean;
   isBestSkillEncyclopedia?: boolean;
-  value: SkillValue;
+  value?: SkillValue;
   valueDiff?: number;
   diff?: number;
-  trainerContribution: Partial<
+  class?: string;
+  potential?: 0 | 1 | 2;
+  trainerContribution?: Partial<
     Record<TrainerNames, { total: number; potential: number }>
   >;
 };
@@ -55,8 +57,8 @@ const Skill: Component<SkillProps> = (props) => {
   let buttonRef;
 
   return (
-    <>
-      <div class="flex">
+    <div class={props.class}>
+      <div class={classNames("flex")}>
         <Show when={showTrainerSkillContribution()}>
           <For each={Object.keys(props.trainerContribution)}>
             {(key) => (
@@ -137,48 +139,67 @@ const Skill: Component<SkillProps> = (props) => {
             </Match>
           </Switch>
         )}
-        <Switch>
-          <Match when={!props.valueDiff}>
-            <span class="text-white text-sm font-medium mr-1">
-              [{props.value}]
-            </span>
-          </Match>
-          <Match when={props.valueDiff > 0}>
-            <span class="text-green-400 text-sm font-medium mr-1 animate-pulse-full">
-              [+{props.valueDiff}]
-            </span>
-            <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
-              [{props.value}]
-            </span>
-          </Match>
-          <Match when={props.valueDiff < 0}>
-            <span class="text-red-400 text-sm font-medium mr-1 animate-pulse-full">
-              [{props.valueDiff}]
-            </span>
-            <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
-              [{props.value}]
-            </span>
-          </Match>
-        </Switch>
+        <Show when={props.value}>
+          <Switch>
+            <Match when={!props.valueDiff}>
+              <span class="text-white text-sm font-medium mr-1">
+                [{props.value}]
+              </span>
+            </Match>
+            <Match when={props.valueDiff > 0}>
+              <span class="text-green-400 text-sm font-medium mr-1 animate-pulse-full">
+                [+{props.valueDiff}]
+              </span>
+              <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
+                [{props.value}]
+              </span>
+            </Match>
+            <Match when={props.valueDiff < 0}>
+              <span class="text-red-400 text-sm font-medium mr-1 animate-pulse-full">
+                [{props.valueDiff}]
+              </span>
+              <span class="text-white absolute text-sm font-medium mr-1 animate-pulse-full-reverse">
+                [{props.value}]
+              </span>
+            </Match>
+          </Switch>
+        </Show>
         <span class="text-gray-200 text-sm font-medium">{props.name}</span>
-        <button
-          ref={buttonRef}
-          class={classNames("ml-auto")}
-          onClick={(e) => {
-            e.stopPropagation();
-            setShowTrainerSkillContribution((prev) => !prev);
-          }}
-        >
-          <HiOutlineDocumentSearch
-            class={classNames(
-              "ml-auto w-6 h-6",
-              showTrainerSkillContribution()
-                ? "stroke-blue-700"
-                : "stroke-white"
-            )}
-          />
-        </button>
-
+        <Show when={props.trainerContribution}>
+          <button
+            ref={buttonRef}
+            class={classNames("ml-auto")}
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowTrainerSkillContribution((prev) => !prev);
+            }}
+          >
+            <HiOutlineDocumentSearch
+              class={classNames(
+                "ml-auto w-6 h-6",
+                showTrainerSkillContribution()
+                  ? "stroke-blue-700"
+                  : "stroke-white"
+              )}
+            />
+          </button>
+        </Show>
+        <Show when={props.potential}>
+          <div class="flex items-center ml-auto text-blue-600 font-semibold">
+            <span
+              class={classNames(
+                "after:content-[''] after:absolute after:right-0 after:translate-x-full after:border-t-[.625rem] after:border-t-transparent after:border-l-[.5rem] after:border-l-gray-200 after:border-b-[.625rem] after:border-b-transparent",
+                "before:content-[''] before:absolute before:left-0 before:-translate-x-full before:border-t-[.625rem] before:border-t-transparent before:border-r-[.5rem] before:border-r-gray-200 before:border-b-[.625rem] before:border-b-transparent",
+                "relative z-20 pl-1.5 mx-auto h-5 w-3 bg-gray-200 text-xs flex justify-center items-center"
+              )}
+            >
+              <span class="text-blue-600 text-sm font-medium z-10 text-center flex items-center mr-1.5">
+                <IoTriangleSharp class="w-2 h-2" />
+                {props.potential}
+              </span>
+            </span>
+          </div>
+        </Show>
         <Switch>
           <Match when={props.isBestSkill}>
             <IoStarSharp class="w-6 h-6 fill-white line-through " />
@@ -188,7 +209,7 @@ const Skill: Component<SkillProps> = (props) => {
           </Match>
         </Switch>
       </div>
-    </>
+    </div>
   );
 };
 

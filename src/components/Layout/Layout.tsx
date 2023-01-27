@@ -8,12 +8,7 @@ import {
 } from "solid-js";
 import { Dialog, DialogPanel } from "solid-headless";
 import { HiOutlineMenu, HiOutlineX } from "solid-icons/hi";
-import {
-  IoHammerOutline,
-  IoPeopleOutline,
-  IoListOutline,
-  IoPerson,
-} from "solid-icons/io";
+import { IoHammerOutline, IoPeopleOutline, IoPerson } from "solid-icons/io";
 
 import { classNames } from "@utils/commonHelpers";
 import { Motion, Presence } from "@motionone/solid";
@@ -28,15 +23,12 @@ const swipeLeftDirective = swipeLeft;
 
 const navigation = [
   { name: "Deckbuilding", href: "/deck", icon: IoHammerOutline },
-  {
-    name: "Saved Decks",
-    href: "/decklist",
-    icon: IoListOutline,
-  },
+  // {
+  //   name: "Saved Decks",
+  //   href: "/decklist",
+  //   icon: IoListOutline,
+  // },
   { name: "My Roster", href: "/roster", icon: IoPeopleOutline },
-  // { name: "Calendar", href: "#", icon: HiOutlineCalendar },
-  // { name: "Documents", href: "#", icon: HiOutlineInbox },
-  // { name: "Reports", href: "#", icon: HiOutlineChartBar },
 ];
 
 const Layout: ParentComponent = (props) => {
@@ -103,8 +95,8 @@ const Layout: ParentComponent = (props) => {
                   </Motion.span>
 
                   <div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-                    <div class="flex flex-shrink-0 items-center px-4">
-                      SuBa 2023 Deckbuilder
+                    <div class="flex flex-shrink-0 text-xs items-center px-4 text-white">
+                      BBSS 2023 Deckbuilder
                     </div>
                     <nav class="mt-5 space-y-1 px-2">
                       <For each={navigation}>

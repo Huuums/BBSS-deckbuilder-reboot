@@ -264,7 +264,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
               </div>
             )}
 
-            <div class="grid gap-x-1 lg:gap-x-2 gap-y-2 max-w-100 lg:grid-cols-auto grid-cols-auto-small p-5">
+            <div class="grid gap-x-1 lg:gap-x-2 gap-y-2 max-w-100 lg:grid-cols-auto grid-cols-auto-small py-5 px-2 lg:px-5">
               <For each={sortedTrainers()}>
                 {(trainer) => {
                   return (

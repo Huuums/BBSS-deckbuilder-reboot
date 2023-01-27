@@ -4,7 +4,7 @@ import {
   Trainer as TrainerType,
   TrainerNames,
 } from "@localtypes/types";
-import { Component, For, JSX, Show } from "solid-js";
+import { Component, createSignal, For, JSX, Show } from "solid-js";
 import teamImages from "@assets/images/teams";
 
 import TrainerPosition from "@components/TrainerPosition";
@@ -18,6 +18,7 @@ import TrainerPotential from "@components/TrainerPotential";
 
 import Modal from "@components/Modal";
 import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
+import TrainerDetails from "@components/TrainerDetails";
 
 type TrainerProps = {
   src: string;
@@ -70,22 +71,9 @@ const getBorderRarityClass = (rarity: Rarity) => {
   }
 };
 
-const getBackgroundAndTextRarityClass = (rarity: Rarity) => {
-  switch (rarity) {
-    case "N":
-      return "bg-rarity-N text-gray-100";
-    case "R":
-      return "bg-rarity-R text-gray-100";
-    case "SR":
-      return "bg-rarity-SR text-gray-100";
-    case "SSR":
-      return "bg-rarity-SSR text-gray-100";
-    case "UR":
-      return "bg-rarity-UR text-gray-900";
-  }
-};
-
 const Trainer: Component<TrainerProps> = (props) => {
+  const [showDetails, setShowDetails] = createSignal(false);
+
   return (
     <Show
       when={props.onlyAvatarAndStars}
@@ -129,22 +117,26 @@ const Trainer: Component<TrainerProps> = (props) => {
             class="bg-gray-700 relative"
           />
           <div class="relative bg-gray-800 text-gray-200 font-semibold flex justify-between flex-wrap">
-            <div class="basis-full flex">
+            <div class="basis-full flex border-b border-gray-500">
               {props.deckSkillValue !== undefined && (
                 <>
-                  <div class="basis-1/2 border-r text-xs items-center flex border-gray-200 p-1">
+                  <div class="basis-1/2 border-r justify-center text-xs items-center flex border-gray-500 p-1">
                     <IoStarSharp class="w-3 h-3 lg:w-4 lg:h-4" />
                     {props.trainerSkillContribution?.default === undefined
                       ? "-"
-                      : props.trainerSkillContribution?.default -
-                        (props.deckSkillValue?.default || 0)}
+                      : Math.round(
+                          props.trainerSkillContribution?.default -
+                            (props.deckSkillValue?.default || 0)
+                        )}
                   </div>
-                  <div class="basis-1/2 flex text-xs items-center border-gray-200 p-1">
+                  <div class="basis-1/2 flex text-xs justify-center items-center border-gray-500 p-1">
                     <IoStarHalfSharp class="w-3 h-3 lg:w-4 lg:h-4" />
                     {props.trainerSkillContribution?.encyclopedia === undefined
                       ? "-"
-                      : props.trainerSkillContribution?.encyclopedia -
-                        (props.deckSkillValue?.encyclopedia || 0)}
+                      : Math.round(
+                          props.trainerSkillContribution?.encyclopedia -
+                            (props.deckSkillValue?.encyclopedia || 0)
+                        )}
                   </div>
                 </>
               )}
@@ -152,20 +144,23 @@ const Trainer: Component<TrainerProps> = (props) => {
             <div class="basis-full flex">
               <button
                 class={classNames(
-                  "flex justify-center p-0.5 basis-1/2 items-center text-xs py-1",
-                  getBackgroundAndTextRarityClass(props.trainer.rarity),
+                  "flex  px-0.5 basis-1/2 justify-center items-center text-xs py-1 border-r border-gray-500 overflow-hidden",
+                  props.trainer.potential.filter((val) => val).length === 3
+                    ? "bg-blue-700"
+                    : "",
                   "basis-1/2"
                 )}
                 onClick={() =>
                   props.setPotentialSelectionTrainer(props.trainer.name)
                 }
               >
-                Potential
+                <span class="text-ellipsis">Potential</span>
               </button>
               {props.showPotentialSelectionSmall && (
                 <Modal
                   isOpen={props.showPotentialSelectionSmall}
                   onClose={() => props.setPotentialSelectionTrainer("")}
+                  class="max-w-sm lg:max-w-2xl"
                 >
                   <div class="2xl:basis-1/4 flex-grow my-2 mx-2">
                     <TrainerPotential
@@ -182,15 +177,25 @@ const Trainer: Component<TrainerProps> = (props) => {
               )}
               <button
                 class={classNames(
-                  "flex text-gray-300 justify-center items-center text-center text-xs py-1 cursor-not-allowed",
+                  "flex text-gray-300 justify-center items-center text-center text-xs py-1 ",
                   "basis-1/2"
                 )}
                 title="Will be added later"
-                disabled
-                onClick={() => null /*showTrainerInfo(props.name) */}
+                onClick={() => setShowDetails(true)}
               >
                 Details
               </button>
+              {showDetails() && (
+                <Modal
+                  class="w-full max-w-lg"
+                  isOpen={showDetails()}
+                  onClose={() => setShowDetails(false)}
+                >
+                  <div class="2xl:basis-1/4 flex-grow my-2 mx-2">
+                    <TrainerDetails trainer={props.trainer} src={props.src} />
+                  </div>
+                </Modal>
+              )}
             </div>
             <h3
               class={classNames(

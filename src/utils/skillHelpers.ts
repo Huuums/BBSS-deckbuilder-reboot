@@ -127,7 +127,7 @@ export const makeSkillData = (
 export const getSkillLevelDiff = (
   newSkills: SkillRanks,
   oldSkills: SkillRanks,
-  position: Position | "0"
+  position?: Position | "0"
 ): SkillDiff => {
   const changedSkills = Object.keys(newSkills)
     .filter((row) => newSkills[row] !== oldSkills[row])
