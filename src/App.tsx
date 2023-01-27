@@ -1,4 +1,4 @@
-import { Component, Match, Switch, Show } from "solid-js";
+import { Component, Match, Switch, Show, createEffect } from "solid-js";
 import { Navigate, Route, Routes } from "@solidjs/router";
 import Layout from "@components/Layout";
 import Deckbuilder from "@pages/Deckbuilder";
@@ -13,6 +13,10 @@ import SignUp from "@pages/SignUp";
 
 const App: Component = () => {
   const user = useAuth();
+
+  createEffect(() => {
+    console.log(user());
+  });
 
   return (
     <Layout>
@@ -46,7 +50,7 @@ const App: Component = () => {
         <Route
           path="/forgot-password"
           element={
-            <Show when={user()} fallback={<Navigate href="/deck" />}>
+            <Show when={!user()} fallback={<Navigate href="/deck" />}>
               <ForgotPassword />
             </Show>
           }
