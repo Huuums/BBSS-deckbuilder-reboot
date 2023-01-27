@@ -13,7 +13,7 @@ const pressedESCDirective = pressedESC;
 type ModalProps = {
   onClose: () => void;
   isOpen: boolean;
-  class: string;
+  class?: string;
 };
 
 const Modal: ParentComponent<ModalProps> = (props) => {

@@ -331,7 +331,10 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                           onMouseLeaveUpgradeSelector={() =>
                             props.onMouseLeaveTrainerAvatar?.()
                           }
-                          src={trainerImages[trainer.name]}
+                          src={
+                            trainerImages[trainer.name] ||
+                            trainerImages["placeholder"]
+                          }
                           trainerDeckIndex={props.deck?.findIndex(
                             (row) =>
                               row !== "empty" && row.name === trainer.name

@@ -1,34 +1,17 @@
-## Usage
+# BBSS Deckbuilder
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+## How to add a new Trainer
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+Open the `types.ts` file located at `src/types/types.ts` and add the Trainername to the `TrainerNames` type.
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+Open the `trainers.ts` file located at `src/assets/json/trainers.ts` and add the Data for a new Trainer in there.
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Get the image of the trainer out of the gamefiles and name it like the trainer (i.e. The image from Yeomra should be named `Yeomra.png`) and add it to the `src/assets/images/trainer` folder
 
-## Available Scripts
+Open a PR with the changes to the main branch. As soon as the pull request is accepted the changes will be deployed to the site.
 
-In the project directory, you can run:
+## How to add a new Skills
 
-### `npm dev` or `npm start`
+Open the `skillDefinitions.ts` file located at `src/assets/json/skillDefinitions.ts` and add the Skill to the file.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+Open a PR with the changes to the main branch. As soon as the pull request is accepted the changes will be deployed to the site.

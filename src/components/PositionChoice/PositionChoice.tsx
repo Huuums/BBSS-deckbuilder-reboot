@@ -2,24 +2,11 @@ import { Component, For } from "solid-js";
 import { battingPositions, pitchingPositions } from "@assets/positions";
 import { Position } from "@localtypes/types";
 import RadioButton from "@components/RadioButton";
-import Checkbox from "@components/Checkbox";
 
-type PositionChoiceProps =
-  | (
-      | {
-          currentPosition: Position | "0" | "batters" | "pitchers";
-          onChange: (val: Position | "0" | "batters" | "pitchers") => void;
-          allowMultiple?: false;
-        }
-      | {
-          currentPosition?: (Position | "0" | "batters" | "pitchers")[];
-          onChange: (
-            isChecked: boolean,
-            value: Position | "0" | "batters" | "pitchers"
-          ) => void;
-          allowMultiple: true;
-        }
-    ) & { withAll?: boolean };
+type PositionChoiceProps = {
+  currentPosition: Position | "0";
+  onChange: (val: Position | "0") => void;
+};
 
 const PositionChoice: Component<PositionChoiceProps> = (props) => {
   return (
@@ -30,34 +17,20 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
           Batting
         </h4>
         <div class="h-full flex flex-wrap flex-1">
-          <For each={battingPositions.concat(props.withAll ? "All" : [])}>
-            {(val) =>
-              !props.allowMultiple ? (
-                <RadioButton
-                  onClick={(value) =>
-                    value === props.currentPosition
-                      ? props.onChange("0")
-                      : props.onChange(value)
-                  }
-                  name="position"
-                  class="mr-1 mb-1 basis-11"
-                  value={val === "All" ? "batters" : val}
-                  isActive={val === props.currentPosition}
-                />
-              ) : (
-                <Checkbox
-                  label={val}
-                  onChange={props.onChange}
-                  name="position"
-                  class="mr-1 mb-1 basis-11"
-                  value={val === "All" ? "batters" : val}
-                  isChecked={props.currentPosition?.some?.(
-                    (entry) =>
-                      entry === val || (val === "All" && entry === "batters")
-                  )}
-                />
-              )
-            }
+          <For each={battingPositions}>
+            {(val) => (
+              <RadioButton
+                onClick={(value) =>
+                  value === props.currentPosition
+                    ? props.onChange("0")
+                    : props.onChange(value)
+                }
+                name="position"
+                class="mr-1 mb-1 basis-11"
+                value={val}
+                isActive={val === props.currentPosition}
+              />
+            )}
           </For>
         </div>
       </div>
@@ -66,34 +39,20 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
           Pitching
         </h4>
         <div class="flex-1 flex flex-wrap">
-          <For each={pitchingPositions.concat(props.withAll ? "All" : [])}>
-            {(val) =>
-              !props.allowMultiple ? (
-                <RadioButton
-                  onClick={(value) =>
-                    value === props.currentPosition
-                      ? props.onChange("0")
-                      : props.onChange(value)
-                  }
-                  name="position"
-                  class="mr-1 mb-1 basis-11"
-                  value={val === "All" ? "pitchers" : val}
-                  isActive={val === props.currentPosition}
-                />
-              ) : (
-                <Checkbox
-                  label={val}
-                  onChange={props.onChange}
-                  name="position"
-                  class="mr-1 mb-1 basis-11"
-                  value={val === "All" ? "pitchers" : val}
-                  isChecked={props.currentPosition?.some?.(
-                    (entry) =>
-                      entry === val || (val === "All" && entry === "pitchers")
-                  )}
-                />
-              )
-            }
+          <For each={pitchingPositions}>
+            {(val) => (
+              <RadioButton
+                onClick={(value) =>
+                  value === props.currentPosition
+                    ? props.onChange("0")
+                    : props.onChange(value)
+                }
+                name="position"
+                class="mr-1 mb-1 basis-11"
+                value={val}
+                isActive={val === props.currentPosition}
+              />
+            )}
           </For>
         </div>
       </div>

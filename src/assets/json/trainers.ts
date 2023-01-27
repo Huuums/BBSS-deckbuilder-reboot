@@ -1,6 +1,4 @@
-import { Trainer, TrainerNames } from "@localtypes/types";
-
-// missing: 'Yeomra', 'Rache', 'Francis', 'MED', 'Taesung', 'Mary', 'Lucis', 'Scofield', 'Annie', 'Code-J', 'Lazi', 'Aria', 'Bill', 'Pansy', 'Johanna', 'Kinsley', 'Velvet', 'Ziz', 'Behemoth', 'Leviathan', 'Bebe', 'Freyja'
+import { Trainer } from "@localtypes/types";
 
 const trainers: Omit<Trainer, "stars" | "potential">[] = [
   {
@@ -11536,12 +11534,5 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
     },
   },
 ];
-
-export const trainersObject = trainers.reduce<
-  Record<TrainerNames, Omit<Trainer, "stars" | "potential">>
->((acc, trainer) => {
-  acc[trainer.name] = trainer;
-  return acc;
-}, {} as Record<TrainerNames, Omit<Trainer, "stars" | "potential">>);
 
 export default trainers;
