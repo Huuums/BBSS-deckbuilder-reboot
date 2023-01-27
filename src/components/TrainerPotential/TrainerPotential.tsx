@@ -55,7 +55,7 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
                 placeholder="Potential 1"
                 optionIsDisabled={(val) =>
                   props.trainer.potential.filter((skill) => skill === val)
-                    .length >= 2 || val === "Switch Hitter"
+                    .length >= 2
                 }
                 onChange={(val) => {
                   props.updateTrainer([
