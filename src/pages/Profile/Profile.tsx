@@ -26,8 +26,12 @@ const Profile: Component = () => {
       "/isShared": e.currentTarget.shareroster.checked,
     };
 
-    updateUserData(user?.().uid, userValues);
-    updateRosterData(user?.().roster, rosterValues);
+    try {
+      updateUserData(user?.().uid, userValues);
+      updateRosterData(user?.().roster, rosterValues);
+    } catch (e) {
+      setError(e);
+    }
   };
 
   return (

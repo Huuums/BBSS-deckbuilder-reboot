@@ -62,15 +62,28 @@ export type SkillData = [Skill, RankLevels, SkillValue];
 
 export type SkillValue = number;
 
-export type Trainer = {
+export type Trainer = TrainerData &
+  TrainerSettings & {
+    isCustomTrainer?: boolean;
+    trainerId?: string;
+    isNew?: boolean;
+  };
+
+export type TrainerSettings = {
+  useSkin: boolean;
+  stars: RankLevels;
+  potential: RosterTrainer["potential"];
+  customName: string;
+};
+
+export type TrainerData = {
   name: TrainerNames;
   rarity: Rarity;
   position: BattingPosition | PitchingPosition;
   type: Statstype[];
   bonusTeam: Team[];
   skills: TrainerSkillRanks;
-  stars: RankLevels;
-  potential: RosterTrainer["potential"];
+  hasSkin: boolean;
 };
 
 export type SkillType =
@@ -228,15 +241,25 @@ export type SkillDefinition = {
 };
 
 export type Roster = Partial<Record<TrainerNames, RosterTrainer>>;
+export type RosterCustomTrainers = Record<string, CustomTrainer>;
 
 export type RosterTrainer = {
   stars: RankLevels;
-  potential: [Skill | undefined, Skill | undefined, Skill | undefined] | [];
+  potential: [Skill | "", Skill | "", Skill | ""] | [];
+  useSkin: boolean;
+  customName: string;
+};
+
+export type CustomTrainer = RosterTrainer & {
+  trainer: TrainerNames;
+  isCustomTrainer: true;
+  isNew?: boolean;
+  trainerId: string;
 };
 
 export type Deck = DeckSlot[];
 
-export type DeckSlot = Required<Trainer> | "empty";
+export type DeckSlot = Trainer | "empty";
 
 export type User = {
   uid: string;

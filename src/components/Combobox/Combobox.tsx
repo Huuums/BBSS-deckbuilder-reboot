@@ -18,6 +18,7 @@ type ComboboxProps<T extends string | number | object> = {
   optionIsDisabled?: (value: T) => boolean;
   optionLabel?: ((option: T) => JSX.Element) | keyof T;
   clearable?: boolean;
+  icon?: JSX.Element;
 };
 
 const Combobox = <T extends string | number | object>(
@@ -69,7 +70,7 @@ const Combobox = <T extends string | number | object>(
         );
 
     if (props.clearable) {
-      return ["-"].concat(filteredOptions);
+      return (["-"] as T[]).concat(filteredOptions);
     }
     return filteredOptions;
   };
@@ -107,7 +108,9 @@ const Combobox = <T extends string | number | object>(
   return (
     <div class="relative" use:clickOutsideDirective={() => setIsOpen(false)}>
       <div class="relative flex items-center bg-gray-900">
-        <HiOutlineSearch class="pointer-events-none ml-2 h-5 w-5 stroke-gray-500" />
+        {props.icon || (
+          <HiOutlineSearch class="pointer-events-none ml-2 h-5 w-5 stroke-gray-500" />
+        )}
         <input
           onFocus={() => setIsOpen(true)}
           onClick={() => (!isOpen() ? setIsOpen(true) : null)}

@@ -9,8 +9,10 @@ import {
   Match,
   Show,
 } from "solid-js";
+import uniqid from "uniqid";
 import trainerImages from "../../assets/images/trainer";
 import {
+  CustomTrainer,
   Deck,
   DeckSlot,
   FilterEntry,
@@ -19,6 +21,7 @@ import {
   Skill,
   Trainer as TrainerType,
   TrainerNames,
+  TrainerSettings,
 } from "@localtypes/types";
 
 import { battingPositions, pitchingPositions } from "@assets/positions";
@@ -34,8 +37,11 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "solid-headless";
-import { IoChevronUpOutline } from "solid-icons/io";
+import { IoAddSharp, IoChevronUpOutline } from "solid-icons/io";
 import { HiOutlineX } from "solid-icons/hi";
+import rarities from "@assets/rarities";
+import Combobox from "@components/Combobox";
+import { trainerNames } from "@assets/json/trainers";
 
 type TrainerlistProps = {
   useRoster?: boolean;
@@ -51,9 +57,9 @@ type TrainerlistProps = {
     stars: RankLevels
   ) => void;
   onMouseLeaveUpgradeSelector?: () => void;
-  updateTrainer: <K extends keyof TrainerType>(
-    trainerName: string,
-    valuesToUpdate: Partial<Record<K, TrainerType[K]>>
+  updateTrainer: <K extends keyof TrainerSettings>(
+    trainerId: string,
+    valuesToUpdate: Partial<Record<K, TrainerSettings[K]>>
   ) => void;
   potentialListView?: boolean;
   rosterView?: boolean;
@@ -70,6 +76,12 @@ type TrainerlistProps = {
     valuesToUpdate: Partial<Record<K, TrainerType[K]>>
   ) => void;
   isDeckBuilder?: boolean;
+  addCustomTrainer?: (val: CustomTrainer) => void;
+  removeCustomTrainer?: (val: CustomTrainer["trainerId"]) => void;
+  updateCustomTrainer?: (
+    trainerId: CustomTrainer["trainerId"],
+    val: Partial<CustomTrainer>
+  ) => void;
 };
 
 const Trainerlist: Component<TrainerlistProps> = (props) => {
@@ -99,7 +111,10 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
         .every(([type, value]: FilterEntry) => {
           switch (type) {
             case "name":
-              return trainer.name.toLowerCase().includes(value.toLowerCase());
+              return (
+                trainer.name.toLowerCase().includes(value.toLowerCase()) ||
+                trainer.customName.toLowerCase().includes(value.toLowerCase())
+              );
             case "position": {
               return positionsToCheck.includes(trainer.position);
             }
@@ -133,8 +148,8 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
           return 1;
         }
         return (
-          props.trainerSkillContribution[b.name]?.default -
-          props.trainerSkillContribution[a.name]?.default
+          props.trainerSkillContribution[b.trainerId]?.default -
+          props.trainerSkillContribution[a.trainerId]?.default
         );
       });
     } else if (sortBy() === "Skill Compatibility with Encyclopedia") {
@@ -145,12 +160,32 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
           return 1;
         }
         return (
-          props.trainerSkillContribution[b.name]?.encyclopedia -
-          props.trainerSkillContribution[a.name]?.encyclopedia
+          props.trainerSkillContribution[b.trainerId]?.encyclopedia -
+          props.trainerSkillContribution[a.trainerId]?.encyclopedia
         );
       });
+    } else {
+      return visibleTrainers().sort((a, b) => {
+        if (props.rosterView) {
+          if (a.isNew && b.isNew) return 0;
+          if (a.isNew && !b.isNew) return -1;
+          if (!a.isNew && b.isNew) return 1;
+        }
+
+        const rarityIndexA = rarities.indexOf(a.rarity);
+        const rarityIndexB = rarities.indexOf(b.rarity);
+
+        if (rarityIndexA < rarityIndexB) return -1;
+        if (rarityIndexA > rarityIndexB) return 1;
+
+        if (a.stars < b.stars) return 1;
+        if (a.stars > b.stars) return -1;
+
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      });
     }
-    return visibleTrainers();
   };
 
   return (
@@ -193,14 +228,18 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
       <Switch>
         <Match when={props.potentialListView}>
           <div class="flex flex-wrap">
-            <For each={visibleTrainers().filter((val) => val.stars)}>
+            <For each={sortedTrainers().filter((val) => val.stars)}>
               {(trainer) => (
                 <div class="basis-1/3 flex-grow max-w-1/2 mr-auto 2xl:basis-1/4 lg:basis-1/3 lg:flex-grow my-2 mx-2 2xl:max-w-1/3">
                   <TrainerPotential
                     trainer={trainer}
                     mode="large"
                     updateTrainer={(potential) =>
-                      props.updateTrainer(trainer.name, { potential })
+                      trainer.isCustomTrainer && props.rosterView
+                        ? props.updateCustomTrainer(trainer.trainerId, {
+                            potential,
+                          })
+                        : props.updateTrainer(trainer.trainerId, { potential })
                     }
                   />
                 </div>
@@ -228,7 +267,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                       class="bg-gray-900 text-ellipsis overflow-hidden w-full"
                       onChange={(e) => setSortBy(e.currentTarget.value)}
                     >
-                      <option value="Rarity">Rarity</option>
+                      <option value="Rank">Rank</option>
                       <option value="Skill Compatibility">
                         Skill Compatibility
                       </option>
@@ -242,8 +281,8 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                   Sort By:
                   <RadioButton
                     onClick={(value) => setSortBy(value)}
-                    value={"Rarity"}
-                    isActive={sortBy() === "Rarity"}
+                    value={"Rank"}
+                    isActive={sortBy() === "Rank"}
                     class="mx-2 flex-grow-0 py-1.5"
                   />
                   <RadioButton
@@ -263,7 +302,28 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                 </div>
               </div>
             )}
-
+            {props.rosterView && (
+              <div class="my-3 max-w-lg w-full mx-auto text-white">
+                <Combobox
+                  icon={<IoAddSharp class={"w-8 h-8 ml-2"} />}
+                  placeholder="Add additional Trainer Copy to Roster"
+                  options={trainerNames}
+                  value={""}
+                  onChange={(name: TrainerNames) =>
+                    props.addCustomTrainer({
+                      trainer: name,
+                      customName: "",
+                      potential: [],
+                      stars: 1,
+                      useSkin: false,
+                      isCustomTrainer: true,
+                      isNew: true,
+                      trainerId: uniqid(),
+                    })
+                  }
+                />
+              </div>
+            )}
             <div class="grid gap-x-1 lg:gap-x-2 gap-y-2 max-w-100 lg:grid-cols-auto grid-cols-auto-small py-5 px-2 lg:px-5">
               <For each={sortedTrainers()}>
                 {(trainer) => {
@@ -294,23 +354,30 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                       >
                         <Trainer
                           trainer={trainer}
-                          updateTrainer={props.updateTrainer}
+                          updateTrainer={
+                            trainer.isCustomTrainer && props.rosterView
+                              ? props.updateCustomTrainer
+                              : props.updateTrainer
+                          }
                           rosterView={props.rosterView}
                           trainerSkillContribution={
-                            props.trainerSkillContribution[trainer.name]
+                            props.trainerSkillContribution[trainer.trainerId]
                           }
                           deckSkillValue={props.deckSkillValue}
                           removeTrainerFromRoster={() => {
-                            props.updateTrainer(trainer.name, {
-                              stars: 0,
-                              potential: [],
-                            });
+                            trainer.isCustomTrainer && props.rosterView
+                              ? props.removeCustomTrainer(trainer.trainerId)
+                              : props.updateTrainer(trainer.trainerId, {
+                                  stars: 0,
+                                  potential: [],
+                                });
                           }}
                           setPotentialSelectionTrainer={(
                             name: TrainerNames | ""
                           ) => props.setPotentialSelectionTrainer(name)}
                           showPotentialSelectionSmall={
-                            props.potentialSelectionTrainer === trainer.name
+                            props.potentialSelectionTrainer ===
+                            trainer.trainerId
                           }
                           onClickAvatar={() =>
                             !props.deck?.some(
@@ -332,16 +399,24 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                             props.onMouseLeaveTrainerAvatar?.()
                           }
                           src={
-                            trainerImages[trainer.name] ||
-                            trainerImages["placeholder"]
+                            trainer.useSkin
+                              ? trainerImages[`${trainer.name}_skin`]
+                              : trainerImages[trainer.name] ||
+                                trainerImages["placeholder"]
                           }
                           trainerDeckIndex={props.deck?.findIndex(
                             (row) =>
                               row !== "empty" && row.name === trainer.name
                           )}
-                          onChange={(values) =>
-                            props.updateTrainer(trainer.name, values)
-                          }
+                          onChange={(values) => {
+                            if (trainer.isCustomTrainer && props.rosterView) {
+                              props.updateCustomTrainer(
+                                trainer.trainerId,
+                                values
+                              );
+                            }
+                            props.updateTrainer(trainer.trainerId, values);
+                          }}
                         />
                       </Suspense>
                     </>

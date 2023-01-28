@@ -66,7 +66,7 @@ const TrainerSearch: Component<TrainerSearchProps> = (props) => {
           <Combobox
             clearable
             options={Object.keys(skillDefinitions)}
-            onChange={(val: Skill) =>
+            onChange={(val: Skill | "") =>
               props.setFilters("skill", val === "" ? [] : [val])
             }
             placeholder="Enter Skill Name"

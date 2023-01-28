@@ -2,7 +2,7 @@ import {
   RankLevels,
   Rarity,
   Trainer as TrainerType,
-  TrainerNames,
+  TrainerSettings as TrainerSettingsType,
 } from "@localtypes/types";
 import { Component, createSignal, For, JSX, Show } from "solid-js";
 import teamImages from "@assets/images/teams";
@@ -19,6 +19,7 @@ import TrainerPotential from "@components/TrainerPotential";
 import Modal from "@components/Modal";
 import { IoStarHalfSharp, IoStarSharp } from "solid-icons/io";
 import TrainerDetails from "@components/TrainerDetails";
+import TrainerSettings from "@components/TrainerSettings";
 
 type TrainerProps = {
   src: string;
@@ -29,22 +30,26 @@ type TrainerProps = {
   removeTrainerFromRoster?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
   onMouseEnterUpgradeSelector?: (stars: RankLevels) => void;
   onMouseLeaveUpgradeSelector?: () => void;
-  setPotentialSelectionTrainer?: (name: TrainerNames | "") => void;
+  setPotentialSelectionTrainer?: (name: string | "") => void;
   showPotentialSelectionSmall?: boolean;
   trainerDeckIndex?: number;
   class?: string;
   cannotAddTrainer?: boolean;
   showButtonsOnAvatar?: boolean;
   trainer: TrainerType;
-  onChange?: <K extends keyof TrainerType>(
-    values: Record<K, TrainerType[K]>
+  onChange?: <K extends keyof TrainerSettingsType>(
+    values: Record<K, TrainerSettingsType[K]>
   ) => void;
   markedForExchange?: boolean;
   imgClass?: string;
   onlyAvatarAndStars?: boolean;
-  updateTrainer?: <K extends keyof TrainerType>(
-    trainerName: string,
-    valuesToUpdate: Partial<Record<K, TrainerType[K]>>
+  updateTrainer?: <K extends keyof TrainerSettingsType>(
+    trainerId: string,
+    valuesToUpdate: Partial<Record<K, TrainerSettingsType[K]>>
+  ) => void;
+  updateCustomTrainer?: <K extends keyof TrainerSettingsType>(
+    trainerId: string,
+    valuesToUpdate: Partial<Record<K, TrainerSettingsType[K]>>
   ) => void;
   rosterView?: boolean;
   trainerSkillContribution?:
@@ -73,6 +78,7 @@ const getBorderRarityClass = (rarity: Rarity) => {
 
 const Trainer: Component<TrainerProps> = (props) => {
   const [showDetails, setShowDetails] = createSignal(false);
+  const [showTrainerSettings, setShowTrainerSettings] = createSignal(false);
 
   return (
     <Show
@@ -141,7 +147,7 @@ const Trainer: Component<TrainerProps> = (props) => {
                 </>
               )}
             </div>
-            <div class="basis-full flex">
+            <div class="basis-full flex flex-wrap">
               <button
                 class={classNames(
                   "flex  px-0.5 basis-1/2 justify-center items-center text-xs py-1 border-r border-gray-500 overflow-hidden",
@@ -151,7 +157,7 @@ const Trainer: Component<TrainerProps> = (props) => {
                   "basis-1/2"
                 )}
                 onClick={() =>
-                  props.setPotentialSelectionTrainer(props.trainer.name)
+                  props.setPotentialSelectionTrainer(props.trainer.trainerId)
                 }
               >
                 <span class="text-ellipsis">Potential</span>
@@ -167,7 +173,7 @@ const Trainer: Component<TrainerProps> = (props) => {
                       trainer={props.trainer}
                       mode="large"
                       updateTrainer={(potential) =>
-                        props.updateTrainer(props.trainer.name, {
+                        props.updateTrainer(props.trainer.trainerId, {
                           potential,
                         })
                       }
@@ -196,6 +202,31 @@ const Trainer: Component<TrainerProps> = (props) => {
                   </div>
                 </Modal>
               )}
+              {props.rosterView && (
+                <button
+                  class="basis-full text-xs text-left p-1 border-t text-gray-300 border-gray-500"
+                  onClick={() => setShowTrainerSettings(true)}
+                >
+                  Trainersettings
+                </button>
+              )}
+              {showTrainerSettings() && (
+                <Modal
+                  class="w-full max-w-lg"
+                  isOpen={showTrainerSettings()}
+                  onClose={() => setShowTrainerSettings(false)}
+                >
+                  <div class="2xl:basis-1/4 flex-grow my-2 mx-2">
+                    <TrainerSettings
+                      trainer={props.trainer}
+                      src={props.src}
+                      updateTrainer={(vals) =>
+                        props.updateTrainer(props.trainer.trainerId, vals)
+                      }
+                    />
+                  </div>
+                </Modal>
+              )}
             </div>
             <h3
               class={classNames(
@@ -203,7 +234,7 @@ const Trainer: Component<TrainerProps> = (props) => {
                 getBorderRarityClass(props.trainer.rarity)
               )}
             >
-              {props.trainer.name}
+              {props.trainer.customName || props.trainer.name}
             </h3>
           </div>
         </TrainerBorder>

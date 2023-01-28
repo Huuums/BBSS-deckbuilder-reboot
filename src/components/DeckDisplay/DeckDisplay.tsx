@@ -8,6 +8,7 @@ import {
   RankLevels,
   Trainer as TrainerType,
   TrainerNames,
+  TrainerSettings,
 } from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
 
@@ -15,9 +16,9 @@ type DeckDisplayProps = {
   deck: Deck;
   tempDeck: Deck;
   removeTrainerFromDeck: (trainerName: string) => void;
-  updateTrainer: <K extends keyof TrainerType>(
-    trainerName: string,
-    valuesToUpdate: Partial<Record<K, TrainerType[K]>>
+  updateTrainer: <K extends keyof TrainerSettings>(
+    trainerId: string,
+    valuesToUpdate: Partial<Record<K, TrainerSettings[K]>>
   ) => void;
   onMouseEnterTrainerAvatar?: (trainer: TrainerType) => void;
   onMouseLeaveTrainerAvatar?: () => void;

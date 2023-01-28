@@ -39,6 +39,8 @@ const ImportRosterModal: Component<ImportRosterModalProps> = (props) => {
                     trainer["Potential 2"],
                     trainer["Potential 3"],
                   ],
+                  useSkin: false,
+                  customName: "",
                 };
               });
             } else {
@@ -49,6 +51,8 @@ const ImportRosterModal: Component<ImportRosterModalProps> = (props) => {
                   trainer["Potential 2"],
                   trainer["Potential 3"],
                 ],
+                useSkin: false,
+                customName: "",
               };
             }
             return acc;
@@ -79,10 +83,12 @@ const ImportRosterModal: Component<ImportRosterModalProps> = (props) => {
       const json: Partial<Record<TrainerNames, number>> = await parseJsonFile(
         e.currentTarget.files[0]
       );
-      const rosterObj = Object.keys(json).reduce((acc, trainerName) => {
+      const rosterObj = Object.keys(json).reduce<Roster>((acc, trainerName) => {
         acc[trainerName] = {
           stars: json[trainerName],
           potential: ["", "", ""],
+          useSkin: false,
+          customName: "",
         };
         return acc;
       }, {});

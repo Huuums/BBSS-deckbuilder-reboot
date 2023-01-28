@@ -65,9 +65,19 @@ const getTrainersFromParams = (params: Params | undefined): Partial<Roster> => {
 const setInitialTrainerList = (paramTrainers: Partial<Roster> | undefined) => {
   return trainers.map<Trainer>((trainer) => {
     if (paramTrainers !== undefined && paramTrainers[trainer.name]) {
-      return { ...trainer, ...paramTrainers[trainer.name] };
+      return {
+        ...trainer,
+        ...paramTrainers[trainer.name],
+      };
     }
-    return { ...trainer, stars: 1, potential: [] };
+    return {
+      ...trainer,
+      stars: 1,
+      potential: [],
+      useSkin: false,
+      customName: "",
+      trainerId: trainer.name,
+    };
   });
 };
 
@@ -105,7 +115,7 @@ const Deckbuilder: Component = () => {
   const [deck, setDeck] = createSignal<(DeckSlot | undefined)[]>(
     paramTrainers
       ? trainerList
-          .filter((trainer) => paramTrainers[trainer.name])
+          .filter((trainer) => paramTrainers[trainer.trainerId])
           .concat(
             Array(6 - Object.keys(paramTrainers || {})?.length).fill("empty")
           )
@@ -126,13 +136,13 @@ const Deckbuilder: Component = () => {
       setTrainerList(
         reconcile(
           rosterQuery?.data.trainers.filter((trainer) => trainer.stars !== 0),
-          { key: "name" }
+          { key: "trainerId" }
         )
       );
       setDeck((prev) =>
         prev.map((val) =>
           val === "empty" ||
-          trainerList.some((trainer) => trainer.name === val.name)
+          trainerList.some((trainer) => trainer.trainerId === val.trainerId)
             ? val
             : "empty"
         )
@@ -140,8 +150,15 @@ const Deckbuilder: Component = () => {
     } else if (!useRosterTrainers()) {
       setTrainerList(
         reconcile(
-          trainers.map((trainer) => ({ ...trainer, stars: 1, potential: [] })),
-          { key: "name", merge: true }
+          trainers.map((trainer) => ({
+            ...trainer,
+            stars: 1,
+            potential: [],
+            useSkin: false,
+            trainerId: trainer.name,
+            customName: "",
+          })),
+          { key: "trainerId", merge: true }
         )
       );
     }
@@ -171,7 +188,13 @@ const Deckbuilder: Component = () => {
             deck().filter((val) => val !== "empty") as Trainer[]
           ).map<[TrainerNames, RosterTrainer]>((val) => [
             val.name,
-            { stars: val.stars, potential: val.potential },
+            {
+              stars: val.stars,
+              potential: val.potential,
+              useSkin: val.useSkin,
+              customName: val.customName,
+              trainerId: val.trainerId,
+            },
           ]);
 
           setSearchParams({
@@ -194,12 +217,12 @@ const Deckbuilder: Component = () => {
   };
 
   const updateTrainer = <K extends keyof Trainer>(
-    trainerName: Trainer["name"],
+    trainerId: Trainer["trainerId"],
     valuesToUpdate: Partial<Record<K, Trainer[K]>>
   ) => {
     batch(() => {
       setTrainerList(
-        (el) => el.name === trainerName,
+        (el) => el.trainerId === trainerId,
         (el) => ({ ...el, ...valuesToUpdate })
       );
     });
@@ -400,7 +423,7 @@ const Deckbuilder: Component = () => {
               replaceFirstOccasionWithValue(deck(), val, "empty"),
               targetPosition()
             );
-      acc[val.name] = {
+      acc[val.trainerId] = {
         default: sumValuesOfBestSkills(
           Object.values(bestSkills.listOfBestSkillsDefault)
         ),

@@ -2,7 +2,7 @@ import ImportRosterModal from "@components/ImportRosterModal";
 import Trainerlist from "@components/Trainerlist";
 import { useAuth } from "@hooks/useAuth";
 import useRoster from "@hooks/useRoster";
-import { useSaveTrainer } from "@hooks/useSaveRoster";
+import { useSaveCustomTrainer, useSaveTrainer } from "@hooks/useSaveRoster";
 import { Trainer, TrainerNames } from "@localtypes/types";
 import { classNames } from "@utils/commonHelpers";
 
@@ -10,6 +10,8 @@ import { Component, Switch, Match, createSignal, createEffect } from "solid-js";
 
 const Roster: Component = () => {
   const saveTrainer = useSaveTrainer();
+  const { updateCustomTrainer, removeCustomTrainer, addCustomTrainer } =
+    useSaveCustomTrainer();
 
   const [showImportModal, setShowImportModal] = createSignal(false);
 
@@ -29,10 +31,10 @@ const Roster: Component = () => {
   });
 
   const updateTrainer = <K extends keyof Trainer>(
-    trainerName: Trainer["name"],
+    trainerId: Trainer["name"],
     valuesToUpdate: Record<K, Trainer[K]>
   ) => {
-    saveTrainer(trainerName, valuesToUpdate);
+    saveTrainer(trainerId, valuesToUpdate);
   };
 
   return (
@@ -91,6 +93,9 @@ const Roster: Component = () => {
               }
               trainers={rosterQuery?.data.trainers}
               updateTrainer={updateTrainer}
+              updateCustomTrainer={updateCustomTrainer}
+              addCustomTrainer={addCustomTrainer}
+              removeCustomTrainer={removeCustomTrainer}
               rosterView
               potentialListView={showPotentialView()}
               potentialSelectionTrainer={potentialSelectionTrainer()}

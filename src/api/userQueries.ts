@@ -34,6 +34,7 @@ export const createInitialUser = async (id: string, trainerlist: Roster) => {
   const rosterUpdate = {
     [`/rosters/${rosterId}/trainers`]: trainerlist || allTrainers,
     [`/rosters/${rosterId}/isShared`]: false,
+    [`/rosters/${rosterId}/customTrainers`]: {},
     [`/rosters/${rosterId}/owner`]: "Anonymous",
   };
   await update(ref(db), rosterUpdate);

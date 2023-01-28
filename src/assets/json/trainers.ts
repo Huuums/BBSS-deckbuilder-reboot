@@ -1,6 +1,6 @@
-import { Trainer } from "@localtypes/types";
+import { TrainerData, TrainerNames } from "@localtypes/types";
 
-const trainers: Omit<Trainer, "stars" | "potential">[] = [
+const trainers: TrainerData[] = [
   {
     name: "Yeomra",
     rarity: "UR",
@@ -66,6 +66,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "OF Defense God": 5,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Bill",
@@ -132,6 +133,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Super Jump": 5,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Aria",
@@ -198,6 +200,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Pansy",
@@ -262,6 +265,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk Machine": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Johanna",
@@ -329,6 +333,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Kinsley",
@@ -394,6 +399,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk Machine": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Velvet",
@@ -460,6 +466,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Ziz",
@@ -526,6 +533,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "IF Throw God": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Behemoth",
@@ -593,6 +601,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Point Man": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Leviathan",
@@ -660,6 +669,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Point Man": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Mav",
@@ -726,6 +736,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Bebe",
@@ -792,6 +803,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Camilla",
@@ -858,6 +870,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Freyja",
@@ -924,6 +937,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hyper",
@@ -990,6 +1004,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Loki",
@@ -1056,6 +1071,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Sun Wukong",
@@ -1122,6 +1138,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nox",
@@ -1188,6 +1205,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Pure Survival": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Caroline",
@@ -1254,6 +1272,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Scoring Chance": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Anubis",
@@ -1322,6 +1341,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Early Challenge": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Bastet",
@@ -1388,6 +1408,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Early Challenge": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Dion",
@@ -1453,6 +1474,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Roy",
@@ -1519,6 +1541,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Error Prevention": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Ines",
@@ -1586,6 +1609,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Pure Survival": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Clefina",
@@ -1654,6 +1678,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Rachel",
@@ -1718,6 +1743,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Michaella",
@@ -1784,6 +1810,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Hustle: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Tsubaki",
@@ -1848,6 +1875,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Luther",
@@ -1913,6 +1941,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Flamesh",
@@ -1975,6 +2004,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Early Challenge": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Britra",
@@ -2040,6 +2070,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Early Challenge": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Chael",
@@ -2103,6 +2134,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Hustle: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Helga",
@@ -2166,6 +2198,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Tactical Bunt": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Seiryu",
@@ -2230,6 +2263,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Kai",
@@ -2296,6 +2330,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Gambler: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Nina",
@@ -2361,6 +2396,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Hustle: 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Sohyang",
@@ -2426,6 +2462,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Ara",
@@ -2492,6 +2529,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "King Tiger",
@@ -2558,6 +2596,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Luna",
@@ -2621,6 +2660,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Rache",
@@ -2687,6 +2727,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Steel Arm": 5,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Francis",
@@ -2753,6 +2794,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Reliever: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "MED",
@@ -2820,6 +2862,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Anti LH Batter": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Taesung",
@@ -2887,6 +2930,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Anti Walk": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Mary",
@@ -2953,6 +2997,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nicki",
@@ -3019,6 +3064,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Lucis",
@@ -3085,6 +3131,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Artamiel",
@@ -3151,6 +3198,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Scofield",
@@ -3219,6 +3267,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Changing Tides": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hayley",
@@ -3284,6 +3333,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Changing Tides": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Annie",
@@ -3351,6 +3401,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Fortune: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Code-J",
@@ -3418,6 +3469,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Fortune: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Echo",
@@ -3486,6 +3538,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Fortune: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Lazi",
@@ -3553,6 +3606,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Claris",
@@ -3619,6 +3673,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Hathor",
@@ -3687,6 +3742,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Reliever: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Isis",
@@ -3752,6 +3808,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Ceres",
@@ -3820,6 +3877,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Shutter Man": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Kunio",
@@ -3886,6 +3944,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Eve",
@@ -3952,6 +4011,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Pin Point": 5,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Lilith",
@@ -4018,6 +4078,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Strikeout King": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Belita",
@@ -4085,6 +4146,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Dragona",
@@ -4152,6 +4214,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Anti Walk": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Regret",
@@ -4214,6 +4277,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Concentration: 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Leon",
@@ -4281,6 +4345,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Strikeout King": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Rowena",
@@ -4348,6 +4413,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Violet",
@@ -4415,6 +4481,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Fortune: 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Leonie",
@@ -4481,6 +4548,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Strikeout King": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Pluto",
@@ -4548,6 +4616,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Concentration: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Valentine",
@@ -4614,6 +4683,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Concentration: 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Ditto",
@@ -4679,6 +4749,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Shutter Man": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Psyker",
@@ -4745,6 +4816,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Daphne",
@@ -4803,6 +4875,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Kyoko",
@@ -4865,6 +4938,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Zia",
@@ -4927,6 +5001,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Tactical Bunt": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Magnus",
@@ -4988,6 +5063,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Monique",
@@ -5051,6 +5127,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Sophie",
@@ -5110,6 +5187,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Tactical Bunt": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nameless",
@@ -5169,6 +5247,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Mei Mei",
@@ -5229,6 +5308,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Albert",
@@ -5292,6 +5372,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Point Man": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Base Hero",
@@ -5351,6 +5432,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Tauric",
@@ -5414,6 +5496,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Hustle: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Helen",
@@ -5474,6 +5557,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Chaser: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "NOM",
@@ -5533,6 +5617,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Golden Boy",
@@ -5592,6 +5677,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Elfin",
@@ -5654,6 +5740,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Scoring Chance": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Lucy",
@@ -5713,6 +5800,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Policia",
@@ -5773,6 +5861,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Basedevil",
@@ -5832,6 +5921,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Scoring Chance": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Pi",
@@ -5892,6 +5982,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Tactical Bunt": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Kryzer",
@@ -5946,6 +6037,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Mia",
@@ -6006,6 +6098,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Zena",
@@ -6065,6 +6158,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Scoring Chance": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Liew",
@@ -6127,6 +6221,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Point Man": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Guy-E",
@@ -6187,6 +6282,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Slugger Power": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Velour",
@@ -6246,6 +6342,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Scoring Chance": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Medica",
@@ -6306,6 +6403,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Scumbag Joe",
@@ -6368,6 +6466,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Rose",
@@ -6429,6 +6528,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Penelope",
@@ -6490,6 +6590,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Fire Baller": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Misako",
@@ -6553,6 +6654,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hannibal",
@@ -6614,6 +6716,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Aliana",
@@ -6677,6 +6780,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Allen",
@@ -6740,6 +6844,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Anti Walk": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "MK-3",
@@ -6802,6 +6907,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Change of Mood": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Miho",
@@ -6865,6 +6971,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Anti Walk": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Captain Jack",
@@ -6927,6 +7034,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Concentration: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Psyche",
@@ -6989,6 +7097,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Hunter G",
@@ -7049,6 +7158,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Fortune: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Soldia",
@@ -7111,6 +7221,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Strikeout King": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Bora",
@@ -7173,6 +7284,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Underhand: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Lucia",
@@ -7233,6 +7345,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hellfire",
@@ -7295,6 +7408,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Change of Mood": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Zhizi",
@@ -7358,6 +7472,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Reliever: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Base Angel",
@@ -7421,6 +7536,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Onestone",
@@ -7484,6 +7600,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Pin Point": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Boomiger",
@@ -7546,6 +7663,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Yomi",
@@ -7609,6 +7727,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Riki",
@@ -7664,6 +7783,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Lina",
@@ -7718,6 +7838,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Chaser: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Kate",
@@ -7773,6 +7894,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Rex",
@@ -7827,6 +7949,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Flora",
@@ -7884,6 +8007,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Paris",
@@ -7939,6 +8063,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Eia",
@@ -7992,6 +8117,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Patricia",
@@ -8048,6 +8174,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Siren",
@@ -8104,6 +8231,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Brokel",
@@ -8156,6 +8284,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Gladius",
@@ -8209,6 +8338,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Pazuzu",
@@ -8264,6 +8394,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Chaser: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hell Guy",
@@ -8317,6 +8448,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Zen",
@@ -8372,6 +8504,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Pale",
@@ -8428,6 +8561,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Talas",
@@ -8480,6 +8614,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Acro",
@@ -8534,6 +8669,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Soun",
@@ -8588,6 +8724,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nio",
@@ -8642,6 +8779,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Chaser: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Liuxia",
@@ -8692,6 +8830,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "New Resolution": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Liuxing",
@@ -8746,6 +8885,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nahyun",
@@ -8798,6 +8938,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Eunwoo",
@@ -8850,6 +8991,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Four-Seam Hunter": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Genie",
@@ -8904,6 +9046,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Marvel",
@@ -8952,6 +9095,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Tactical Bunt": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Titania",
@@ -9006,6 +9150,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 3,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Kalisto",
@@ -9059,6 +9204,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Brant",
@@ -9115,6 +9261,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Drucker",
@@ -9168,6 +9315,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Focused Defense": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Daisy",
@@ -9223,6 +9371,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Phrygia",
@@ -9279,6 +9428,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Wonhee",
@@ -9333,6 +9483,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Stolen Bases": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Hilary",
@@ -9388,6 +9539,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Anetta",
@@ -9448,6 +9600,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Shuri",
@@ -9509,6 +9662,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Popo",
@@ -9570,6 +9724,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 2,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Tera",
@@ -9632,6 +9787,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Alert: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Cami",
@@ -9690,6 +9846,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Stinger",
@@ -9753,6 +9910,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Drake",
@@ -9813,6 +9971,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Alert: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "John Roger",
@@ -9872,6 +10031,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Dice",
@@ -9932,6 +10092,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Lupina",
@@ -9993,6 +10154,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Sherlia",
@@ -10050,6 +10212,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Amir",
@@ -10112,6 +10275,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Reuben",
@@ -10174,6 +10338,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Alert: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Marcus",
@@ -10230,6 +10395,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Gryllson",
@@ -10286,6 +10452,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Shutter Man": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Wendell",
@@ -10348,6 +10515,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Alert: 3,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Snipe",
@@ -10409,6 +10577,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Strikeout King": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Wendy",
@@ -10468,6 +10637,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "No Runs For You": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Serena",
@@ -10530,6 +10700,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Change of Mood": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Venomizer",
@@ -10591,6 +10762,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Magmizer",
@@ -10653,6 +10825,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Lilo",
@@ -10712,6 +10885,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Alert: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Casta",
@@ -10774,6 +10948,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Rise of a Hero": 1,
       },
     },
+    hasSkin: true,
   },
   {
     name: "Firelord",
@@ -10833,6 +11008,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Reliever: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Aqualord",
@@ -10897,6 +11073,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Matilda",
@@ -10935,6 +11112,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Sarah",
@@ -10974,6 +11152,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Human Magnet": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Eva",
@@ -11018,6 +11197,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Liz",
@@ -11063,6 +11243,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Dbl Play Machine": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Zett",
@@ -11113,6 +11294,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Kang",
@@ -11167,6 +11349,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Nick",
@@ -11216,6 +11399,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Roland",
@@ -11265,6 +11449,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Jorge",
@@ -11292,6 +11477,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Ruric",
@@ -11328,6 +11514,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Walk-Off Hit": 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Gabe",
@@ -11360,6 +11547,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Terminator: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Micky",
@@ -11397,6 +11585,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Chaser: 2,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Choco",
@@ -11435,6 +11624,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Change of Mood": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Soda",
@@ -11456,6 +11646,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         "Special Force": 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Mocha",
@@ -11497,6 +11688,7 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Confidence: 1,
       },
     },
+    hasSkin: false,
   },
   {
     name: "Frill",
@@ -11532,7 +11724,17 @@ const trainers: Omit<Trainer, "stars" | "potential">[] = [
         Guardian: 1,
       },
     },
+    hasSkin: false,
   },
 ];
+
+export const trainersObject = trainers.reduce<
+  Record<TrainerNames, TrainerData>
+>((acc, trainer) => {
+  acc[trainer.name] = trainer;
+  return acc;
+}, {} as Record<TrainerNames, TrainerData>);
+
+export const trainerNames = trainers.map((val) => val.name);
 
 export default trainers;
