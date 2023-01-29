@@ -34,6 +34,7 @@ const Roster: Component = () => {
     trainerId: Trainer["name"],
     valuesToUpdate: Record<K, Trainer[K]>
   ) => {
+    console.log(trainerId, valuesToUpdate);
     saveTrainer(trainerId, valuesToUpdate);
   };
 

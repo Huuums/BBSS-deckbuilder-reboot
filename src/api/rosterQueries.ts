@@ -32,6 +32,7 @@ const makeLocalTrainerData = (
       potential: [],
       useSkin: false,
       customName: "",
+      trainerId: trainer.name,
     };
   });
 
