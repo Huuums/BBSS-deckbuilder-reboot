@@ -21,12 +21,18 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
           <Trainer
             onlyAvatarAndStars
             trainer={props.trainer}
-            src={trainerImages[props.trainer.name]}
+            src={
+              trainerImages[
+                props.trainer.useSkin
+                  ? `${props.trainer.name}_skin`
+                  : props.trainer.name
+              ]
+            }
             class="h-full w-20"
           />
           <div class="flex flex-wrap flex-1 justify-between space-x-2 text-gray-200">
             <h4 class="basis-full text-gray-200 font-semibold mx-2">
-              {props.trainer.name}
+              {props.trainer.customName || props.trainer.name}
             </h4>
             <h5>
               A Trainer with rank 0 cannot have Potential. Please set the
@@ -40,12 +46,18 @@ const TrainerPotential: Component<TrainerPotentialProps> = (props) => {
           <Trainer
             onlyAvatarAndStars
             trainer={props.trainer}
-            src={trainerImages[props.trainer.name]}
+            src={
+              trainerImages[
+                props.trainer.useSkin
+                  ? `${props.trainer.name}_skin`
+                  : props.trainer.name
+              ]
+            }
             class="h-full basis-20"
           />
           <div class="flex basis-full flex-col lg:flex-row lg:flex-wrap flex-1 justify-between text-gray-200 lg:space-x-2">
             <h4 class="basis-full text-gray-200 font-semibold text-center">
-              {props.trainer.name}
+              {props.trainer.customName || props.trainer.name}
             </h4>
             <div class="flex flex-col flex-1">
               <label class="font-medium">Potential 1</label>
