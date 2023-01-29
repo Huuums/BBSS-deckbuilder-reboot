@@ -1810,7 +1810,7 @@ const trainers: TrainerData[] = [
         Hustle: 2,
       },
     },
-    hasSkin: false,
+    hasSkin: true,
   },
   {
     name: "Tsubaki",
