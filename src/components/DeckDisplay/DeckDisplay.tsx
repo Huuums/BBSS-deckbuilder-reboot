@@ -115,7 +115,13 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                       onMouseLeaveUpgradeSelector={() =>
                         props.onMouseLeaveTrainerAvatar()
                       }
-                      src={trainerImages[(trainer as TrainerType).name]}
+                      src={
+                        trainerImages[
+                          (trainer as TrainerType).useSkin
+                            ? `${(trainer as TrainerType).name}_skin`
+                            : (trainer as TrainerType).name
+                        ]
+                      }
                       onClickAvatar={() =>
                         props.removeTrainerFromDeck(
                           (trainer as TrainerType).name
