@@ -268,6 +268,7 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Zero"
   | "Yeomra"
   | "Rache"
   | "Francis"
