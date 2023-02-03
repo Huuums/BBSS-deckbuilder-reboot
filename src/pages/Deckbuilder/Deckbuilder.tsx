@@ -46,6 +46,8 @@ import { useAuth } from "@hooks/useAuth";
 import clickOutside from "@hooks/clickOutside";
 import { swipeLeft, swipeRight } from "@hooks/swipe";
 import { HiOutlineX } from "solid-icons/hi";
+import Modal from "@components/Modal";
+import OptimalPotentialDisplay from "@components/OptimalPotentialDisplay";
 
 //don't remove this.
 //eslint-disable-next-line
@@ -82,6 +84,7 @@ const setInitialTrainerList = (paramTrainers: Partial<Roster> | undefined) => {
 };
 
 const Deckbuilder: Component = () => {
+  let modalMountRef: HTMLElement;
   const [searchParams, setSearchParams] = useSearchParams();
   const user = useAuth();
   const [showSkillsOnMobile, setShowSkillsOnMobile] = createSignal(false);
@@ -103,6 +106,7 @@ const Deckbuilder: Component = () => {
   });
 
   const [targetPosition, setTargetPosition] = createSignal<Position | "0">("0");
+  const [showOptimalPotential, setShowOptimalPotential] = createSignal(false);
 
   const [potentialSelectionTrainer, setPotentialSelectionTrainer] =
     createSignal<TrainerNames | "">("");
@@ -438,6 +442,7 @@ const Deckbuilder: Component = () => {
   return (
     <>
       <section
+        ref={modalMountRef}
         aria-labelledby="primary-heading"
         class="min-w-0 max-w-full flex-1 h-full max-h-screen min-h-screen flex-col lg:overflow-hidden lg:overflow-y-auto"
         use:swipeLeftDirective={(e) => {
@@ -469,6 +474,29 @@ const Deckbuilder: Component = () => {
             setPotentialSelectionTrainer(name)
           }
         />
+        <div class="flex flex-1 justify-center md:justify-end py-2 min-h-[40px] bg-gray-800 max-w-5xl mx-auto pr-5">
+          <Show when={deck().filter((val) => val !== "empty").length === 6}>
+            <button
+              class="border p-1 bg-gray-600 text-white"
+              onClick={() => setShowOptimalPotential(true)}
+            >
+              Show optimal Potential
+            </button>
+          </Show>
+          <Show when={showOptimalPotential()}>
+            <Modal
+              isOpen={showOptimalPotential()}
+              onClose={() => setShowOptimalPotential(false)}
+              class="max-w-5xl overflow-auto"
+            >
+              <OptimalPotentialDisplay
+                setTargetPosition={(val) => setTargetPosition(val)}
+                deck={deck()}
+                targetPosition={targetPosition()}
+              />
+            </Modal>
+          </Show>
+        </div>
         <div class="bg-gray-800 px-3 lg:py-3 flex space-x-3 items-start justify-around max-w-5xl mx-auto flex-wrap ">
           <div class="flex basis-full text-white">
             <h4 class="text-white flex-1 text-center font-semibold mb-3">

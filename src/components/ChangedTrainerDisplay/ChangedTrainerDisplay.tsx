@@ -53,7 +53,13 @@ const ChangedTrainerDisplay: Component<ChangedTrainerDisplayProps> = (
                     <Trainer
                       // safeguard is typeof trainer !== "string" in <Match> above so casting as type is okay
                       trainer={trainer as Required<TrainerType>}
-                      src={trainerImages[(trainer as TrainerType).name]}
+                      src={
+                        trainerImages[
+                          (trainer as TrainerType).useSkin
+                            ? `${(trainer as TrainerType).name}_skin`
+                            : (trainer as TrainerType).name
+                        ]
+                      }
                       onlyAvatarAndStars
                       class="basis-1/3"
                     />

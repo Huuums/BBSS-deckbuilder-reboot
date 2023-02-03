@@ -127,7 +127,7 @@ const DeckDisplay: Component<DeckDisplayProps> = (props) => {
                           (trainer as TrainerType).name
                         )
                       }
-                      class="max-w-[100px] lg:max-w-[150px]"
+                      class="min-w-[110px] lg:max-w-[150px]"
                     />
                   </Match>
                 </Switch>

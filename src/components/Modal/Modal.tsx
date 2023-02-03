@@ -41,7 +41,7 @@ const Modal: ParentComponent<ModalProps> = (props) => {
             use:clickOutsideDirective={() => props.onClose()}
             use:pressedESCDirective={() => props.onClose()}
             class={classNames(
-              "flex-1 w-full px-4 m-auto sm:px-0 lg:max-w-3xl bg-gray-800 relative z-50",
+              "flex-1 w-full px-4 m-auto sm:px-0 bg-gray-800 relative max-h-[90%] overflow-auto my-5 z-50",
               props.class
             )}
           >

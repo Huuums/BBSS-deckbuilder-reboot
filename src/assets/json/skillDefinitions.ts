@@ -989,7 +989,10 @@ const skillDefinitions: Record<Skill, SkillDefinition> = {
     skillGrade: "UR",
     type: "Resolve",
     name: "SP's Resolve",
-    valuesByPosition: { "0": 1.6, CP: 0, SP: 1.6 },
+    valuesByPosition: {
+      "0": { 0: 0, 1: 2.8, 2: 2.8, 3: 2.8, 4: 2.8, 5: 3.5 },
+      SP: { 0: 0, 1: 2.8, 2: 2.8, 3: 2.8, 4: 2.8, 5: 3.5 },
+    },
   },
   "Super Left Arm": {
     skillGrade: "UR",
@@ -1233,7 +1236,7 @@ const skillDefinitions: Record<Skill, SkillDefinition> = {
     skillGrade: "SR",
     type: "Common",
     name: "Steel Arm",
-    valuesByPosition: { "0": 1, CP: 1, RP: 1, SP: 1 },
+    valuesByPosition: { "0": 1, CP: 1, RP: 1, SP: 1.25 },
   },
   "Two-Seam": {
     skillGrade: "SR",

@@ -43,7 +43,8 @@ module.exports = {
         },
       },
       boxShadow: {
-        maxSkill: "0px 0px 15px 7px rgba(209,183,52,1)",
+        maxSkill: "0px 0px 15px 7px #D1B734",
+        maxSkillEncyclopedia: "0px 0px 15px 7px #ff4242",
       },
       animation: {
         "pulse-full": "pulse-full 4s linear infinite alternate",

@@ -10,6 +10,7 @@ import {
   SkillValue,
   TrainerNames,
 } from "@localtypes/types";
+import { classNames } from "@utils/commonHelpers";
 
 import {
   sortByGradeAndLevel,
@@ -140,7 +141,17 @@ const SkillDisplay: Component<SkillDisplayProps> = (props) => {
           <h4 class="text-gray-200 text-xs font-semibold mt-1">
             Deck Skillvalue
           </h4>
-          <IoStarSharp class="mx-auto mt-1 w-8 h-8 fill-white line-through " />
+          <div class="flex items-center justify-center space-x-2">
+            <IoStarSharp class="w-8 h-8 fill-white line-through " />
+            <span
+              class={classNames(
+                "shadow-maxSkill",
+                "after:content-[''] after:absolute after:right-0 after:translate-x-full after:border-t-[.625rem] after:border-t-transparent after:border-l-[.5rem] after:border-l-gray-200 after:border-b-[.625rem] after:border-b-transparent",
+                "before:content-[''] before:absolute before:left-0 before:-translate-x-full before:border-t-[.625rem] before:border-t-transparent before:border-r-[.5rem] before:border-r-gray-200 before:border-b-[.625rem] before:border-b-transparent",
+                "mx-auto h-5 w-3 relative bg-gray-200 text-xs flex justify-center items-center "
+              )}
+            />
+          </div>
         </div>
         <div class="bg-gray-800 w-1/2 text-center border py-2 relative border-gray-200">
           <Switch>
@@ -192,10 +203,29 @@ const SkillDisplay: Component<SkillDisplayProps> = (props) => {
           <h4 class="text-gray-200 text-xs font-semibold mt-1">
             Deck with Encyclopedia
           </h4>
-          <IoStarHalfSharp class="mx-auto mt-1 w-8 h-8 fill-white line-through " />
+          <div class="flex justify-center items-center space-x-2">
+            <IoStarHalfSharp class="w-8 h-8 fill-white line-through " />
+            <span
+              class={classNames(
+                "shadow-maxSkillEncyclopedia",
+                "after:content-[''] after:absolute after:right-0 after:translate-x-full after:border-t-[.625rem] after:border-t-transparent after:border-l-[.5rem] after:border-l-gray-200 after:border-b-[.625rem] after:border-b-transparent",
+                "before:content-[''] before:absolute before:left-0 before:-translate-x-full before:border-t-[.625rem] before:border-t-transparent before:border-r-[.5rem] before:border-r-gray-200 before:border-b-[.625rem] before:border-b-transparent",
+                "mx-auto h-5 w-3 relative bg-gray-200 text-xs flex justify-center items-center "
+              )}
+            />
+          </div>
         </div>
       </div>
-
+      <div class="flex text-white items-center justify-center flex-col mt-3 mb-0 font-semibold">
+        Max Skills
+        <span class="text-2xl font-bold">
+          {props.skillInformationTemp
+            ? props.skillInformationTemp.skillData.filter((val) => val[1] === 5)
+                .length
+            : props.skillInformationDeck.skillData.filter((val) => val[1] === 5)
+                .length}
+        </span>
+      </div>
       <div class="category">
         <For each={activeSkills()}>
           {([groupName, skillsList]) => (

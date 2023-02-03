@@ -236,7 +236,10 @@ export type SkillDefinition = {
   type: SkillType;
   name: Skill;
   valuesByPosition: Partial<
-    Record<"0" | BattingPosition | PitchingPosition, number>
+    Record<
+      "0" | BattingPosition | PitchingPosition,
+      number | Record<RankLevels, number>
+    >
   >;
 };
 

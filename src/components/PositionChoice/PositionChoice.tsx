@@ -13,9 +13,7 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
     <>
       {" "}
       <div class="space-x-3 flex lg:flex-nowrap basis-full lg:basis-auto lg:flex-1 items-start">
-        <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5 lg:w-auto">
-          Batting
-        </h4>
+        <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5 ">Batting</h4>
         <div class="h-full flex flex-wrap flex-1">
           <For each={battingPositions}>
             {(val) => (
@@ -35,9 +33,7 @@ const PositionChoice: Component<PositionChoiceProps> = (props) => {
         </div>
       </div>
       <div class="flex space-x-3 lg:flex-nowrap items-start basis-full lg:basis-auto flex-1 mt-2 lg:mt-0">
-        <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5 lg:w-auto">
-          Pitching
-        </h4>
+        <h4 class="text-gray-200 font-medium h-full w-16 mt-2.5">Pitching</h4>
         <div class="flex-1 flex flex-wrap">
           <For each={pitchingPositions}>
             {(val) => (

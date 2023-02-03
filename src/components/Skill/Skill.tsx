@@ -10,7 +10,7 @@ import { classNames } from "@utils/commonHelpers";
 import { HiOutlineDocumentSearch } from "solid-icons/hi";
 import trainerImages from "@assets/images/trainer";
 
-import { IoStarHalfSharp, IoStarSharp, IoTriangleSharp } from "solid-icons/io";
+import { IoTriangleSharp } from "solid-icons/io";
 import { Component, createSignal, Match, Show, For } from "solid-js";
 import { Switch } from "solid-js";
 import clickOutside from "@hooks/clickOutside";
@@ -21,7 +21,7 @@ const clickOutsideDirective = clickOutside;
 
 type SkillProps = {
   grade: Rarity;
-  rank: RankLevels;
+  rank?: RankLevels;
   name: SkillNames;
   isBestSkill?: boolean;
   isBestSkillEncyclopedia?: boolean;
@@ -93,6 +93,7 @@ const Skill: Component<SkillProps> = (props) => {
           </For>
         </Show>
       </div>
+
       <div
         class={classNames(
           props.rank === 0
@@ -102,17 +103,22 @@ const Skill: Component<SkillProps> = (props) => {
           "after:content[''] after:top-0 after:absolute after:right-0 after:translate-x-full after:border-t-[1rem] after:border-t-transparent after:border-l-[.75rem] after:border-l-inherit after:border-b-[1rem] after:border-b-transparent"
         )}
       >
-        <span
-          class={classNames(
-            props.rank === 5 ? "shadow-maxSkill" : "",
-
-            "after:content-[''] after:absolute after:right-0 after:translate-x-full after:border-t-[.625rem] after:border-t-transparent after:border-l-[.5rem] after:border-l-gray-200 after:border-b-[.625rem] after:border-b-transparent",
-            "before:content-[''] before:absolute before:left-0 before:-translate-x-full before:border-t-[.625rem] before:border-t-transparent before:border-r-[.5rem] before:border-r-gray-200 before:border-b-[.625rem] before:border-b-transparent",
-            "absolute top-0 bottom-0 my-auto h-5 w-3 left-0 -translate-x-1/2 bg-gray-200  text-xs flex justify-center items-center "
-          )}
-        >
-          {props.rank}
-        </span>
+        <Show when={props.rank !== undefined}>
+          <span
+            class={classNames(
+              props.isBestSkill ? "shadow-maxSkill" : "",
+              props.isBestSkillEncyclopedia
+                ? "shadow-maxSkillEncyclopedia"
+                : "",
+              props.rank === 5 ? "font-semibold text-base" : "",
+              "after:content-[''] after:absolute after:right-0 after:translate-x-full after:border-t-[.625rem] after:border-t-transparent after:border-l-[.5rem] after:border-l-gray-200 after:border-b-[.625rem] after:border-b-transparent",
+              "before:content-[''] before:absolute before:left-0 before:-translate-x-full before:border-t-[.625rem] before:border-t-transparent before:border-r-[.5rem] before:border-r-gray-200 before:border-b-[.625rem] before:border-b-transparent",
+              "absolute top-0 bottom-0 my-auto h-5 w-3 left-0 -translate-x-1/2 bg-gray-200 text-xs flex justify-center items-center "
+            )}
+          >
+            {props.rank}
+          </span>
+        </Show>
         {props.diff && (
           <Switch>
             <Match when={props.diff < 0}>
@@ -139,6 +145,7 @@ const Skill: Component<SkillProps> = (props) => {
             </Match>
           </Switch>
         )}
+
         <Show when={props.value}>
           <Switch>
             <Match when={!props.valueDiff}>
@@ -181,6 +188,7 @@ const Skill: Component<SkillProps> = (props) => {
                   ? "stroke-blue-700"
                   : "stroke-white"
               )}
+              title="Show Trainer Contribution to Skill"
             />
           </button>
         </Show>
@@ -200,14 +208,6 @@ const Skill: Component<SkillProps> = (props) => {
             </span>
           </div>
         </Show>
-        <Switch>
-          <Match when={props.isBestSkill}>
-            <IoStarSharp class="w-6 h-6 fill-white line-through " />
-          </Match>
-          <Match when={props.isBestSkillEncyclopedia}>
-            <IoStarHalfSharp class="w-6 h-6 fill-white line-through " />
-          </Match>
-        </Switch>
       </div>
     </div>
   );
