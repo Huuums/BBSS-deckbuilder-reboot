@@ -9,7 +9,6 @@ import {
   Skill as SkillName,
 } from "@localtypes/types";
 import {
-  getBestSkillsInDeck,
   getDeckSkillValue,
   getOptimalPotentialForDeck,
 } from "@utils/skillHelpers";
@@ -25,7 +24,6 @@ import { IoChevronUpOutline } from "solid-icons/io";
 import { Component, createSignal, Show, For } from "solid-js";
 import skillDefinitions from "@assets/json/skillDefinitions";
 import PositionChoice from "@components/PositionChoice";
-import { classNames } from "@utils/commonHelpers";
 
 type OptimalPotentialDisplayProps = {
   targetPosition: Position | "0";

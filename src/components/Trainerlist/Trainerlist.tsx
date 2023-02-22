@@ -178,6 +178,9 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
         if (rarityIndexA < rarityIndexB) return -1;
         if (rarityIndexA > rarityIndexB) return 1;
 
+        if (a.trans < b.trans) return 1;
+        if (a.trans > b.trans) return -1;
+
         if (a.stars < b.stars) return 1;
         if (a.stars > b.stars) return -1;
 
@@ -255,7 +258,13 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                   <span>Set all Trainer Ranks:</span>
                   <TrainerUpgradeSelector
                     ignoreUpdateCheck
-                    onChange={(stars) => props.updateAllTrainers({ stars })}
+                    activeTrans={5}
+                    onChangeTrans={(trans) =>
+                      props.updateAllTrainers({ stars: 5, trans })
+                    }
+                    onChange={(stars) =>
+                      props.updateAllTrainers({ stars, trans: 0 })
+                    }
                     activeUpgrade={5}
                     class="w-32 ml-2"
                   />
@@ -319,6 +328,7 @@ const Trainerlist: Component<TrainerlistProps> = (props) => {
                       isCustomTrainer: true,
                       isNew: true,
                       trainerId: uniqid(),
+                      trans: 0,
                     })
                   }
                 />

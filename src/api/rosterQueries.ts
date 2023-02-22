@@ -24,6 +24,7 @@ const makeLocalTrainerData = (
         useSkin: rosterTrainer?.useSkin || false,
         customName: rosterTrainer?.customName || "",
         trainerId: trainer.name,
+        trans: rosterTrainer?.trans || 0,
       };
     }
     return {
@@ -33,6 +34,7 @@ const makeLocalTrainerData = (
       useSkin: false,
       customName: "",
       trainerId: trainer.name,
+      trans: 0,
     };
   });
 
@@ -46,6 +48,7 @@ const makeLocalTrainerData = (
       customName: val?.customName || "",
       trainerId: val?.trainerId || "",
       isCustomTrainer: val?.isCustomTrainer || true,
+      trans: val?.trans,
     }));
   }
   return defaultTrainers.concat(customTrainersData);

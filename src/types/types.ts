@@ -74,6 +74,7 @@ export type TrainerSettings = {
   stars: RankLevels;
   potential: RosterTrainer["potential"];
   customName: string;
+  trans: RankLevels;
 };
 
 export type TrainerData = {
@@ -251,6 +252,7 @@ export type RosterTrainer = {
   potential: [Skill | "", Skill | "", Skill | ""] | [];
   useSkin: boolean;
   customName: string;
+  trans: RankLevels;
 };
 
 export type CustomTrainer = RosterTrainer & {
@@ -271,6 +273,7 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Soyoon"
   | "Zero"
   | "Yeomra"
   | "Rache"

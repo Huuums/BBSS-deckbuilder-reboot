@@ -116,11 +116,23 @@ const Trainer: Component<TrainerProps> = (props) => {
             />
           </div>
           <TrainerUpgradeSelector
-            onChange={(stars) => props.onChange({ stars })}
+            onChange={(stars) =>
+              props.onChange({
+                stars,
+                trans: 0,
+              })
+            }
+            onChangeTrans={(trans) =>
+              props.onChange({
+                trans,
+                stars: 5,
+              })
+            }
             onMouseEnter={(stars) => props.onMouseEnterUpgradeSelector?.(stars)}
             onMouseLeave={() => props.onMouseLeaveUpgradeSelector?.()}
             activeUpgrade={props.trainer.stars}
             class="bg-gray-700 relative"
+            activeTrans={props.trainer.trans}
           />
           <div class="relative bg-gray-800 text-gray-200 font-semibold flex justify-between flex-wrap">
             <div class="basis-full flex border-b border-gray-500">
@@ -254,10 +266,22 @@ const Trainer: Component<TrainerProps> = (props) => {
           onClickExchange={(e) => props.onClickExchange?.(e)}
         />
         <TrainerUpgradeSelector
-          onChange={(stars) => props.onChange?.({ stars })}
+          onChange={(stars) =>
+            props.onChange?.({
+              stars,
+              trans: 0,
+            })
+          }
+          onChangeTrans={(trans) =>
+            props.onChange?.({
+              stars: 5,
+              trans,
+            })
+          }
           onMouseEnter={(stars) => props.onMouseEnterUpgradeSelector?.(stars)}
           onMouseLeave={() => props.onMouseLeaveUpgradeSelector?.()}
           activeUpgrade={props.trainer.stars}
+          activeTrans={props.trainer.trans}
           class="bg-gray-700 relative"
         />
       </TrainerBorder>
