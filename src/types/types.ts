@@ -273,6 +273,11 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Zeus"
+  | "House Bunny"
+  | "Seed"
+  | "Ampero"
+  | "Yuna"
   | "Soyoon"
   | "Zero"
   | "Yeomra"
