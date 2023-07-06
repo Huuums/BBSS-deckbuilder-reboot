@@ -413,7 +413,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["DEX", "MNT"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "Perfect Lions"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
