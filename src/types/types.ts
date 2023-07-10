@@ -273,6 +273,7 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Abu"
   | "Zeus"
   | "House Bunny"
   | "Seed"
