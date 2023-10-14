@@ -2,6 +2,274 @@ import { TrainerData, TrainerNames } from "@localtypes/types";
 
 const trainers: TrainerData[] = [
   {
+    name: "Ma Dong-Tak",
+    rarity: "UR",
+    position: "3B",
+    type: ["STR", "INT"],
+    bonusTeam: ["A Daunting Team"],
+    skills: {
+      "1": {
+        "3B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Home Run Master": 2,
+        "Power Batter": 1,
+        "Big Bang": 1,
+        "Provoke": 1,
+        "Anti LH Pitcher": 2,
+        "Four-Seam Hunter": 2,
+        "Pull-Hit": 1,
+      },
+      "2": {
+        "3B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Power Batter": 1,
+        "Home Run Master": 2,
+        "Big Bang": 2,
+        "Provoke": 1,
+        "Four-Seam Hunter": 2,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+      },
+      "3": {
+        "3B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Switch Hitter": 1,
+        "Power Batter": 1,
+        "Home Run Master": 3,
+        "Provoke": 2,
+        "Big Bang": 2,
+        "Four-Seam Hunter": 2,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+      },
+      "4": {
+        "3B's Resolve": 1,
+        "Switch Hitter": 1,
+        "HR King Blessing": 2,
+        "Power Batter": 2,
+        "Home Run Master": 3,
+        "Big Bang": 2,
+        "Provoke": 3,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+        "Four-Seam Hunter": 3,
+      },
+      "5": {
+        "3B's Resolve": 2,
+        "Switch Hitter": 1,
+        "HR King Blessing": 2,
+        "Power Batter": 3,
+        "Home Run Master": 3,
+        "Big Bang": 3,
+        "Provoke": 3,
+        "Anti LH Pitcher": 3,
+        "Pull-Hit": 2,
+        "Four-Seam Hunter": 3,
+      },
+    },
+    hasSkin: false,
+  },
+  {
+    name: "Choi Eom-Ji",
+    rarity: "UR",
+    position: "2B",
+    type: ["STR", "INT"],
+    bonusTeam: ["A Daunting Team"],
+    skills: {
+      "1": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Switch Hitter": 1,
+        "Power Batter": 1,
+        "Roadrunner": 1,
+        "Provoke": 2,
+        "Anti LH Pitcher": 2,
+        "IF Defense God": 1,
+        "Pull-Hit": 1,
+      },
+      "2": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Power Batter": 2,
+        "Switch Hitter": 1,
+        "Roadrunner": 1,
+        "Provoke": 2,
+        "IF Defense God": 1,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+      },
+      "3": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Switch Hitter": 2,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 1,
+        "Provoke": 2,
+        "Roadrunner": 2,
+        "IF Defense God": 1,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+      },
+      "4": {
+        "2B's Resolve": 2,
+        "Switch Hitter": 2,
+        "HR King Blessing": 1,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 1,
+        "Roadrunner": 2,
+        "Provoke": 3,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 3,
+        "IF Defense God": 2,
+      },
+      "5": {
+        "2B's Resolve": 2,
+        "Switch Hitter": 2,
+        "HR King Blessing": 1,
+        "Power Batter": 3,
+        "Knuckleball Hunter": 2,
+        "Roadrunner": 3,
+        "Provoke": 3,
+        "Anti LH Pitcher": 3,
+        "Pull-Hit": 3,
+        "IF Defense God": 3,
+      },
+    },
+    hasSkin: false,
+  },
+  {
+    name: "Oh Hye-Sung",
+    rarity: "UR",
+    position: "SP",
+    type: ["STR", "INT"],
+    bonusTeam: ["A Daunting Team"],
+    skills: {
+      "1": {
+        "SP's Resolve": 1,
+        "Knuckleball": 1,
+        "Heavy Ball": 2,
+        "Double Step": 2,
+        "Speed Control": 1,
+        "Shadow Trap": 1,
+        "Four-Seam": 2,
+        "Bold": 2,
+      },
+      "2": {
+        "SP's Resolve": 1,
+        "Knuckleball": 1,
+        "Double Step": 2,
+        "Heavy Ball": 2,
+        "Speed Control": 2,
+        "Four-Seam": 2,
+        "Shadow Trap": 1,
+        "Bold": 2,
+      },
+      "3": {
+        "SP's Resolve": 1,
+        "Knuckleball": 2,
+        "Heavy Ball": 2,
+        "Super Right Arm": 1,
+        "Double Step": 2,
+        "Speed Control": 2,
+        "Four-Seam": 3,
+        "Shadow Trap": 1,
+        "Bold": 2,
+      },
+      "4": {
+        "SP's Resolve": 1,
+        "Heavy Ball": 2,
+        "Knuckleball": 2,
+        "Double Step": 2,
+        "Super Right Arm": 1,
+        "Speed Control": 2,
+        "Shadow Trap": 2,
+        "Bold": 3,
+        "Four-Seam": 3,
+      },
+      "5": {
+        "SP's Resolve": 2,
+        "Supersonic Pitch": 1,
+        "Super Right Arm": 2,
+        "Heavy Ball": 2,
+        "Knuckleball": 2,
+        "Double Step": 3,
+        "Speed Control": 2,
+        "Shadow Trap": 2,
+        "Bold": 3,
+        "Four-Seam": 3,
+      },
+    },
+    hasSkin: false,
+  },
+  {
+    name: "Rikumi",
+    rarity: "UR",
+    position: "2B",
+    type: ["STR", "INT"],
+    bonusTeam: ["River City High", "A Daunting Team"],
+    skills: {
+      "1": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Roadrunner": 2,
+        "Power Batter": 1,
+        "Knuckleball Hunter": 1,
+        "Provoke": 1,
+        "Anti LH Pitcher": 2,
+        "IF Defense God": 1,
+        "Pull-Hit": 1,
+      },
+      "2": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Power Batter": 2,
+        "Roadrunner": 2,
+        "Knuckleball Hunter": 1,
+        "Provoke": 1,
+        "IF Defense God": 2,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 1,
+      },
+      "3": {
+        "2B's Resolve": 1,
+        "HR King Blessing": 1,
+        "Switch Hitter": 1,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 2,
+        "Provoke": 2,
+        "Roadrunner": 2,
+        "IF Defense God": 2,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 1,
+      },
+      "4": {
+        "2B's Resolve": 2,
+        "Switch Hitter": 1,
+        "HR King Blessing": 1,
+        "Power Batter": 2,
+        "Roadrunner": 3,
+        "Knuckleball Hunter": 2,
+        "Provoke": 2,
+        "Anti LH Pitcher": 2,
+        "Pull-Hit": 2,
+        "IF Defense God": 3,
+      },
+      "5": {
+        "2B's Resolve": 2,
+        "Switch Hitter": 2,
+        "HR King Blessing": 1,
+        "Power Batter": 3,
+        "Roadrunner": 3,
+        "Knuckleball Hunter": 2,
+        "Provoke": 3,
+        "Anti LH Pitcher": 3,
+        "Pull-Hit": 3,
+        "IF Defense God": 3,
+      },
+    },
+    hasSkin: false,
+  },
+  {
     name: "Abu",
     rarity: "UR",
     position: "RP",
@@ -70,7 +338,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["STR", "INT"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "A Daunting Team"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -810,7 +1078,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "2B",
     type: ["STR", "GP"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "A Daunting Team"],
     skills: {
       "1": {
         "2B's Resolve": 1,
@@ -1214,7 +1482,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["INT", "STR"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "A Daunting Team"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -1281,7 +1549,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["INT", "STR"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "A Daunting Team"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -1886,7 +2154,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["DEX", "INT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "A Daunting Team"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -2288,7 +2556,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CF",
     type: ["INT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "A Daunting Team"],
     skills: {
       "1": {
         "CF's Resolve": 1,
@@ -2486,7 +2754,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "2B",
     type: ["STR"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "A Daunting Team"],
     skills: {
       "1": {
         "2B's Resolve": 1,
@@ -2549,7 +2817,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "1B",
     type: ["INT"],
-    bonusTeam: ["Mystic Unicorns", "River City High"],
+    bonusTeam: ["A Daunting Team", "River City High"],
     skills: {
       "1": {
         "1B's Resolve": 1,
@@ -3205,7 +3473,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["STR", "MNT"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "A Daunting Team"],
     skills: {
       "1": {
         "Perfect Pitch": 1,
@@ -4623,7 +4891,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["INT"],
-    bonusTeam: ["Shining Angels", "Forest Elves"],
+    bonusTeam: ["A Daunting Team", "Forest Elves"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -4759,7 +5027,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["STR"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "A Daunting Team"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -5228,7 +5496,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["INT"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "A Daunting Team"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -5546,7 +5814,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "3B",
     type: ["STR"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "A Daunting Team"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -6222,7 +6490,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "1B",
     type: ["INT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "A Daunting Team"],
     skills: {
       "1": {
         "1B's Resolve": 1,
@@ -6582,7 +6850,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "2B",
     type: ["INT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "A Daunting Team"],
     skills: {
       "1": {
         "2B's Resolve": 1,
@@ -6703,7 +6971,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "3B",
     type: ["INT"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "A Daunting Team"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -7011,7 +7279,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "C",
     type: ["STR"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "A Daunting Team"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -7766,7 +8034,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SP",
     type: ["STR"],
-    bonusTeam: ["Zenonia Knights", "Victory Swallows"],
+    bonusTeam: ["Zenonia Knights", "A Daunting Team"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -8145,7 +8413,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SP",
     type: ["INT"],
-    bonusTeam: ["Zenonia Knights", "Forest Elves"],
+    bonusTeam: ["A Daunting Team", "Forest Elves"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -9375,7 +9643,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "2B",
     type: ["STR"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "A Daunting Team"],
     skills: {
       "1": {
         "2B's Resolve": 1,
@@ -9749,7 +10017,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "3B",
     type: ["INT"],
-    bonusTeam: ["Victory Swallows"],
+    bonusTeam: ["Victory Swallows", "A Daunting Team"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -10576,7 +10844,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "SP",
     type: ["INT"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "A Daunting Team"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -10699,7 +10967,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "SP",
     type: ["INT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "A Daunting Team"],
     skills: {
       "1": {
         "SP's Resolve": 1,

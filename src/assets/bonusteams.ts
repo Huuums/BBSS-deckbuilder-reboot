@@ -9,6 +9,7 @@ const bonusTeams: Team[] = [
   "Forest Elves",
   "Perfect Lions",
   "Victory Swallows",
+  "A Daunting Team",
 ];
 
 export const teamAbbreviations = {
@@ -20,6 +21,7 @@ export const teamAbbreviations = {
   "Forest Elves": "FE",
   "Perfect Lions": "PL",
   "Victory Swallows": "VS",
+  "A Daunting Team": "ADT",
 };
 
 export default bonusTeams;
