@@ -40,7 +40,8 @@ export type Team =
   | "Zenonia Knights"
   | "Forest Elves"
   | "Perfect Lions"
-  | "Victory Swallows";
+  | "Victory Swallows"
+  | "A Daunting Team";
 
 export type TrainerSkillRanks = {
   "1": SkillRanks;
@@ -273,6 +274,10 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Choi Eom-Ji"
+  | "Ma Dong-Tak"
+  | "Oh Hye-Sung"
+  | "Rikumi"
   | "Abu"
   | "Zeus"
   | "House Bunny"
