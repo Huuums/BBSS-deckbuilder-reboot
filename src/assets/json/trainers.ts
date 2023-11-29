@@ -2,6 +2,96 @@ import { TrainerData, TrainerNames } from "@localtypes/types";
 
 const trainers: TrainerData[] = [
   {
+    name: "Ultimate Yomi",
+    bonusTeam: ["Gameville Superstars"],
+    hasSkin: false,
+    position: "SP",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
+    name: "Ultimate Medica",
+    bonusTeam: ["Gameville Superstars"],
+    hasSkin: false,
+    position: "C",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
+    name: "Ultimate Bora",
+    bonusTeam: ["Gameville Superstars"],
+    hasSkin: false,
+    position: "SP",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
+    name: "Ultimate Scumbag Joe",
+    bonusTeam: ["Gameville Superstars"],
+    hasSkin: false,
+    position: "LF",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
+    name: "Hotaru",
+    bonusTeam: ["Victory Swallows"],
+    hasSkin: false,
+    position: "C",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
+    name: "Set",
+    bonusTeam: ["Victory Swallows"],
+    hasSkin: false,
+    position: "C",
+    rarity: "UR",
+    skills: {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {}
+    },
+    type: ["DEX", "MNT"]
+  },
+  {
     name: "Ma Dong-Tak",
     rarity: "UR",
     position: "3B",
@@ -677,7 +767,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SS",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
     skills: {
       "1": {
         "SS's Resolve": 1,
@@ -1146,7 +1236,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RF",
     type: ["DEX", "GP"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "Gameville Superstars"],
     skills: {
       "1": {
         "HR King Blessing": 1,
@@ -1414,7 +1504,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "LF",
     type: ["MNT", "STR"],
-    bonusTeam: ["Victory Swallows"],
+    bonusTeam: ["Victory Swallows", "Gameville Superstars"],
     skills: {
       "1": {
         "LF's Resolve": 1,
@@ -2287,7 +2377,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["MNT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "Gameville Superstars"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -2491,7 +2581,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "3B",
     type: ["DEX"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "Gameville Superstars"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -3675,7 +3765,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT", "STR"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "Gameville Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -3743,7 +3833,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -3810,7 +3900,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -3877,7 +3967,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT", "DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -3944,7 +4034,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT", "DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -4080,7 +4170,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -4555,7 +4645,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT", "INT"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "Gameville Superstars"],
     skills: {
       "1": {
         "Perfect Pitch": 1,
@@ -4757,7 +4847,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "Gameville Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -5226,7 +5316,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["GP"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -5361,7 +5451,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -9698,7 +9788,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "CF",
     type: ["MNT"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "Gameville Superstars"],
     skills: {
       "1": {
         "CF's Resolve": 1,

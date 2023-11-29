@@ -41,7 +41,8 @@ export type Team =
   | "Forest Elves"
   | "Perfect Lions"
   | "Victory Swallows"
-  | "A Daunting Team";
+  | "A Daunting Team"
+  | "Gameville Superstars";
 
 export type TrainerSkillRanks = {
   "1": SkillRanks;
@@ -274,6 +275,12 @@ export type User = {
 } | null;
 
 export type TrainerNames =
+  | "Ultimate Yomi"
+  | "Ultimate Bora"
+  | "Ultimate Medica"
+  | "Ultimate Scumbag Joe"
+  | "Set"
+  | "Hotaru"
   | "Choi Eom-Ji"
   | "Ma Dong-Tak"
   | "Oh Hye-Sung"
