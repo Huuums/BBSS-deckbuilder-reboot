@@ -3,61 +3,273 @@ import { TrainerData, TrainerNames } from "@localtypes/types";
 const trainers: TrainerData[] = [
   {
     name: "Ultimate Yomi",
-    bonusTeam: ["Gameville Superstars"],
+    bonusTeam: ["Gamevil Superstars"],
     hasSkin: false,
     position: "SP",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "Perfect Pitch": 2,
+        "SP's Resolve": 1,
+        "Knuckleball": 1,
+        "Super Fastball": 2,
+        "Shadow Trap": 1,
+        "Accuracy Control": 1,
+        "Hit Blockade": 1,
+        "Bold": 2,
+        "Anti Walk": 1,
+      },
+      "2": {
+        "Perfect Pitch": 2,
+        "SP's Resolve": 1,
+        "Knuckleball": 2,
+        "Super Fastball": 2,
+        "Shadow Trap": 1,
+        "Accuracy Control": 2,
+        "Hit Blockade": 1,
+        "Bold": 2,
+        "Anti Walk": 1,
+      },
+      "3": {
+        "Perfect Pitch": 2,
+        "SP's Resolve": 1,
+        "Knuckleball": 2,
+        "Super Right Arm": 1,
+        "Super Fastball": 3,
+        "Shadow Trap": 1,
+        "Accuracy Control": 2,
+        "Hit Blockade": 2,
+        "Bold": 2,
+        "Anti Walk": 1,
+      },
+      "4": {
+        "Perfect Pitch": 2,
+        "SP's Resolve": 1,
+        "Knuckleball": 2,
+        "Super Right Arm": 1,
+        "Super Fastball": 3,
+        "Shadow Trap": 2,
+        "Accuracy Control": 2,
+        "Hit Blockade": 3,
+        "Bold": 3,
+        "Anti Walk": 2,
+      },
+      "5": {
+        "Perfect Pitch": 3,
+        "SP's Resolve": 2,
+        "Knuckleball": 2,
+        "Super Right Arm": 1,
+        "Super Fastball": 3,
+        "Shadow Trap": 2,
+        "Accuracy Control": 3,
+        "Hit Blockade": 3,
+        "Bold": 3,
+        "Anti Walk": 3,
+      },
     },
     type: ["DEX", "MNT"]
   },
   {
     name: "Ultimate Medica",
-    bonusTeam: ["Gameville Superstars"],
+    bonusTeam: ["Gamevil Superstars"],
     hasSkin: false,
     position: "C",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "C's Resolve": 1,
+        "Power Batter": 2,
+        "Tenacity": 1,
+        "Home Run Master": 1,
+        "Knuckleball Hunter": 1,
+        "Walk Machine": 2,
+        "Iron Wall": 1,
+        "Slugger Power": 2,
+        "No Stolen Bases": 1,
+      },
+      "2": {
+        "C's Resolve": 1,
+        "Power Batter": 2,
+        "Tenacity": 1,
+        "Home Run Master": 2,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "Iron Wall": 1,
+        "Slugger Power": 2,
+        "No Stolen Bases": 1,
+      },
+      "3": {
+        "C's Resolve": 1,
+        "Switch Hitter": 1,
+        "Power Batter": 3,
+        "Tenacity": 1,
+        "Home Run Master": 2,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "Iron Wall": 2,
+        "Slugger Power": 2,
+        "No Stolen Bases": 1,
+      },
+      "4": {
+        "C's Resolve": 1,
+        "Switch Hitter": 1,
+        "Power Batter": 3,
+        "Tenacity": 2,
+        "Home Run Master": 2,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "Iron Wall": 3,
+        "Slugger Power": 3,
+        "No Stolen Bases": 2,
+      },
+      "5": {
+        "C's Resolve": 2,
+        "Switch Hitter": 1,
+        "Power Batter": 3,
+        "Tenacity": 2,
+        "Home Run Master": 3,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 3,
+        "Iron Wall": 3,
+        "Slugger Power": 3,
+        "No Stolen Bases": 3,
+      },
     },
     type: ["DEX", "MNT"]
   },
   {
     name: "Ultimate Bora",
-    bonusTeam: ["Gameville Superstars"],
+    bonusTeam: ["Gamevil Superstars"],
     hasSkin: false,
-    position: "SP",
+    position: "CP",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "Super Left Arm": 2,
+        "CP's Resolve": 1,
+        "Perfect Pitch": 1,
+        "Knuckleball": 1,
+        "Screwball": 2,
+        "Hit Blockade": 1,
+        "Man of Steel": 1,
+        "Steel Arm": 1,
+        "Anti Walk": 2,
+      },
+      "2": {
+        "Super Left Arm": 2,
+        "CP's Resolve": 1,
+        "Perfect Pitch": 1,
+        "Knuckleball": 2,
+        "Screwball": 2,
+        "Hit Blockade": 1,
+        "Man of Steel": 2,
+        "Steel Arm": 1,
+        "Anti Walk": 2,
+      },
+      "3": {
+        "Super Left Arm": 2,
+        "CP's Resolve": 1,
+        "Perfect Pitch": 1,
+        "Knuckleball": 2,
+        "Supersonic Pitch": 1,
+        "Screwball": 2,
+        "Hit Blockade": 1,
+        "Man of Steel": 2,
+        "Steel Arm": 2,
+        "Anti Walk": 3,
+      },
+      "4": {
+        "Super Left Arm": 2,
+        "CP's Resolve": 1,
+        "Perfect Pitch": 2,
+        "Knuckleball": 2,
+        "Supersonic Pitch": 1,
+        "Screwball": 3,
+        "Hit Blockade": 2,
+        "Man of Steel": 2,
+        "Steel Arm": 3,
+        "Anti Walk": 3,
+      },
+      "5": {
+        "Super Left Arm": 3,
+        "CP's Resolve": 2,
+        "Perfect Pitch": 3,
+        "Knuckleball": 2,
+        "Supersonic Pitch": 1,
+        "Screwball": 3,
+        "Hit Blockade": 2,
+        "Man of Steel": 3,
+        "Steel Arm": 3,
+        "Anti Walk": 3,
+      },
     },
     type: ["DEX", "MNT"]
   },
   {
     name: "Ultimate Scumbag Joe",
-    bonusTeam: ["Gameville Superstars"],
+    bonusTeam: ["Gamevil Superstars"],
     hasSkin: false,
-    position: "LF",
+    position: "SS",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "SS's Resolve": 1,
+        "HR King Blessing": 1,
+        "Golden Arm": 2,
+        "Power Batter": 1,
+        "Provoke": 1,
+        "Knuckleball Hunter": 1,
+        "IF Catch God": 2,
+        "Push-hit": 1,
+        "Gambler": 2,
+      },
+      "2": {
+        "SS's Resolve": 1,
+        "HR King Blessing": 1,
+        "Golden Arm": 2,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 2,
+        "Provoke": 1,
+        "IF Catch God": 2,
+        "Push-hit": 1,
+        "Gambler": 2,
+      },
+      "3": {
+        "SS's Resolve": 1,
+        "HR King Blessing": 1,
+        "Switch Hitter": 1,
+        "Golden Arm": 2,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 2,
+        "Provoke": 3,
+        "IF Catch God": 2,
+        "Push-hit": 1,
+        "Gambler": 2,
+      },
+      "4": {
+        "SS's Resolve": 1,
+        "HR King Blessing": 2,
+        "Switch Hitter": 1,
+        "Golden Arm": 3,
+        "Power Batter": 2,
+        "Knuckleball Hunter": 2,
+        "Provoke": 3,
+        "IF Catch God": 2,
+        "Push-hit": 2,
+        "Gambler": 3,
+      },
+      "5": {
+        "SS's Resolve": 2,
+        "HR King Blessing": 2,
+        "Switch Hitter": 1,
+        "Golden Arm": 3,
+        "Power Batter": 3,
+        "Knuckleball Hunter": 3,
+        "Provoke": 3,
+        "IF Catch God": 3,
+        "Push-hit": 3,
+        "Gambler": 3,
+      },
     },
     type: ["DEX", "MNT"]
   },
@@ -68,28 +280,134 @@ const trainers: TrainerData[] = [
     position: "C",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "RF's Resolve": 1,
+        "Top Batter Blessing": 1,
+        "Tight Defense": 2,
+        "Knuckleball Hunter": 1,
+        "Tenacity": 1,
+        "Home Run Master": 1,
+        "Anti RH Pitcher": 2,
+        "OF Catch God": 2,
+        "OF Defense God": 1,
+      },
+      "2": {
+        "RF's Resolve": 1,
+        "Top Batter Blessing": 1,
+        "Tight Defense": 2,
+        "Knuckleball Hunter": 2,
+        "Tenacity": 1,
+        "Home Run Master": 1,
+        "Anti RH Pitcher": 2,
+        "OF Catch God": 2,
+        "OF Defense God": 2,
+      },
+      "3": {
+        "RF's Resolve": 1,
+        "Top Batter Blessing": 1,
+        "Tight Defense": 3,
+        "Knuckleball Hunter": 2,
+        "Tenacity": 2,
+        "Home Run Master": 1,
+        "Anti RH Pitcher": 2,
+        "OF Catch God": 2,
+        "OF Defense God": 2,
+        "Target Sighted": 1,
+      },
+      "4": {
+        "RF's Resolve": 1,
+        "Top Batter Blessing": 2,
+        "Tight Defense": 3,
+        "Knuckleball Hunter": 2,
+        "Tenacity": 2,
+        "Home Run Master": 2,
+        "Anti RH Pitcher": 2,
+        "OF Catch God": 3,
+        "OF Defense God": 2,
+        "Target Sighted": 1,
+      },
+      "5": {
+        "RF's Resolve": 2,
+        "Top Batter Blessing": 2,
+        "Tight Defense": 3,
+        "Knuckleball Hunter": 3,
+        "Tenacity": 3,
+        "Home Run Master": 3,
+        "Anti RH Pitcher": 3,
+        "OF Catch God": 3,
+        "OF Defense God": 2,
+        "Target Sighted": 1,
+      },
     },
-    type: ["DEX", "MNT"]
+    type: ["STR", "MNT"]
   },
   {
     name: "Set",
     bonusTeam: ["Victory Swallows"],
     hasSkin: false,
-    position: "C",
+    position: "RF",
     rarity: "UR",
     skills: {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {}
+      "1": {
+        "RF's Resolve": 1,
+        "HR King Blessing": 1,
+        "Golden Arm": 2,
+        "Provoke": 1,
+        "Knuckleball Hunter": 1,
+        "Walk Machine": 2,
+        "OF Defense God": 1,
+        "Anti RH Pitcher": 1,
+        "Slugger Power": 2,
+      },
+      "2": {
+        "RF's Resolve": 1,
+        "HR King Blessing": 1,
+        "Golden Arm": 2,
+        "Provoke": 1,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "OF Defense God": 2,
+        "Anti RH Pitcher": 1,
+        "Slugger Power": 2,
+      },
+      "3": {
+        "RF's Resolve": 1,
+        "HR King Blessing": 2,
+        "Switch Hitter": 1,
+        "Golden Arm": 3,
+        "Provoke": 1,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "OF Defense God": 2,
+        "Anti RH Pitcher": 1,
+        "Slugger Power": 2,
+      },
+      "4": {
+        "RF's Resolve": 1,
+        "HR King Blessing": 3,
+        "Switch Hitter": 1,
+        "Golden Arm": 3,
+        "Provoke": 2,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 2,
+        "OF Defense God": 2,
+        "Anti RH Pitcher": 2,
+        "Slugger Power": 2,
+      },
+      "5": {
+        "RF's Resolve": 2,
+        "HR King Blessing": 3,
+        "Switch Hitter": 1,
+        "Golden Arm": 3,
+        "Provoke": 2,
+        "Knuckleball Hunter": 2,
+        "Walk Machine": 3,
+        "OF Defense God": 3,
+        "Anti RH Pitcher": 3,
+        "Slugger Power": 3,
+      },
     },
-    type: ["DEX", "MNT"]
+    type: ["INT", "MNT"]
   },
   {
     name: "Ma Dong-Tak",
@@ -767,7 +1085,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SS",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "SS's Resolve": 1,
@@ -835,7 +1153,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["DEX", "MNT"],
-    bonusTeam: ["Forest Elves", "Perfect Lions"],
+    bonusTeam: ["Forest Elves", "Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -1036,7 +1354,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["DEX", "STR"],
-    bonusTeam: ["Shining Angels", "Perfect Lions"],
+    bonusTeam: ["Shining Angels", "Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -1236,7 +1554,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RF",
     type: ["DEX", "GP"],
-    bonusTeam: ["Zenonia Knights", "Gameville Superstars"],
+    bonusTeam: ["Zenonia Knights", "Gamevil Superstars"],
     skills: {
       "1": {
         "HR King Blessing": 1,
@@ -1504,7 +1822,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "LF",
     type: ["MNT", "STR"],
-    bonusTeam: ["Victory Swallows", "Gameville Superstars"],
+    bonusTeam: ["Victory Swallows", "Gamevil Superstars"],
     skills: {
       "1": {
         "LF's Resolve": 1,
@@ -2175,7 +2493,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "3B",
     type: ["INT", "MNT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -2377,7 +2695,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "C",
     type: ["MNT"],
-    bonusTeam: ["Shining Angels", "Gameville Superstars"],
+    bonusTeam: ["Shining Angels", "Gamevil Superstars"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -2581,7 +2899,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "3B",
     type: ["DEX"],
-    bonusTeam: ["Shining Angels", "Gameville Superstars"],
+    bonusTeam: ["Shining Angels", "Gamevil Superstars"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -3765,7 +4083,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT", "STR"],
-    bonusTeam: ["River City High", "Gameville Superstars"],
+    bonusTeam: ["River City High", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -3833,7 +4151,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -3900,7 +4218,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["SP", "DEX"],
-    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -3967,7 +4285,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT", "DEX"],
-    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -4034,7 +4352,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT", "DEX"],
-    bonusTeam: ["Perfect Lions", "Gameville Superstars"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -4170,7 +4488,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -4645,7 +4963,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT", "INT"],
-    bonusTeam: ["Forest Elves", "Gameville Superstars"],
+    bonusTeam: ["Forest Elves", "Gamevil Superstars"],
     skills: {
       "1": {
         "Perfect Pitch": 1,
@@ -4847,7 +5165,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "RP",
     type: ["MNT"],
-    bonusTeam: ["River City High", "Gameville Superstars"],
+    bonusTeam: ["River City High", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -5316,7 +5634,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "CP",
     type: ["GP"],
-    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -5451,7 +5769,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "SP",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns", "Gameville Superstars"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -6275,7 +6593,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "3B",
     type: ["MNT"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "Gamevil Superstars"],
     skills: {
       "1": {
         "3B's Resolve": 1,
@@ -6460,7 +6778,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "CF",
     type: ["DEX"],
-    bonusTeam: ["Victory Swallows"],
+    bonusTeam: ["Victory Swallows", "Gamevil Superstars"],
     skills: {
       "1": {
         "CF's Resolve": 1,
@@ -6703,7 +7021,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SS",
     type: ["DEX"],
-    bonusTeam: ["Cruel Pumas"],
+    bonusTeam: ["Cruel Pumas", "Gamevil Superstars"],
     skills: {
       "1": {
         "SS's Resolve": 1,
@@ -6764,7 +7082,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "1B",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "1B's Resolve": 1,
@@ -6824,7 +7142,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SS",
     type: ["MNT"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "SS's Resolve": 1,
@@ -7306,7 +7624,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "LF",
     type: ["DEX"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "Gamevil Superstars"],
     skills: {
       "1": {
         "LF's Resolve": 1,
@@ -7431,7 +7749,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "RP",
     type: ["DEX"],
-    bonusTeam: ["Forest Elves"],
+    bonusTeam: ["Forest Elves", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -7937,7 +8255,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "CP",
     type: ["MNT"],
-    bonusTeam: ["River City High", "Mystic Unicorns"],
+    bonusTeam: ["River City High", "Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -8187,7 +8505,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SP",
     type: ["DEX"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -8375,7 +8693,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "RP",
     type: ["SP"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "Gamevil Superstars"],
     skills: {
       "1": {
         "MRP's Resolve": 1,
@@ -8566,7 +8884,7 @@ const trainers: TrainerData[] = [
     rarity: "SSR",
     position: "SP",
     type: ["MNT"],
-    bonusTeam: ["Shining Angels", "River City High"],
+    bonusTeam: ["Shining Angels", "River City High", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -8630,7 +8948,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "1B",
     type: ["STR"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "Gamevil Superstars"],
     skills: {
       "1": {
         "1B's Resolve": 1,
@@ -8797,7 +9115,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "C",
     type: ["DEX"],
-    bonusTeam: ["Shining Angels"],
+    bonusTeam: ["Shining Angels", "Gamevil Superstars"],
     skills: {
       "1": {
         "C's Resolve": 1,
@@ -8852,7 +9170,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "SS",
     type: ["DEX"],
-    bonusTeam: ["Perfect Lions"],
+    bonusTeam: ["Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "SS's Resolve": 1,
@@ -9077,7 +9395,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "RF",
     type: ["MNT"],
-    bonusTeam: ["Cruel Pumas"],
+    bonusTeam: ["Cruel Pumas", "Gamevil Superstars"],
     skills: {
       "1": {
         "RF's Resolve": 1,
@@ -9187,7 +9505,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "2B",
     type: ["MNT"],
-    bonusTeam: ["Zenonia Knights"],
+    bonusTeam: ["Zenonia Knights", "Gamevil Superstars"],
     skills: {
       "1": {
         "2B's Resolve": 1,
@@ -9788,7 +10106,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "CF",
     type: ["MNT"],
-    bonusTeam: ["Shining Angels", "Gameville Superstars"],
+    bonusTeam: ["Shining Angels", "Gamevil Superstars"],
     skills: {
       "1": {
         "CF's Resolve": 1,
@@ -10503,7 +10821,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "CP",
     type: ["MNT"],
-    bonusTeam: ["River City High"],
+    bonusTeam: ["River City High", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -10627,7 +10945,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "SP",
     type: ["MNT"],
-    bonusTeam: ["Mystic Unicorns"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,
@@ -10995,7 +11313,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "CP",
     type: ["DEX"],
-    bonusTeam: ["Cruel Pumas", "Perfect Lions"],
+    bonusTeam: ["Cruel Pumas", "Perfect Lions", "Gamevil Superstars"],
     skills: {
       "1": {
         "CP's Resolve": 1,
@@ -11178,7 +11496,7 @@ const trainers: TrainerData[] = [
     rarity: "SR",
     position: "SP",
     type: ["DEX"],
-    bonusTeam: ["Cruel Pumas"],
+    bonusTeam: ["Cruel Pumas", "Gamevil Superstars"],
     skills: {
       "1": {
         "SP's Resolve": 1,

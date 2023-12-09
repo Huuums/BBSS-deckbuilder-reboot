@@ -42,7 +42,7 @@ export type Team =
   | "Perfect Lions"
   | "Victory Swallows"
   | "A Daunting Team"
-  | "Gameville Superstars";
+  | "Gamevil Superstars";
 
 export type TrainerSkillRanks = {
   "1": SkillRanks;
