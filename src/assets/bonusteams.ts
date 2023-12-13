@@ -10,6 +10,7 @@ const bonusTeams: Team[] = [
   "Perfect Lions",
   "Victory Swallows",
   "A Daunting Team",
+  "Gamevil Superstars",
 ];
 
 export const teamAbbreviations = {
@@ -22,6 +23,7 @@ export const teamAbbreviations = {
   "Perfect Lions": "PL",
   "Victory Swallows": "VS",
   "A Daunting Team": "ADT",
+  "Gamevil Superstars": "GS",
 };
 
 export default bonusTeams;
