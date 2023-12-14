@@ -2493,7 +2493,7 @@ const trainers: TrainerData[] = [
     rarity: "UR",
     position: "3B",
     type: ["INT", "MNT"],
-    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars"],
+    bonusTeam: ["Mystic Unicorns", "Gamevil Superstars", "Victory Swallows"],
     skills: {
       "1": {
         "3B's Resolve": 1,
